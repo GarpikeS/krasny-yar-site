@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #1A1A1A; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  background: #0D0D0D;
+}
+.header {
+  padding: 40pt 50pt 30pt 50pt;
+}
+.label {
+  color: #8B1538;
+  font-size: 10pt;
+  letter-spacing: 3pt;
+}
+h2 {
+  color: #FFFFFF;
+  font-size: 32pt;
+  font-weight: 700;
+  margin: 10pt 0 0 0;
+}
+.table-wrapper {
+  padding: 0 50pt;
+}
+.row {
+  display: flex;
+  border-bottom: 1pt solid #333333;
+  padding: 20pt 0;
+}
+.row-header {
+  border-bottom: 2pt solid #8B1538;
+}
+.col {
+  flex: 1;
+}
+.col-name {
+  flex: 2;
+}
+.header-text {
+  color: #888888;
+  font-size: 10pt;
+  letter-spacing: 1pt;
+}
+.name-text {
+  color: #FFFFFF;
+  font-size: 14pt;
+  font-weight: 500;
+}
+.value-text {
+  color: #FFFFFF;
+  font-size: 14pt;
+}
+.price-text {
+  color: #8B1538;
+  font-size: 18pt;
+  font-weight: 700;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <p class="label">УСЛОВИЯ</p>
+  <h2>Стоимость</h2>
+</div>
+<div class="table-wrapper">
+  <div class="row row-header">
+    <div class="col col-name"><p class="header-text">ФОРМАТ</p></div>
+    <div class="col"><p class="header-text">ПЛОЩАДЬ</p></div>
+    <div class="col"><p class="header-text">ЦЕНА ЗА М²</p></div>
+  </div>
+  <div class="row">
+    <div class="col col-name"><p class="name-text">Аренда</p></div>
+    <div class="col"><p class="value-text">2 700 м²</p></div>
+    <div class="col"><p class="price-text">700 ₽</p></div>
+  </div>
+  <div class="row">
+    <div class="col col-name"><p class="name-text">Продажа по BTS</p></div>
+    <div class="col"><p class="value-text">12 714 м²</p></div>
+    <div class="col"><p class="price-text">95 000 ₽</p></div>
+  </div>
+  <div class="row">
+    <div class="col col-name"><p class="name-text">Готовые помещения</p></div>
+    <div class="col"><p class="value-text">12 714 м²</p></div>
+    <div class="col"><p class="price-text">110 000 ₽</p></div>
+  </div>
+</div>
+</body>
+</html>

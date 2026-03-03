@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #1A1A1A; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  background: #0D0D0D;
+}
+.left {
+  width: 350pt;
+  padding: 50pt;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.label {
+  color: #8B1538;
+  font-size: 10pt;
+  letter-spacing: 3pt;
+}
+h2 {
+  color: #FFFFFF;
+  font-size: 32pt;
+  font-weight: 700;
+  margin: 10pt 0 30pt 0;
+}
+.address {
+  color: #888888;
+  font-size: 12pt;
+  margin-bottom: 40pt;
+  line-height: 1.6;
+}
+.stats {
+  display: flex;
+  gap: 30pt;
+}
+.stat {
+  text-align: left;
+}
+.stat-num {
+  color: #FFFFFF;
+  font-size: 36pt;
+  font-weight: 700;
+  margin: 0;
+}
+.stat-unit {
+  color: #8B1538;
+  font-size: 14pt;
+}
+.stat-label {
+  color: #666666;
+  font-size: 10pt;
+  margin-top: 5pt;
+}
+.right {
+  flex: 1;
+  background: #1A1A1A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.map-placeholder {
+  width: 280pt;
+  height: 280pt;
+  background: #252525;
+  border: 1pt solid #333333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.map-text {
+  color: #555555;
+  font-size: 12pt;
+}
+</style>
+</head>
+<body>
+<div class="left">
+  <p class="label">МЕСТОПОЛОЖЕНИЕ</p>
+  <h2>Красноярск</h2>
+  <p class="address">ул. Кутузова, д.1, стр.37<br>Интеграция в мкр. Мичуринский</p>
+  <div class="stats">
+    <div class="stat">
+      <p class="stat-num">50<span class="stat-unit"> тыс</span></p>
+      <p class="stat-label">м² площадей</p>
+    </div>
+    <div class="stat">
+      <p class="stat-num">12.2<span class="stat-unit"> Га</span></p>
+      <p class="stat-label">территория</p>
+    </div>
+  </div>
+</div>
+<div class="right">
+  <div class="map-placeholder">
+    <p class="map-text">КАРТА</p>
+  </div>
+</div>
+</body>
+</html>

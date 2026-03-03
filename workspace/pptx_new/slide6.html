@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #FFFFFF; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  background: #FAFAFA;
+}
+.header {
+  padding: 40pt 50pt 30pt 50pt;
+}
+.label {
+  color: #8B1538;
+  font-size: 10pt;
+  letter-spacing: 3pt;
+}
+h2 {
+  color: #1A1A1A;
+  font-size: 32pt;
+  font-weight: 700;
+  margin: 10pt 0 0 0;
+}
+.stages {
+  display: flex;
+  padding: 0 50pt;
+  gap: 30pt;
+}
+.stage {
+  flex: 1;
+  background: #FFFFFF;
+  border: 1pt solid #E0E0E0;
+  padding: 30pt;
+}
+.stage-header {
+  display: flex;
+  align-items: baseline;
+  gap: 10pt;
+  margin-bottom: 25pt;
+}
+.stage-num {
+  color: #8B1538;
+  font-size: 24pt;
+  font-weight: 700;
+}
+.stage-title {
+  color: #1A1A1A;
+  font-size: 14pt;
+  font-weight: 600;
+}
+.spec {
+  margin-bottom: 15pt;
+}
+.spec-value {
+  color: #1A1A1A;
+  font-size: 20pt;
+  font-weight: 700;
+  margin: 0;
+}
+.spec-label {
+  color: #888888;
+  font-size: 10pt;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <p class="label">II ОЧЕРЕДЬ</p>
+  <h2>План строительства</h2>
+</div>
+<div class="stages">
+  <div class="stage">
+    <div class="stage-header">
+      <p class="stage-num">I</p>
+      <p class="stage-title">этап</p>
+    </div>
+    <div class="spec">
+      <p class="spec-value">21 000 м²</p>
+      <p class="spec-label">площадь строительства</p>
+    </div>
+    <div class="spec">
+      <p class="spec-value">2.8 Га</p>
+      <p class="spec-label">площадь участка</p>
+    </div>
+    <div class="spec">
+      <p class="spec-value">5 мВт</p>
+      <p class="spec-label">электроснабжение</p>
+    </div>
+  </div>
+  <div class="stage">
+    <div class="stage-header">
+      <p class="stage-num">II</p>
+      <p class="stage-title">этап</p>
+    </div>
+    <div class="spec">
+      <p class="spec-value">3.8 Га</p>
+      <p class="spec-label">площадь участка</p>
+    </div>
+    <div class="spec">
+      <p class="spec-value">37 м³/сут</p>
+      <p class="spec-label">водоснабжение</p>
+    </div>
+    <div class="spec">
+      <p class="spec-value">2.4 Гкал</p>
+      <p class="spec-label">теплоснабжение</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

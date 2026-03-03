@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Политика конфиденциальности — Пром парк Красный Яр</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="js">
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header__inner">
+            <!-- Left: Logo + Call -->
+            <div class="header__left">
+                <a href="index.html" class="header__logo">
+                    <img src="assets/images/logo.png" alt="Красный Яр" style="height: 40px; width: auto;">
+                </a>
+                <div class="header__dropdown header__dropdown--call">
+                    <button class="header__call">
+                        <span>Позвонить нам</span>
+                        <svg class="header__dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 4.5L6 7.5L9 4.5"/>
+                        </svg>
+                    </button>
+                    <div class="header__dropdown-menu header__dropdown-menu--call">
+                        <div class="header__dropdown-inner">
+                            <div class="header__phone-item">
+                                <span class="header__phone-label">отдел продаж</span>
+                                <a href="tel:+73919899949" class="header__phone-number">+7 (391) 989-99-49</a>
+                            </div>
+                            <div class="header__phone-item">
+                                <span class="header__phone-label">мобильный</span>
+                                <a href="tel:+79240424900" class="header__phone-number">+7 924 042-49-00</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Center: Navigation -->
+            <nav class="header__nav">
+                <a href="about.html" class="header__link">О парке</a>
+
+                <!-- Infrastructure Dropdown -->
+                <div class="header__dropdown">
+                    <button class="header__link header__link--dropdown">
+                        <span>Инфраструктура</span>
+                        <svg class="header__dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 4.5L6 7.5L9 4.5"/>
+                        </svg>
+                    </button>
+                    <div class="header__dropdown-menu">
+                        <div class="header__dropdown-inner">
+                            <a href="about.html#infrastructure" class="header__dropdown-link">Мощности парка</a>
+                            <a href="about.html#communications" class="header__dropdown-link">Коммуникации</a>
+                            <a href="about.html#location" class="header__dropdown-link">Расположение</a>
+                            <a href="projects.html" class="header__dropdown-all">
+                                <span>Генплан</span>
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M2.5 7H11.5M8 3.5L11.5 7L8 10.5"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formats Dropdown -->
+                <div class="header__dropdown">
+                    <button class="header__link header__link--dropdown">
+                        <span>Помещения</span>
+                        <svg class="header__dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 4.5L6 7.5L9 4.5"/>
+                        </svg>
+                    </button>
+                    <div class="header__dropdown-menu">
+                        <div class="header__dropdown-inner">
+                            <a href="formats.html" class="header__dropdown-link">Производственные</a>
+                            <a href="formats.html" class="header__dropdown-link">Складские</a>
+                            <a href="formats.html" class="header__dropdown-link">Офисные</a>
+                            <a href="formats.html" class="header__dropdown-all">
+                                <span>Все форматы</span>
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M2.5 7H11.5M8 3.5L11.5 7L8 10.5"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="buy.html" class="header__link">Инвесторам</a>
+                <a href="#residents" class="header__link">Резиденты</a>
+                <a href="news.html" class="header__link">Новости</a>
+                <a href="contacts.html" class="header__link">Контакты</a>
+            </nav>
+
+            <!-- Right: Button + Favorites + Burger -->
+            <div class="header__right">
+                <div class="header__dropdown header__dropdown--select">
+                    <button class="header__btn">
+                        <span>Выбрать помещение</span>
+                        <svg class="header__dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 4.5L6 7.5L9 4.5"/>
+                        </svg>
+                    </button>
+                    <div class="header__dropdown-menu header__dropdown-menu--select">
+                        <div class="header__dropdown-inner">
+                            <a href="rent.html" class="header__select-link">
+                                <span class="header__select-title">В аренду</span>
+                                <span class="header__select-desc">Складские и производственные помещения</span>
+                            </a>
+                            <a href="buy.html" class="header__select-link">
+                                <span class="header__select-title">Для покупки</span>
+                                <span class="header__select-desc">Готовые объекты и земельные участки</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <button class="header__fav" aria-label="Избранное">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M10 17.5L2.5 10C0.5 8 0.5 4.5 2.5 2.5C4.5 0.5 8 0.5 10 2.5C12 0.5 15.5 0.5 17.5 2.5C19.5 4.5 19.5 8 17.5 10L10 17.5Z"/>
+                    </svg>
+                </button>
+                <button class="header__burger" id="burger" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <!-- Sidebar Menu -->
+    <div class="menu" id="menu">
+        <div class="menu__inner">
+            <!-- Toggle rent/buy -->
+            <div class="menu__toggle">
+                <button class="menu__toggle-btn is-active" data-type="rent">В аренду</button>
+                <button class="menu__toggle-btn" data-type="buy">Для покупки</button>
+            </div>
+            <nav class="menu__nav">
+                <a href="about.html" class="menu__link">О парке</a>
+                <a href="projects.html" class="menu__link">Генплан</a>
+                <a href="formats.html" class="menu__link">Помещения</a>
+                <a href="buy.html" class="menu__link">Инвесторам</a>
+                <a href="index.html#residents" class="menu__link">Резиденты</a>
+                <a href="news.html" class="menu__link">Новости</a>
+                <a href="contacts.html" class="menu__link">Контакты</a>
+            </nav>
+            <div class="menu__bottom">
+                <a href="tel:+73919899949" class="menu__call">
+                    <span>позвонить нам</span>
+                    <strong>+7 (391) 989-99-49</strong>
+                </a>
+                <div class="menu__contacts">
+                    <div class="menu__contact">
+                        <span>отдел продаж</span>
+                        <a href="tel:+79240424900">+7 924 042-49-00</a>
+                    </div>
+                </div>
+                <div class="menu__socials">
+                    <a href="#" aria-label="YouTube">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M19.582 5.182a2.506 2.506 0 00-1.764-1.764C16.254 3 10 3 10 3s-6.254 0-7.818.418A2.506 2.506 0 00.418 5.182C0 6.746 0 10 0 10s0 3.254.418 4.818a2.506 2.506 0 001.764 1.764C3.746 17 10 17 10 17s6.254 0 7.818-.418a2.506 2.506 0 001.764-1.764C20 13.254 20 10 20 10s0-3.254-.418-4.818zM8 13V7l5.196 3L8 13z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Telegram">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M10 0C4.478 0 0 4.478 0 10s4.478 10 10 10 10-4.478 10-10S15.522 0 10 0zm4.7 6.833c-.125 1.317-.667 4.517-.942 5.992-.117.625-.35.833-.575.858-.483.042-.85-.317-1.317-.625-.733-.483-1.15-.783-1.858-1.25-.825-.542-.292-.842.183-1.325.125-.125 2.259-2.067 2.3-2.242a.17.17 0 00-.039-.147c-.05-.038-.12-.025-.171-.015-.073.015-1.241.789-3.504 2.317a1.63 1.63 0 01-.924.353c-.304-.006-.889-.172-1.324-.314-.534-.174-.958-.266-.921-.561.019-.154.232-.311.638-.472 2.5-1.088 4.17-1.806 5.009-2.153 2.386-.992 2.883-1.164 3.206-1.169.071-.001.23.016.333.099a.36.36 0 01.123.237c.011.072.025.236.014.365z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="WhatsApp">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M10.008 0C4.505 0 .027 4.478.027 9.98c0 1.76.462 3.478 1.34 4.992L.01 20l5.17-1.357a9.93 9.93 0 004.828 1.247c5.503 0 9.982-4.478 9.982-9.98S15.51 0 10.008 0z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Hero with Background -->
+    <section class="page-hero page-hero--bg" style="background-image: url('assets/images/gallery/5.jpg');">
+        <div class="page-hero__overlay"></div>
+        <div class="page-hero__content">
+            <h1 class="page-hero__title" data-reveal="up">Политика конфиденциальности</h1>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <section class="page-hero page-hero--small">
+        <div class="page-hero__container">
+            <nav class="breadcrumb">
+                <a href="index.html">Главная</a>
+                <span>/</span>
+                <span class="breadcrumb__current">Политика конфиденциальности</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="legal">
+        <div class="legal__container">
+            <div class="legal__content">
+                <p class="legal__date">Дата последнего обновления: 15 января 2024 года</p>
+
+                <h2>1. Общие положения</h2>
+                <p>Настоящая Политика конфиденциальности персональных данных (далее — Политика) действует в отношении всей информации, которую ООО «Красный Яр» (ИНН: 2461029213, ОГРН: 1152468038447) (далее — Оператор) может получить о пользователе во время использования сайта.</p>
+                <p>Использование сайта означает безоговорочное согласие пользователя с настоящей Политикой и указанными в ней условиями обработки его персональных данных.</p>
+
+                <h2>2. Персональные данные пользователей</h2>
+                <p>В рамках настоящей Политики под персональными данными пользователя понимаются:</p>
+                <ul>
+                    <li>Персональные данные, которые пользователь предоставляет о себе самостоятельно при заполнении форм обратной связи</li>
+                    <li>Данные, которые автоматически передаются в процессе использования сайта с помощью установленного на устройстве пользователя программного обеспечения</li>
+                </ul>
+
+                <h2>3. Цели обработки персональных данных</h2>
+                <p>Оператор обрабатывает персональные данные пользователя в следующих целях:</p>
+                <ul>
+                    <li>Идентификация пользователя для обработки заявок</li>
+                    <li>Предоставление пользователю информации об услугах компании</li>
+                    <li>Связь с пользователем для консультации</li>
+                    <li>Улучшение качества услуг и удобства использования сайта</li>
+                    <li>Проведение статистических и маркетинговых исследований</li>
+                </ul>
+
+                <h2>4. Обработка персональных данных</h2>
+                <p>Обработка персональных данных осуществляется на основе принципов:</p>
+                <ul>
+                    <li>Законности и справедливости</li>
+                    <li>Соответствия целей обработки заранее определенным и заявленным целям</li>
+                    <li>Соответствия объема и характера персональных данных целям обработки</li>
+                    <li>Недопустимости объединения баз данных, содержащих персональные данные</li>
+                </ul>
+
+                <h2>5. Защита персональных данных</h2>
+                <p>Оператор принимает необходимые организационные и технические меры для защиты персональных данных пользователя от неправомерного или случайного доступа, уничтожения, изменения, блокирования, копирования, распространения, а также от иных неправомерных действий третьих лиц.</p>
+
+                <h2>6. Права пользователя</h2>
+                <p>Пользователь имеет право:</p>
+                <ul>
+                    <li>Получать информацию об обработке своих персональных данных</li>
+                    <li>Требовать уточнения, блокирования или уничтожения персональных данных</li>
+                    <li>Отозвать согласие на обработку персональных данных</li>
+                    <li>Обжаловать действия или бездействие Оператора</li>
+                </ul>
+
+                <h2>7. Файлы cookie</h2>
+                <p>Сайт использует файлы cookie для обеспечения корректной работы и улучшения пользовательского опыта. Cookie — это небольшие текстовые файлы, которые сохраняются на устройстве пользователя.</p>
+                <p>Пользователь может отключить использование cookie в настройках браузера, однако это может повлиять на функциональность сайта.</p>
+
+                <h2>8. Изменение Политики</h2>
+                <p>Оператор имеет право вносить изменения в настоящую Политику. Новая редакция Политики вступает в силу с момента ее размещения на сайте.</p>
+
+                <h2>9. Контактная информация</h2>
+                <p>По всем вопросам, связанным с обработкой персональных данных, пользователь может обратиться по адресу электронной почты: <a href="mailto:red-yar@mail.ru">red-yar@mail.ru</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__toggle">
+                <button class="footer__toggle-btn is-active" data-type="rent">В аренду</button>
+                <button class="footer__toggle-btn" data-type="buy">Для покупки</button>
+            </div>
+            <div class="footer__main">
+                <div class="footer__nav">
+                    <div class="footer__col">
+                        <span class="footer__col-title">Помещения</span>
+                        <a href="rent.html">В аренду</a>
+                        <a href="buy.html">Для покупки</a>
+                    </div>
+                    <div class="footer__col">
+                        <span class="footer__col-title">Компания</span>
+                        <a href="about.html">О парке</a>
+                        <a href="projects.html">Генплан</a>
+                        <a href="formats.html">Помещения</a>
+                    </div>
+                    <div class="footer__col">
+                        <span class="footer__col-title">Информация</span>
+                        <a href="news.html">Новости</a>
+                        <a href="contacts.html">Контакты</a>
+                    </div>
+                </div>
+                <div class="footer__contacts">
+                    <div class="footer__contact">
+                        <span>отдел продаж</span>
+                        <a href="tel:+73919899949">+7 (391) 989-99-49</a>
+                    </div>
+                    <div class="footer__contact">
+                        <span>мобильный</span>
+                        <a href="tel:+79240424900">+7 924 042-49-00</a>
+                    </div>
+                    <div class="footer__contact">
+                        <span>почта</span>
+                        <a href="mailto:red-yar@mail.ru">red-yar@mail.ru</a>
+                    </div>
+                </div>
+                <div class="footer__right">
+                    <address class="footer__address">660050, г. Красноярск,<br>ул. Кутузова, 1, стр. 37, оф. 307</address>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <span class="footer__copy">&copy; 2026 ООО «Красный Яр». Пром парк. ИНН: 2461029213</span>
+                <div class="footer__links">
+                    <a href="privacy.html">Политика обработки данных</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

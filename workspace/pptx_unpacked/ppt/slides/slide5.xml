@@ -1,0 +1,988 @@
+<?xml version="1.0" encoding="ascii"?>
+<p:sld xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main">
+  <p:cSld>
+    <p:spTree>
+      <p:nvGrpSpPr>
+        <p:cNvPr id="1" name=""/>
+        <p:cNvGrpSpPr/>
+        <p:nvPr/>
+      </p:nvGrpSpPr>
+      <p:grpSpPr>
+        <a:xfrm>
+          <a:off x="0" y="0"/>
+          <a:ext cx="0" cy="0"/>
+          <a:chOff x="0" y="0"/>
+          <a:chExt cx="0" cy="0"/>
+        </a:xfrm>
+      </p:grpSpPr>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="12" name="object 12"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="6195509" y="8509040"/>
+            <a:ext cx="12092940" cy="1778000"/>
+          </a:xfrm>
+          <a:custGeom>
+            <a:avLst/>
+            <a:gdLst/>
+            <a:ahLst/>
+            <a:cxnLst/>
+            <a:rect l="l" t="t" r="r" b="b"/>
+            <a:pathLst>
+              <a:path w="12092940" h="1778000">
+                <a:moveTo>
+                  <a:pt x="12092489" y="1777959"/>
+                </a:moveTo>
+                <a:lnTo>
+                  <a:pt x="0" y="1777959"/>
+                </a:lnTo>
+                <a:lnTo>
+                  <a:pt x="856982" y="0"/>
+                </a:lnTo>
+                <a:lnTo>
+                  <a:pt x="12092489" y="0"/>
+                </a:lnTo>
+                <a:lnTo>
+                  <a:pt x="12092489" y="1777959"/>
+                </a:lnTo>
+                <a:close/>
+              </a:path>
+            </a:pathLst>
+          </a:custGeom>
+          <a:solidFill>
+            <a:srgbClr val="FF3030"/>
+          </a:solidFill>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" lIns="0" tIns="0" rIns="0" bIns="0" rtlCol="0"/>
+          <a:lstStyle/>
+          <a:p>
+            <a:endParaRPr/>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="13" name="object 13"/>
+          <p:cNvSpPr txBox="1"/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="13785162" y="9229818"/>
+            <a:ext cx="3660977" cy="558800"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr vert="horz" wrap="square" lIns="0" tIns="12700" rIns="0" bIns="0" rtlCol="0">
+            <a:spAutoFit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr marL="12700">
+              <a:lnSpc>
+                <a:spcPct val="100000"/>
+              </a:lnSpc>
+              <a:spcBef>
+                <a:spcPts val="100"/>
+              </a:spcBef>
+              <a:tabLst>
+                <a:tab pos="1723389" algn="l"/>
+                <a:tab pos="4004945" algn="l"/>
+              </a:tabLst>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="ru-RU" sz="3500" b="1" spc="-645" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="FAF7F7"/>
+                </a:solidFill>
+                <a:latin typeface="Arial"/>
+                <a:cs typeface="Arial"/>
+              </a:rPr>
+              <a:t>&#1052;&#1045;&#1057;&#1058;&#1054;&#1055;&#1054;&#1051;&#1040;&#1046;&#1045;&#1053;&#1048;&#1045;</a:t>
+            </a:r>
+            <a:endParaRPr sz="3500" dirty="0">
+              <a:latin typeface="Arial"/>
+              <a:cs typeface="Arial"/>
+            </a:endParaRPr>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="14" name="object 14"/>
+          <p:cNvSpPr txBox="1">
+            <a:spLocks noGrp="1"/>
+          </p:cNvSpPr>
+          <p:nvPr>
+            <p:ph type="title"/>
+          </p:nvPr>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="2813204" y="152200"/>
+            <a:ext cx="15381560" cy="1304203"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr vert="horz" wrap="square" lIns="0" tIns="11430" rIns="0" bIns="0" rtlCol="0">
+            <a:spAutoFit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr marL="12700" indent="-12700" algn="ctr">
+              <a:lnSpc>
+                <a:spcPct val="100000"/>
+              </a:lnSpc>
+              <a:spcBef>
+                <a:spcPts val="90"/>
+              </a:spcBef>
+              <a:tabLst>
+                <a:tab pos="841375" algn="l"/>
+                <a:tab pos="2499995" algn="l"/>
+                <a:tab pos="3604260" algn="l"/>
+                <a:tab pos="6092190" algn="l"/>
+                <a:tab pos="6644640" algn="l"/>
+                <a:tab pos="8302625" algn="l"/>
+              </a:tabLst>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="ru-RU" sz="4200" dirty="0">
+                <a:latin typeface="Arial"/>
+                <a:cs typeface="Arial"/>
+              </a:rPr>
+              <a:t>&#1052;&#1077;&#1089;&#1090;&#1086;&#1085;&#1072;&#1093;&#1086;&#1078;&#1076;&#1077;&#1085;&#1080;&#1077; </a:t>
+            </a:r>
+            <a:br>
+              <a:rPr lang="ru-RU" sz="4200" dirty="0">
+                <a:latin typeface="Arial"/>
+                <a:cs typeface="Arial"/>
+              </a:rPr>
+            </a:br>
+            <a:r>
+              <a:rPr lang="ru-RU" sz="4200" dirty="0">
+                <a:latin typeface="Arial"/>
+                <a:cs typeface="Arial"/>
+              </a:rPr>
+              <a:t>&#1048;&#1085;&#1076;&#1091;&#1089;&#1090;&#1088;&#1080;&#1072;&#1083;&#1100;&#1085;&#1086;&#1075;&#1086; &#1087;&#1072;&#1088;&#1082;&#1072; &#171;&#1050;&#1088;&#1072;&#1089;&#1085;&#1099;&#1081; &#1071;&#1088;&#187;</a:t>
+            </a:r>
+            <a:endParaRPr sz="4200" dirty="0">
+              <a:latin typeface="Arial"/>
+              <a:cs typeface="Arial"/>
+            </a:endParaRPr>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:pic>
+        <p:nvPicPr>
+          <p:cNvPr id="28" name="&#1056;&#1080;&#1089;&#1091;&#1085;&#1086;&#1082; 27">
+            <a:extLst>
+              <a:ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
+                <a16:creationId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" id="{85B61F8F-2103-4565-AFFC-49E2329E857E}"/>
+              </a:ext>
+            </a:extLst>
+          </p:cNvPr>
+          <p:cNvPicPr>
+            <a:picLocks noChangeAspect="1"/>
+          </p:cNvPicPr>
+          <p:nvPr/>
+        </p:nvPicPr>
+        <p:blipFill>
+          <a:blip r:embed="rId2">
+            <a:extLst>
+              <a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
+                <a14:useLocalDpi xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main" val="0"/>
+              </a:ext>
+            </a:extLst>
+          </a:blip>
+          <a:stretch>
+            <a:fillRect/>
+          </a:stretch>
+        </p:blipFill>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="2445632" y="1669499"/>
+            <a:ext cx="10438448" cy="5662913"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+        </p:spPr>
+      </p:pic>
+      <p:grpSp>
+        <p:nvGrpSpPr>
+          <p:cNvPr id="29" name="object 2">
+            <a:extLst>
+              <a:ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
+                <a16:creationId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" id="{11AED8B9-4B39-4900-8CA7-505F0A0785E7}"/>
+              </a:ext>
+            </a:extLst>
+          </p:cNvPr>
+          <p:cNvGrpSpPr/>
+          <p:nvPr/>
+        </p:nvGrpSpPr>
+        <p:grpSpPr>
+          <a:xfrm>
+            <a:off x="0" y="0"/>
+            <a:ext cx="2813685" cy="6064885"/>
+            <a:chOff x="0" y="0"/>
+            <a:chExt cx="2813685" cy="6064885"/>
+          </a:xfrm>
+        </p:grpSpPr>
+        <p:sp>
+          <p:nvSpPr>
+            <p:cNvPr id="30" name="object 3">
+              <a:extLst>
+                <a:ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
+                  <a16:creationId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" id="{00E15E40-D09C-4637-AFAE-716E4C9A64D8}"/>
+                </a:ext>
+              </a:extLst>
+            </p:cNvPr>
+            <p:cNvSpPr/>
+            <p:nvPr/>
+          </p:nvSpPr>
+          <p:spPr>
+            <a:xfrm>
+              <a:off x="0" y="0"/>
+              <a:ext cx="1221105" cy="2760980"/>
+            </a:xfrm>
+            <a:custGeom>
+              <a:avLst/>
+              <a:gdLst/>
+              <a:ahLst/>
+              <a:cxnLst/>
+              <a:rect l="l" t="t" r="r" b="b"/>
+              <a:pathLst>
+                <a:path w="1221105" h="2760980">
+                  <a:moveTo>
+                    <a:pt x="582394" y="2760856"/>
+                  </a:moveTo>
+                  <a:lnTo>
+                    <a:pt x="0" y="2760856"/>
+                  </a:lnTo>
+                  <a:lnTo>
+                    <a:pt x="0" y="2227064"/>
+                  </a:lnTo>
+                  <a:lnTo>
+                    <a:pt x="515031" y="0"/>
+                  </a:lnTo>
+                  <a:lnTo>
+                    <a:pt x="1220871" y="0"/>
+                  </a:lnTo>
+                  <a:lnTo>
+                    <a:pt x="582394" y="2760856"/>
+                  </a:lnTo>
+                  <a:close/>
+                </a:path>
+              </a:pathLst>
+            </a:custGeom>
+            <a:solidFill>
+              <a:srgbClr val="FF3030">
+                <a:alpha val="89999"/>
+              </a:srgbClr>
+            </a:solidFill>
+          </p:spPr>
+          <p:txBody>
+            <a:bodyPr wrap="square" lIns="0" tIns="0" rIns="0" bIns="0" rtlCol="0"/>
+            <a:lstStyle/>
+            <a:p>
+              <a:endParaRPr/>
+            </a:p>
+          </p:txBody>
+        </p:sp>
+        <p:sp>
+          <p:nvSpPr>
+            <p:cNvPr id="31" name="object 4">
+              <a:extLst>
+                <a:ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
+                  <a16:creationId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" id="{75EF7158-F83A-4395-BAAD-3A7A72E4E3BC}"/>
+                </a:ext>
+              </a:extLst>
+            </p:cNvPr>
+            <p:cNvSpPr/>
+            <p:nvPr/>
+          </p:nvSpPr>
+          <p:spPr>
+            <a:xfrm>
+              <a:off x="0" y="392424"/>
+              <a:ext cx="2055495" cy="2789555"/>
+            </a:xfrm>
+            <a:custGeom>
+              <a:avLst/>
+              <a:gdLst/>
+              <a:ahLst/>
+              <a:cxnLst/>
+              <a:rect l="l" t="t" r="r" b="b"/>
+              <a:pathLst>
+                <a:path w="2055495" h="2789555">
+                  <a:moveTo>
+                    <a:pt x="1161068" y="2789155"/>
+                  </a:moveTo>
+                  <a:lnTo>
+                    <a:pt x="0" y="2789155"/>
+                  </a:lnTo>
+                  <a:lnTo>
+                    <a:pt x="0" y="505113"/>
+                  </a:lnTo>
+                  <a:lnTo>
+                    <a:pt x="161936" y="0"/>
+                  </a:lnTo>
+                  <a:lnTo>
+                    <a:pt x="2055257" y="0"/>
+                  </a:lnTo>
+                  <a:lnTo>
+                    <a:pt x="1161068" y="2789155"/>
+                  </a:lnTo>
+                  <a:close/>
+                </a:path>
+              </a:pathLst>
+            </a:custGeom>
+            <a:solidFill>
+              <a:srgbClr val="FF3030">
+                <a:alpha val="59999"/>
+              </a:srgbClr>
+            </a:solidFill>
+          </p:spPr>
+          <p:txBody>
+            <a:bodyPr wrap="square" lIns="0" tIns="0" rIns="0" bIns="0" rtlCol="0"/>
+            <a:lstStyle/>
+            <a:p>
+              <a:endParaRPr/>
+            </a:p>
+          </p:txBody>
+        </p:sp>
+        <p:sp>
+          <p:nvSpPr>
+            <p:cNvPr id="32" name="object 5">
+              <a:extLst>
+                <a:ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
+                  <a16:creationId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" id="{B3CCC2D9-FBA2-412F-910A-850896B307AC}"/>
+                </a:ext>
+              </a:extLst>
+            </p:cNvPr>
+            <p:cNvSpPr/>
+            <p:nvPr/>
+          </p:nvSpPr>
+          <p:spPr>
+            <a:xfrm>
+              <a:off x="1287934" y="0"/>
+              <a:ext cx="1525270" cy="1520190"/>
+            </a:xfrm>
+            <a:custGeom>
+              <a:avLst/>
+              <a:gdLst/>
+              <a:ahLst/>
+              <a:cxnLst/>
+              <a:rect l="l" t="t" r="r" b="b"/>
+              <a:pathLst>
+                <a:path w="1525270" h="1520190">
+                  <a:moveTo>
+                    <a:pt x="1173705" y="1519949"/>
+                  </a:moveTo>
+                  <a:lnTo>
+                    <a:pt x="0" y="1519949"/>
+                  </a:lnTo>
+                  <a:lnTo>
+                    <a:pt x="351503" y="0"/>
+                  </a:lnTo>
+                  <a:lnTo>
+                    <a:pt x="1525212" y="0"/>
+                  </a:lnTo>
+                  <a:lnTo>
+                    <a:pt x="1173705" y="1519949"/>
+                  </a:lnTo>
+                  <a:close/>
+                </a:path>
+              </a:pathLst>
+            </a:custGeom>
+            <a:solidFill>
+              <a:srgbClr val="FF3030"/>
+            </a:solidFill>
+          </p:spPr>
+          <p:txBody>
+            <a:bodyPr wrap="square" lIns="0" tIns="0" rIns="0" bIns="0" rtlCol="0"/>
+            <a:lstStyle/>
+            <a:p>
+              <a:endParaRPr/>
+            </a:p>
+          </p:txBody>
+        </p:sp>
+        <p:sp>
+          <p:nvSpPr>
+            <p:cNvPr id="33" name="object 6">
+              <a:extLst>
+                <a:ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
+                  <a16:creationId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" id="{68E59CCF-61BC-4FCC-B3FB-41AA41DD3789}"/>
+                </a:ext>
+              </a:extLst>
+            </p:cNvPr>
+            <p:cNvSpPr/>
+            <p:nvPr/>
+          </p:nvSpPr>
+          <p:spPr>
+            <a:xfrm>
+              <a:off x="133658" y="2194413"/>
+              <a:ext cx="1791335" cy="3870325"/>
+            </a:xfrm>
+            <a:custGeom>
+              <a:avLst/>
+              <a:gdLst/>
+              <a:ahLst/>
+              <a:cxnLst/>
+              <a:rect l="l" t="t" r="r" b="b"/>
+              <a:pathLst>
+                <a:path w="1791335" h="3870325">
+                  <a:moveTo>
+                    <a:pt x="895832" y="3870278"/>
+                  </a:moveTo>
+                  <a:lnTo>
+                    <a:pt x="0" y="3870278"/>
+                  </a:lnTo>
+                  <a:lnTo>
+                    <a:pt x="895041" y="0"/>
+                  </a:lnTo>
+                  <a:lnTo>
+                    <a:pt x="1790873" y="0"/>
+                  </a:lnTo>
+                  <a:lnTo>
+                    <a:pt x="895832" y="3870278"/>
+                  </a:lnTo>
+                  <a:close/>
+                </a:path>
+              </a:pathLst>
+            </a:custGeom>
+            <a:solidFill>
+              <a:srgbClr val="FF3030">
+                <a:alpha val="92999"/>
+              </a:srgbClr>
+            </a:solidFill>
+          </p:spPr>
+          <p:txBody>
+            <a:bodyPr wrap="square" lIns="0" tIns="0" rIns="0" bIns="0" rtlCol="0"/>
+            <a:lstStyle/>
+            <a:p>
+              <a:endParaRPr/>
+            </a:p>
+          </p:txBody>
+        </p:sp>
+      </p:grpSp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="34" name="object 17">
+            <a:extLst>
+              <a:ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
+                <a16:creationId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" id="{9569589C-3BC6-4FC3-9489-F1C01179D648}"/>
+              </a:ext>
+            </a:extLst>
+          </p:cNvPr>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="9764221" y="4943999"/>
+            <a:ext cx="3037812" cy="599297"/>
+          </a:xfrm>
+          <a:custGeom>
+            <a:avLst/>
+            <a:gdLst/>
+            <a:ahLst/>
+            <a:cxnLst/>
+            <a:rect l="l" t="t" r="r" b="b"/>
+            <a:pathLst>
+              <a:path w="4038600" h="760095">
+                <a:moveTo>
+                  <a:pt x="3751274" y="759610"/>
+                </a:moveTo>
+                <a:lnTo>
+                  <a:pt x="0" y="759610"/>
+                </a:lnTo>
+                <a:lnTo>
+                  <a:pt x="286937" y="0"/>
+                </a:lnTo>
+                <a:lnTo>
+                  <a:pt x="4038213" y="0"/>
+                </a:lnTo>
+                <a:lnTo>
+                  <a:pt x="3751274" y="759610"/>
+                </a:lnTo>
+                <a:close/>
+              </a:path>
+            </a:pathLst>
+          </a:custGeom>
+          <a:solidFill>
+            <a:srgbClr val="FF3030">
+              <a:alpha val="75999"/>
+            </a:srgbClr>
+          </a:solidFill>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" lIns="0" tIns="0" rIns="0" bIns="0" rtlCol="0"/>
+          <a:lstStyle/>
+          <a:p>
+            <a:endParaRPr dirty="0"/>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="36" name="object 18">
+            <a:extLst>
+              <a:ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
+                <a16:creationId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" id="{2DCC5C58-6690-4B51-8DD4-3A62EBF1A439}"/>
+              </a:ext>
+            </a:extLst>
+          </p:cNvPr>
+          <p:cNvSpPr txBox="1"/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="9989890" y="4974067"/>
+            <a:ext cx="2935214" cy="523861"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr vert="horz" wrap="square" lIns="0" tIns="12065" rIns="0" bIns="0" rtlCol="0">
+            <a:spAutoFit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr marL="12700" marR="5080" indent="-12700" algn="l" defTabSz="606425">
+              <a:lnSpc>
+                <a:spcPct val="106300"/>
+              </a:lnSpc>
+              <a:spcBef>
+                <a:spcPts val="95"/>
+              </a:spcBef>
+              <a:tabLst>
+                <a:tab pos="1609725" algn="l"/>
+                <a:tab pos="2238375" algn="l"/>
+                <a:tab pos="2416175" algn="l"/>
+              </a:tabLst>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="ru-RU" sz="1600" spc="-10" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="tx1"/>
+                </a:solidFill>
+                <a:latin typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+                <a:cs typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+              </a:rPr>
+              <a:t>&#1054;&#1054;&#1054; </a:t>
+            </a:r>
+            <a:r>
+              <a:rPr sz="1600" spc="-10" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="tx1"/>
+                </a:solidFill>
+                <a:latin typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+                <a:cs typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+              </a:rPr>
+              <a:t>&#171;&#1050;&#1056;&#1040;&#1057;&#1053;&#1067;&#1049;</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr sz="1600" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="tx1"/>
+                </a:solidFill>
+                <a:latin typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+                <a:cs typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+              </a:rPr>
+              <a:t>	</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr sz="1600" spc="-25" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="tx1"/>
+                </a:solidFill>
+                <a:latin typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+                <a:cs typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+              </a:rPr>
+              <a:t>&#1071;&#1056;&#187; </a:t>
+            </a:r>
+            <a:endParaRPr lang="ru-RU" sz="1600" spc="-25" dirty="0">
+              <a:solidFill>
+                <a:schemeClr val="tx1"/>
+              </a:solidFill>
+              <a:latin typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+              <a:ea typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+              <a:cs typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr marL="12700" marR="5080" indent="-12700" algn="l" defTabSz="606425">
+              <a:lnSpc>
+                <a:spcPct val="106300"/>
+              </a:lnSpc>
+              <a:spcBef>
+                <a:spcPts val="95"/>
+              </a:spcBef>
+              <a:tabLst>
+                <a:tab pos="1339850" algn="l"/>
+                <a:tab pos="2238375" algn="l"/>
+                <a:tab pos="2416175" algn="l"/>
+              </a:tabLst>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="1600" spc="-10" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="tx1"/>
+                </a:solidFill>
+                <a:latin typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+                <a:cs typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+              </a:rPr>
+              <a:t>&#1059;&#1051;.&#1050;&#1059;&#1058;&#1059;&#1047;&#1054;&#1042;&#1040;</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr sz="1600" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="tx1"/>
+                </a:solidFill>
+                <a:latin typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+                <a:cs typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+              </a:rPr>
+              <a:t>	</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="ru-RU" sz="1600" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="tx1"/>
+                </a:solidFill>
+                <a:latin typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+                <a:cs typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+              </a:rPr>
+              <a:t>&#1076;.</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="ru-RU" sz="1600" spc="475" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="tx1"/>
+                </a:solidFill>
+                <a:latin typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+                <a:cs typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+              </a:rPr>
+              <a:t>1</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr sz="1600" spc="475" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="tx1"/>
+                </a:solidFill>
+                <a:latin typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+                <a:cs typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+              </a:rPr>
+              <a:t>,</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr sz="1600" spc="150" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="tx1"/>
+                </a:solidFill>
+                <a:latin typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+                <a:cs typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+              </a:rPr>
+              <a:t>&#1057;&#1058;&#1056;.37</a:t>
+            </a:r>
+            <a:endParaRPr sz="1600" dirty="0">
+              <a:solidFill>
+                <a:schemeClr val="tx1"/>
+              </a:solidFill>
+              <a:latin typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+              <a:ea typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+              <a:cs typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+            </a:endParaRPr>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:pic>
+        <p:nvPicPr>
+          <p:cNvPr id="37" name="object 10">
+            <a:extLst>
+              <a:ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
+                <a16:creationId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" id="{43DF0965-2E76-4E38-B7FE-A219E51F7F7B}"/>
+              </a:ext>
+            </a:extLst>
+          </p:cNvPr>
+          <p:cNvPicPr/>
+          <p:nvPr/>
+        </p:nvPicPr>
+        <p:blipFill>
+          <a:blip r:embed="rId3" cstate="print"/>
+          <a:stretch>
+            <a:fillRect/>
+          </a:stretch>
+        </p:blipFill>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="9028967" y="4796622"/>
+            <a:ext cx="904874" cy="904859"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+        </p:spPr>
+      </p:pic>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="39" name="&#1055;&#1088;&#1103;&#1084;&#1086;&#1091;&#1075;&#1086;&#1083;&#1100;&#1085;&#1080;&#1082; 38">
+            <a:extLst>
+              <a:ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
+                <a16:creationId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" id="{112ECC5A-884F-4A29-9DE3-372D0BC627F8}"/>
+              </a:ext>
+            </a:extLst>
+          </p:cNvPr>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="13064081" y="1646568"/>
+            <a:ext cx="5077382" cy="5371407"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square">
+            <a:spAutoFit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr indent="177800" algn="l">
+              <a:lnSpc>
+                <a:spcPct val="115000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="ru-RU" sz="2000" dirty="0">
+                <a:effectLst/>
+                <a:latin typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+                <a:cs typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+              </a:rPr>
+              <a:t>&#1048;&#1085;&#1076;&#1091;&#1089;&#1090;&#1088;&#1080;&#1072;&#1083;&#1100;&#1085;&#1099;&#1081; &#1087;&#1072;&#1088;&#1082; &#1087;&#1088;&#1077;&#1076;&#1089;&#1090;&#1072;&#1074;&#1083;&#1077;&#1085; &#1082;&#1086;&#1084;&#1087;&#1083;&#1077;&#1082;&#1089;&#1086;&#1084; &#1079;&#1076;&#1072;&#1085;&#1080;&#1081; &#1080; &#1089;&#1086;&#1086;&#1088;&#1091;&#1078;&#1077;&#1085;&#1080;&#1081; &#1086;&#1073;&#1077;&#1089;&#1087;&#1077;&#1095;&#1077;&#1085;&#1085;&#1099;&#1093; &#1080;&#1085;&#1078;&#1077;&#1085;&#1077;&#1088;&#1085;&#1086;&#1081; &#1080; &#1090;&#1088;&#1072;&#1085;&#1089;&#1087;&#1086;&#1088;&#1090;&#1085;&#1086;&#1081; &#1080;&#1085;&#1092;&#1088;&#1072;&#1089;&#1090;&#1088;&#1091;&#1082;&#1090;&#1091;&#1088;&#1086;&#1081;.</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:pPr indent="270510" algn="l">
+              <a:lnSpc>
+                <a:spcPct val="115000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="ru-RU" sz="2000" dirty="0">
+                <a:effectLst/>
+                <a:latin typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+                <a:cs typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+              </a:rPr>
+              <a:t>&#1055;&#1072;&#1088;&#1082; &#1080;&#1085;&#1090;&#1077;&#1075;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085; &#1074; &#1078;&#1080;&#1083;&#1091;&#1102; &#1079;&#1072;&#1089;&#1090;&#1088;&#1086;&#1081;&#1082;&#1091; &#1085;&#1086;&#1074;&#1086;&#1075;&#1086; &#1073;&#1086;&#1083;&#1100;&#1096;&#1086;&#1075;&#1086; </a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="ru-RU" sz="2000" dirty="0" err="1">
+                <a:effectLst/>
+                <a:latin typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+                <a:cs typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+              </a:rPr>
+              <a:t>&#1084;&#1082;&#1088;</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="ru-RU" sz="2000" dirty="0">
+                <a:effectLst/>
+                <a:latin typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+                <a:cs typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+              </a:rPr>
+              <a:t>. &#171;&#1052;&#1080;&#1095;&#1091;&#1088;&#1080;&#1085;&#1089;&#1082;&#1080;&#1081;&#187;.</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:pPr indent="269875" algn="l">
+              <a:lnSpc>
+                <a:spcPct val="115000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="ru-RU" sz="2000" dirty="0">
+                <a:effectLst/>
+                <a:latin typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+                <a:cs typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+              </a:rPr>
+              <a:t>&#1053;&#1072; &#1090;&#1077;&#1088;&#1088;&#1080;&#1090;&#1086;&#1088;&#1080;&#1080; &#1088;&#1072;&#1089;&#1087;&#1086;&#1083;&#1086;&#1078;&#1077;&#1085;&#1099; &#1087;&#1088;&#1086;&#1080;&#1079;&#1074;&#1086;&#1076;&#1089;&#1090;&#1074;&#1077;&#1085;&#1085;&#1099;&#1077;, &#1089;&#1082;&#1083;&#1072;&#1076;&#1089;&#1082;&#1080;&#1077; &#1080; &#1086;&#1092;&#1080;&#1089;&#1085;&#1099;&#1077; &#1087;&#1086;&#1084;&#1077;&#1097;&#1077;&#1085;&#1080;&#1103; &#1086;&#1073;&#1097;&#1077;&#1081; &#1087;&#1083;&#1086;&#1097;&#1072;&#1076;&#1100;&#1102; 50&#160;000 </a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="ru-RU" sz="2000" dirty="0" err="1">
+                <a:effectLst/>
+                <a:latin typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+                <a:cs typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+              </a:rPr>
+              <a:t>&#1082;&#1074;.&#1084;</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="ru-RU" sz="2000" dirty="0">
+                <a:effectLst/>
+                <a:latin typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+                <a:cs typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+              </a:rPr>
+              <a:t>, &#1085;&#1072; &#1079;&#1077;&#1084;&#1077;&#1083;&#1100;&#1085;&#1099;&#1093; &#1091;&#1095;&#1072;&#1089;&#1090;&#1082;&#1072;&#1093; &#1087;&#1083;&#1086;&#1097;&#1072;&#1076;&#1100;&#1102; 12,2  &#1043;&#1072;.</a:t>
+            </a:r>
+            <a:endParaRPr lang="ru-RU" sz="2000" dirty="0">
+              <a:latin typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+              <a:ea typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+              <a:cs typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr indent="269875" algn="l">
+              <a:lnSpc>
+                <a:spcPct val="115000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:endParaRPr lang="ru-RU" sz="2000" dirty="0">
+              <a:effectLst/>
+              <a:latin typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+              <a:ea typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+              <a:cs typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr indent="269875" algn="l">
+              <a:lnSpc>
+                <a:spcPct val="115000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="ru-RU" sz="2000" dirty="0">
+                <a:latin typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+                <a:cs typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+              </a:rPr>
+              <a:t>&#1055;&#1083;&#1086;&#1097;&#1072;&#1076;&#1100; &#1079;&#1077;&#1084;&#1077;&#1083;&#1100;&#1085;&#1099;&#1093; &#1091;&#1095;&#1072;&#1089;&#1090;&#1082;&#1086;&#1074; &#1087;&#1086;&#1076; &#1089;&#1090;&#1088;&#1086;&#1080;&#1090;&#1077;&#1083;&#1100;&#1089;&#1090;&#1074;&#1086; </a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="en-US" sz="2000" dirty="0">
+                <a:latin typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+                <a:cs typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+              </a:rPr>
+              <a:t>I </a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="ru-RU" sz="2000" dirty="0">
+                <a:latin typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+                <a:cs typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+              </a:rPr>
+              <a:t>&#1101;&#1090;&#1072;&#1087;&#1072; 2-&#1081; &#1086;&#1095;&#1077;&#1088;&#1077;&#1076;&#1080; &#1089;&#1086;&#1089;&#1090;&#1072;&#1074;&#1083;&#1103;&#1077;&#1090; 2,8 &#1043;&#1072;.</a:t>
+            </a:r>
+            <a:endParaRPr lang="ru-RU" sz="2000" dirty="0">
+              <a:effectLst/>
+              <a:latin typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+              <a:ea typeface="Tahoma" panose="020B0604030504040204" pitchFamily="34" charset="0"/>
+              <a:cs typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+            </a:endParaRPr>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="2" name="&#1055;&#1088;&#1103;&#1084;&#1086;&#1091;&#1075;&#1086;&#1083;&#1100;&#1085;&#1080;&#1082; 1">
+            <a:extLst>
+              <a:ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
+                <a16:creationId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" id="{6D46ABE9-F4A8-4416-8CB4-7241A312E31F}"/>
+              </a:ext>
+            </a:extLst>
+          </p:cNvPr>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="3505200" y="7498203"/>
+            <a:ext cx="7800533" cy="461665"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="none">
+            <a:spAutoFit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:r>
+              <a:rPr lang="ru-RU" sz="2400" dirty="0">
+                <a:latin typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+                <a:cs typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+              </a:rPr>
+              <a:t>&#1057;&#1089;&#1099;&#1083;&#1082;&#1072; &#1085;&#1072; &#1082;&#1072;&#1088;&#1090;&#1091;: </a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="ru-RU" sz="2400" dirty="0">
+                <a:latin typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+                <a:cs typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+                <a:hlinkClick r:id="rId4"/>
+              </a:rPr>
+              <a:t>https://yandex.ru/maps/-/CPaMyF0Q</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="ru-RU" sz="2400" dirty="0">
+                <a:latin typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+                <a:cs typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+              </a:rPr>
+              <a:t> </a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+    </p:spTree>
+  </p:cSld>
+  <p:clrMapOvr>
+    <a:masterClrMapping/>
+  </p:clrMapOvr>
+</p:sld>

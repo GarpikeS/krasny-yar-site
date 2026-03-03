@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ascii"?>
+<cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dcmitype="http://purl.org/dc/dcmitype/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <dc:title>BUILD-TO-SUIT</dc:title>
+  <dc:creator>&#1057;&#1077;&#1084;&#1077;&#1085;&#1086;&#1074; &#1050;&#1086;&#1085;&#1089;&#1090;&#1072;&#1085;&#1090;&#1080;&#1085; &#1057;&#1077;&#1088;&#1075;&#1077;&#1077;&#1074;&#1080;&#1095;</dc:creator>
+  <cp:lastModifiedBy>&#1057;&#1077;&#1084;&#1077;&#1085;&#1086;&#1074; &#1050;&#1086;&#1085;&#1089;&#1090;&#1072;&#1085;&#1090;&#1080;&#1085; &#1057;&#1077;&#1088;&#1075;&#1077;&#1077;&#1074;&#1080;&#1095;</cp:lastModifiedBy>
+  <cp:revision>45</cp:revision>
+  <cp:lastPrinted>2026-02-17T06:11:47Z</cp:lastPrinted>
+  <dcterms:created xsi:type="dcterms:W3CDTF">2026-02-13T03:13:52Z</dcterms:created>
+  <dcterms:modified xsi:type="dcterms:W3CDTF">2026-02-24T01:54:00Z</dcterms:modified>
+</cp:coreProperties>
