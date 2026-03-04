@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Документы промышленного парка «Красный Яр» — презентации, свидетельства, договоры">
+    <title>Документы — Промпарк Красный Яр</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .documents-section { padding: 80px 0 100px; background: #fafafa; }
+        .documents-section__container { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
+        .documents-section__header { text-align: center; margin-bottom: 60px; }
+        .documents-section__title { font-family: 'Oswald', sans-serif; font-size: 48px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.02em; margin-bottom: 16px; }
+        .documents-section__subtitle { font-size: 18px; color: #737373; max-width: 600px; margin: 0 auto; }
+        .documents-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+
+        /* Category styles */
+        .docs-category { margin-bottom: 60px; }
+        .docs-category:last-child { margin-bottom: 0; }
+        .docs-category__header {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+        .docs-category__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 28px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            color: #171717;
+            white-space: nowrap;
+        }
+        .docs-category__line {
+            flex: 1;
+            height: 2px;
+            background: linear-gradient(90deg, #c41e3a 0%, transparent 100%);
+        }
+        .docs-category__count {
+            background: #c41e3a;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 100px;
+            white-space: nowrap;
+        }
+
+        .doc-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.04), 0 4px 8px rgba(0,0,0,0.04), 0 16px 32px rgba(0,0,0,0.04);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+        .doc-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #c41e3a, #e63950);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .doc-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.04), 0 16px 24px rgba(0,0,0,0.08), 0 32px 64px rgba(0,0,0,0.12);
+        }
+        .doc-card:hover::before { transform: scaleX(1); }
+
+        .doc-card__icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, #c41e3a 0%, #e63950 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            position: relative;
+        }
+        .doc-card__icon svg { color: #fff; }
+        .doc-card__icon-badge {
+            position: absolute;
+            bottom: -4px;
+            right: -4px;
+            background: #fff;
+            color: #c41e3a;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            text-transform: uppercase;
+        }
+
+        .doc-card__content { flex: 1; }
+        .doc-card__name {
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            margin-bottom: 12px;
+            line-height: 1.3;
+            color: #171717;
+        }
+        .doc-card__desc {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #525252;
+            margin-bottom: 20px;
+        }
+        .doc-card__meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding-top: 20px;
+            border-top: 1px solid #f0f0f0;
+            margin-top: auto;
+        }
+        .doc-card__size {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: #737373;
+        }
+        .doc-card__size svg { width: 16px; height: 16px; opacity: 0.6; }
+
+        .doc-card__btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-left: auto;
+            padding: 10px 20px;
+            background: #171717;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .doc-card__btn:hover {
+            background: #c41e3a;
+            transform: translateX(2px);
+        }
+        .doc-card__btn svg {
+            width: 16px;
+            height: 16px;
+            transition: transform 0.3s;
+        }
+        .doc-card__btn:hover svg { transform: translateY(2px); }
+
+        /* Additional info section */
+        .documents-info {
+            margin-top: 60px;
+            padding: 40px;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.04), 0 4px 8px rgba(0,0,0,0.04);
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        .documents-info__icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e5e5e5 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .documents-info__icon svg { width: 36px; height: 36px; color: #737373; }
+        .documents-info__content { flex: 1; }
+        .documents-info__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            margin-bottom: 8px;
+        }
+        .documents-info__text { font-size: 15px; line-height: 1.6; color: #525252; }
+        .documents-info__link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            background: #c41e3a;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 500;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.3s, transform 0.3s;
+            flex-shrink: 0;
+        }
+        .documents-info__link:hover { background: #a01830; transform: translateY(-2px); }
+
+        @media (max-width: 1200px) {
+            .documents-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .documents-grid { grid-template-columns: 1fr; }
+            .documents-section__title { font-size: 36px; }
+            .documents-section { padding: 60px 0 80px; }
+            .documents-section__container { padding: 0 20px; }
+            .doc-card { padding: 24px; }
+            .documents-info { flex-direction: column; text-align: center; padding: 30px 20px; }
+            .documents-info__icon { margin-bottom: 20px; }
+        }
+    </style>
+</head>
+<body class="js js-loading">
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader__logo">
+            <img src="assets/images/logo.png" alt="Красный Яр" style="height: 120px; width: auto;">
+        </div>
+        <div class="preloader__content">
+            <div class="preloader__counter">
+                <span class="preloader__number" id="preloader-counter">0</span><span class="preloader__percent">%</span>
+            </div>
+            <div class="preloader__bar">
+                <div class="preloader__progress" id="preloader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header__inner">
+            <!-- Left: Logo -->
+            <div class="header__left">
+                <a href="index.html" class="header__logo">
+                    <img src="assets/images/logo.png" alt="Красный Яр" style="height: 40px; width: auto;">
+                </a>
+            </div>
+
+            <!-- Center: Navigation -->
+            <nav class="header__nav">
+                <!-- О парке Dropdown -->
+                <div class="header__dropdown">
+                    <button class="header__link header__link--dropdown">
+                        <span>О парке</span>
+                        <svg class="header__dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 4.5L6 7.5L9 4.5"/>
+                        </svg>
+                    </button>
+                    <div class="header__dropdown-menu">
+                        <div class="header__dropdown-inner">
+                            <a href="about.html" class="header__dropdown-link">О компании</a>
+                            <a href="infrastructure.html" class="header__dropdown-link">Инфраструктура</a>
+                            <a href="projects.html" class="header__dropdown-link">Генплан</a>
+                            <a href="residents.html" class="header__dropdown-link">Резиденты</a>
+                            <a href="news.html" class="header__dropdown-link">Новости</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Помещения Dropdown -->
+                <div class="header__dropdown">
+                    <button class="header__link header__link--dropdown">
+                        <span>Помещения</span>
+                        <svg class="header__dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 4.5L6 7.5L9 4.5"/>
+                        </svg>
+                    </button>
+                    <div class="header__dropdown-menu">
+                        <div class="header__dropdown-inner">
+                            <a href="rent.html" class="header__dropdown-link">Аренда</a>
+                            <a href="buy.html" class="header__dropdown-link">Покупка</a>
+                            <a href="formats.html" class="header__dropdown-link">Все форматы</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="buy.html" class="header__link">Инвесторам</a>
+                <a href="contacts.html" class="header__link">Контакты</a>
+            </nav>
+
+            <!-- Right: Phone + CTA -->
+            <div class="header__right">
+                <a href="tel:+73919899949" class="header__phone">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                    <span>+7 (391) 989-99-49</span>
+                </a>
+                <a href="rent.html" class="header__cta">
+                    <span>Подобрать</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <button class="header__burger" id="burger" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <!-- Sidebar Menu -->
+    <div class="menu" id="menu">
+        <div class="menu__inner">
+            <nav class="menu__nav">
+                <a href="about.html" class="menu__link">О парке</a>
+                <a href="formats.html" class="menu__link">Помещения</a>
+                <a href="buy.html" class="menu__link">Инвесторам</a>
+                <a href="contacts.html" class="menu__link">Контакты</a>
+            </nav>
+            <div class="menu__bottom">
+                <a href="tel:+73919899949" class="menu__call">
+                    <span>Позвонить нам</span>
+                    <strong>+7 (391) 989-99-49</strong>
+                </a>
+                <div class="menu__contacts">
+                    <div class="menu__contact">
+                        <span>мобильный</span>
+                        <a href="tel:+79240424900">+7 924 042-49-00</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Favorites Modal -->
+    <div class="modal" id="favorites-modal">
+        <div class="modal__overlay" data-close></div>
+        <div class="modal__box">
+            <button class="modal__close" data-close>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6L18 18"/>
+                </svg>
+            </button>
+            <div class="modal__content">
+                <div class="modal__icon">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M24 42L6 24C1.2 19.2 1.2 10.8 6 6C10.8 1.2 19.2 1.2 24 6C28.8 1.2 37.2 1.2 42 6C46.8 10.8 46.8 19.2 42 24L24 42Z"/>
+                    </svg>
+                </div>
+                <h3 class="modal__title">Избранное</h3>
+                <p class="modal__text">У вас пока нет сохранённых объектов.</p>
+                <a href="rent.html" class="modal__btn" data-close>Смотреть каталог</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Split Section -->
+    <section class="hero-split">
+        <div class="hero-split__container">
+            <div class="hero-split__left">
+                <h1 class="hero-split__heading">Документы</h1>
+                <p class="hero-split__text">Презентации, свидетельства, типовые договоры и техническая документация промышленного парка</p>
+                <a href="#documents" class="hero-split__btn" data-scroll-full>Смотреть документы</a>
+            </div>
+            <div class="hero-split__right">
+                <img src="assets/images/gallery/44.jpg" alt="Документы парка Красный Яр" class="hero-split__img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Documents Section -->
+    <section class="documents-section" id="documents">
+        <div class="documents-section__container">
+            <div class="documents-section__header" data-reveal="up">
+                <h2 class="documents-section__title">Скачать документы</h2>
+                <p class="documents-section__subtitle">Основные документы и материалы для ознакомления с промышленным парком</p>
+            </div>
+
+            <!-- Category: Инвесторам -->
+            <div class="docs-category" data-reveal="up">
+                <div class="docs-category__header">
+                    <h3 class="docs-category__title">Инвесторам</h3>
+                    <div class="docs-category__line"></div>
+                    <span class="docs-category__count">2 документа</span>
+                </div>
+                <div class="documents-grid">
+                    <div class="doc-card" data-reveal="up" data-delay="1">
+                        <div class="doc-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z"/>
+                                <polyline points="13,2 13,9 20,9"/>
+                                <line x1="9" y1="13" x2="15" y2="13"/>
+                                <line x1="9" y1="17" x2="15" y2="17"/>
+                            </svg>
+                            <span class="doc-card__icon-badge">PDF</span>
+                        </div>
+                        <div class="doc-card__content">
+                            <h3 class="doc-card__name">Презентация промышленного парка</h3>
+                            <p class="doc-card__desc">Полная презентация парка с описанием инфраструктуры, мощностей и преимуществ</p>
+                        </div>
+                        <div class="doc-card__meta">
+                            <span class="doc-card__size">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                                    <polyline points="7,10 12,15 17,10"/>
+                                    <line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                                8.5 MB
+                            </span>
+                            <a href="assets/docs/presentation.pdf" class="doc-card__btn" download>
+                                <span>Скачать</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                                    <polyline points="7,10 12,15 17,10"/>
+                                    <line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="doc-card" data-reveal="up" data-delay="2">
+                        <div class="doc-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                                <polyline points="14,2 14,8 20,8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                            </svg>
+                            <span class="doc-card__icon-badge">PDF</span>
+                        </div>
+                        <div class="doc-card__content">
+                            <h3 class="doc-card__name">Коммерческое предложение</h3>
+                            <p class="doc-card__desc">Актуальные условия аренды и покупки помещений, тарифы на услуги</p>
+                        </div>
+                        <div class="doc-card__meta">
+                            <span class="doc-card__size">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                                    <polyline points="7,10 12,15 17,10"/>
+                                    <line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                                2.3 MB
+                            </span>
+                            <a href="assets/docs/commercial-offer.pdf" class="doc-card__btn" download>
+                                <span>Скачать</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                                    <polyline points="7,10 12,15 17,10"/>
+                                    <line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category: Резидентам -->
+            <div class="docs-category" data-reveal="up">
+                <div class="docs-category__header">
+                    <h3 class="docs-category__title">Резидентам</h3>
+                    <div class="docs-category__line"></div>
+                    <span class="docs-category__count">3 документа</span>
+                </div>
+                <div class="documents-grid">
+                    <div class="doc-card" data-reveal="up" data-delay="1">
+                        <div class="doc-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                                <polyline points="14,2 14,8 20,8"/>
+                                <path d="M12 18v-6"/>
+                                <path d="M9 15l3 3 3-3"/>
+                            </svg>
+                            <span class="doc-card__icon-badge">PDF</span>
+                        </div>
+                        <div class="doc-card__content">
+                            <h3 class="doc-card__name">Договор аренды (образец)</h3>
+                            <p class="doc-card__desc">Типовой договор аренды с описанием условий и обязанностей сторон</p>
+                        </div>
+                        <div class="doc-card__meta">
+                            <span class="doc-card__size">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                                    <polyline points="7,10 12,15 17,10"/>
+                                    <line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                                456 KB
+                            </span>
+                            <a href="assets/docs/lease-agreement.pdf" class="doc-card__btn" download>
+                                <span>Скачать</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                                    <polyline points="7,10 12,15 17,10"/>
+                                    <line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="doc-card" data-reveal="up" data-delay="2">
+                        <div class="doc-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
+                            </svg>
+                            <span class="doc-card__icon-badge">PDF</span>
+                        </div>
+                        <div class="doc-card__content">
+                            <h3 class="doc-card__name">Технические условия подключения</h3>
+                            <p class="doc-card__desc">Условия подключения к электро-, водо-, теплоснабжению и канализации</p>
+                        </div>
+                        <div class="doc-card__meta">
+                            <span class="doc-card__size">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                                    <polyline points="7,10 12,15 17,10"/>
+                                    <line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                                3.1 MB
+                            </span>
+                            <a href="assets/docs/technical-conditions.pdf" class="doc-card__btn" download>
+                                <span>Скачать</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                                    <polyline points="7,10 12,15 17,10"/>
+                                    <line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="doc-card" data-reveal="up" data-delay="3">
+                        <div class="doc-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                            <span class="doc-card__icon-badge">PDF</span>
+                        </div>
+                        <div class="doc-card__content">
+                            <h3 class="doc-card__name">Правила пропускного режима</h3>
+                            <p class="doc-card__desc">Порядок оформления пропусков, правила въезда и парковки на территории</p>
+                        </div>
+                        <div class="doc-card__meta">
+                            <span class="doc-card__size">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                                    <polyline points="7,10 12,15 17,10"/>
+                                    <line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                                890 KB
+                            </span>
+                            <a href="assets/docs/access-rules.pdf" class="doc-card__btn" download>
+                                <span>Скачать</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                                    <polyline points="7,10 12,15 17,10"/>
+                                    <line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category: Официальные документы -->
+            <div class="docs-category" data-reveal="up">
+                <div class="docs-category__header">
+                    <h3 class="docs-category__title">Официальные документы</h3>
+                    <div class="docs-category__line"></div>
+                    <span class="docs-category__count">2 документа</span>
+                </div>
+                <div class="documents-grid">
+                    <div class="doc-card" data-reveal="up" data-delay="1">
+                        <div class="doc-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="8" r="5"/>
+                                <path d="M12 13v8"/>
+                                <path d="M9 18l3 3 3-3"/>
+                            </svg>
+                            <span class="doc-card__icon-badge">PDF</span>
+                        </div>
+                        <div class="doc-card__content">
+                            <h3 class="doc-card__name">Свидетельство Минпромторга</h3>
+                            <p class="doc-card__desc">Свидетельство о включении в федеральный реестр промышленных парков России</p>
+                        </div>
+                        <div class="doc-card__meta">
+                            <span class="doc-card__size">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                                    <polyline points="7,10 12,15 17,10"/>
+                                    <line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                                1.8 MB
+                            </span>
+                            <a href="assets/docs/certificate.pdf" class="doc-card__btn" download>
+                                <span>Скачать</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                                    <polyline points="7,10 12,15 17,10"/>
+                                    <line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="doc-card" data-reveal="up" data-delay="2">
+                        <div class="doc-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="3" y1="9" x2="21" y2="9"/>
+                                <line x1="9" y1="21" x2="9" y2="9"/>
+                            </svg>
+                            <span class="doc-card__icon-badge">PDF</span>
+                        </div>
+                        <div class="doc-card__content">
+                            <h3 class="doc-card__name">Генеральный план парка</h3>
+                            <p class="doc-card__desc">Схема расположения зданий, инженерных сетей и свободных площадей</p>
+                        </div>
+                        <div class="doc-card__meta">
+                            <span class="doc-card__size">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                                    <polyline points="7,10 12,15 17,10"/>
+                                    <line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                                5.2 MB
+                            </span>
+                            <a href="assets/docs/master-plan.pdf" class="doc-card__btn" download>
+                                <span>Скачать</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                                    <polyline points="7,10 12,15 17,10"/>
+                                    <line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Info Block -->
+            <div class="documents-info" data-reveal="up">
+                <div class="documents-info__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="12" y1="16" x2="12" y2="12"/>
+                        <line x1="12" y1="8" x2="12.01" y2="8"/>
+                    </svg>
+                </div>
+                <div class="documents-info__content">
+                    <h3 class="documents-info__title">Нужен другой документ?</h3>
+                    <p class="documents-info__text">Если вам необходимы дополнительные документы или информация, свяжитесь с нами — менеджер подготовит и отправит нужные материалы.</p>
+                </div>
+                <a href="contacts.html" class="documents-info__link">
+                    <span>Связаться с нами</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M3 8H13M9 4L13 8L9 12"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__main">
+                <div class="footer__nav">
+                    <div class="footer__col">
+                        <span class="footer__col-title">Помещения</span>
+                        <a href="rent.html">В аренду</a>
+                        <a href="buy.html">Для покупки</a>
+                    </div>
+                    <div class="footer__col">
+                        <span class="footer__col-title">Компания</span>
+                        <a href="about.html">О компании</a>
+                        <a href="projects.html">Проекты</a>
+                        <a href="formats.html">Форматы</a>
+                    </div>
+                    <div class="footer__col">
+                        <span class="footer__col-title">Информация</span>
+                        <a href="buy.html">Инвесторам</a>
+                        <a href="news.html">Новости</a>
+                        <a href="residents.html">Резиденты</a>
+                        <a href="contacts.html">Контакты</a>
+                    </div>
+                </div>
+                <div class="footer__contacts">
+                    <div class="footer__contact">
+                        <span>отдел продаж</span>
+                        <a href="tel:+73919899949">+7 (391) 989-99-49</a>
+                    </div>
+                    <div class="footer__contact">
+                        <span>мобильный</span>
+                        <a href="tel:+79240424900">+7 924 042-49-00</a>
+                    </div>
+                    <div class="footer__contact">
+                        <span>почта</span>
+                        <a href="mailto:red-yar@mail.ru">red-yar@mail.ru</a>
+                    </div>
+                </div>
+                <div class="footer__right">
+                    <div class="footer__map-block">
+                        <div class="footer__map">
+                            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Akrasnyy_yar&source=constructor&ll=92.796944%2C56.077222&z=15&pt=92.796944%2C56.077222%2Cpm2rdm1" width="300" height="250" frameborder="0"></iframe>
+                        </div>
+                        <address class="footer__address">660050, г. Красноярск,<br>ул. Кутузова, 1, стр. 37, оф. 307</address>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <span class="footer__copy">&copy; 2026 ООО «Красный Яр»</span>
+                <span class="footer__divider">|</span>
+                <a href="/privacy">Политика обработки данных</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget" id="chat-widget">
+        <button class="chat-widget__btn" id="chat-toggle">
+            <svg class="chat-widget__icon chat-widget__icon--chat" width="28" height="28" viewBox="0 0 28 28" fill="currentColor">
+                <path d="M14 2C7.373 2 2 6.925 2 13c0 2.862 1.181 5.47 3.105 7.43L4 26l5.845-2.338A13.053 13.053 0 0014 24c6.627 0 12-4.925 12-11S20.627 2 14 2zm0 2c5.514 0 10 4.037 10 9s-4.486 9-10 9a11.07 11.07 0 01-3.846-.686l-.54-.2-3.608 1.443.995-3.736-.334-.393C5.18 17.148 4 15.183 4 13c0-4.963 4.486-9 10-9z"/>
+            </svg>
+            <svg class="chat-widget__icon chat-widget__icon--close" width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 8L8 20M8 8L20 20"/>
+            </svg>
+        </button>
+        <div class="chat-widget__panel" id="chat-panel">
+            <div class="chat-widget__header">
+                <span class="chat-widget__status"></span>
+                <span>Онлайн-консультант</span>
+            </div>
+            <div class="chat-widget__body">
+                <div class="chat-widget__message chat-widget__message--bot">
+                    <p>Здравствуйте! Нужна помощь с документами?</p>
+                </div>
+                <div class="chat-widget__options">
+                    <button class="chat-widget__option" data-question="docs">Получить документы</button>
+                    <button class="chat-widget__option" data-question="rent">Аренда помещений</button>
+                    <button class="chat-widget__option" data-question="tour">Записаться на просмотр</button>
+                    <button class="chat-widget__option" data-question="other">Другой вопрос</button>
+                </div>
+            </div>
+            <form class="chat-widget__form" id="chat-form">
+                <input type="text" class="chat-widget__input" placeholder="Введите сообщение..." disabled>
+                <button type="submit" class="chat-widget__send" disabled>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M2.94 17.94L18.94 10.94a1 1 0 000-1.88L2.94 2.06A1 1 0 001.5 3.12L3.5 10l-2 6.88a1 1 0 001.44 1.06z"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookie-banner">
+        <div class="cookie-banner__content">
+            <p class="cookie-banner__text">Мы используем файлы cookie для улучшения работы сайта.</p>
+            <div class="cookie-banner__actions">
+                <button class="cookie-banner__btn cookie-banner__btn--accept" id="accept-cookies">Принять</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

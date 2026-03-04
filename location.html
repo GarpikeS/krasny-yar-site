@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Расположение Пром парка «Красный Яр» — удобная транспортная доступность, собственная ж/д ветка, близость к федеральной трассе М-53">
-    <title>Расположение — Пром парк Красный Яр</title>
+    <meta name="description" content="Расположение Промпарка «Красный Яр» — удобная транспортная доступность, собственная ж/д ветка, близость к федеральной трассе М-53">
+    <title>Расположение — Промпарк Красный Яр</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -45,61 +45,35 @@
     <!-- Header -->
     <header class="header" id="header">
         <div class="header__inner">
-            <!-- Left: Logo + Call -->
+            <!-- Left: Logo -->
             <div class="header__left">
                 <a href="index.html" class="header__logo">
                     <img src="assets/images/logo.png" alt="Красный Яр" style="height: 40px; width: auto;">
                 </a>
-                <div class="header__dropdown header__dropdown--call">
-                    <button class="header__call">
-                        <span>Позвонить нам</span>
-                        <svg class="header__dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M3 4.5L6 7.5L9 4.5"/>
-                        </svg>
-                    </button>
-                    <div class="header__dropdown-menu header__dropdown-menu--call">
-                        <div class="header__dropdown-inner">
-                            <div class="header__phone-item">
-                                <span class="header__phone-label">отдел продаж</span>
-                                <a href="tel:+73919899949" class="header__phone-number">+7 (391) 989-99-49</a>
-                            </div>
-                            <div class="header__phone-item">
-                                <span class="header__phone-label">мобильный</span>
-                                <a href="tel:+79240424900" class="header__phone-number">+7 924 042-49-00</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <!-- Center: Navigation -->
             <nav class="header__nav">
-                <a href="about.html" class="header__link">О парке</a>
-
-                <!-- Infrastructure Dropdown -->
+                <!-- О парке Dropdown -->
                 <div class="header__dropdown">
                     <button class="header__link header__link--dropdown">
-                        <span>Инфраструктура</span>
+                        <span>О парке</span>
                         <svg class="header__dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
                             <path d="M3 4.5L6 7.5L9 4.5"/>
                         </svg>
                     </button>
                     <div class="header__dropdown-menu">
                         <div class="header__dropdown-inner">
-                            <a href="powers.html" class="header__dropdown-link">Мощности парка</a>
-                            <a href="communications.html" class="header__dropdown-link">Коммуникации</a>
-                            <a href="location.html" class="header__dropdown-link">Расположение</a>
-                            <a href="projects.html" class="header__dropdown-all">
-                                <span>Генплан</span>
-                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
-                                    <path d="M2.5 7H11.5M8 3.5L11.5 7L8 10.5"/>
-                                </svg>
-                            </a>
+                            <a href="about.html" class="header__dropdown-link">О компании</a>
+                            <a href="infrastructure.html" class="header__dropdown-link">Инфраструктура</a>
+                            <a href="projects.html" class="header__dropdown-link">Генплан</a>
+                            <a href="residents.html" class="header__dropdown-link">Резиденты</a>
+                            <a href="news.html" class="header__dropdown-link">Новости</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Formats Dropdown -->
+                <!-- Помещения Dropdown -->
                 <div class="header__dropdown">
                     <button class="header__link header__link--dropdown">
                         <span>Помещения</span>
@@ -109,52 +83,31 @@
                     </button>
                     <div class="header__dropdown-menu">
                         <div class="header__dropdown-inner">
-                            <a href="formats.html" class="header__dropdown-link">Производственные</a>
-                            <a href="formats.html" class="header__dropdown-link">Складские</a>
-                            <a href="formats.html" class="header__dropdown-link">Офисные</a>
-                            <a href="formats.html" class="header__dropdown-all">
-                                <span>Все форматы</span>
-                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
-                                    <path d="M2.5 7H11.5M8 3.5L11.5 7L8 10.5"/>
-                                </svg>
-                            </a>
+                            <a href="rent.html" class="header__dropdown-link">Аренда</a>
+                            <a href="buy.html" class="header__dropdown-link">Покупка</a>
+                            <a href="formats.html" class="header__dropdown-link">Все форматы</a>
                         </div>
                     </div>
                 </div>
 
                 <a href="buy.html" class="header__link">Инвесторам</a>
-                <a href="#residents" class="header__link">Резиденты</a>
-                <a href="news.html" class="header__link">Новости</a>
                 <a href="contacts.html" class="header__link">Контакты</a>
             </nav>
 
-            <!-- Right: Button + Favorites + Burger -->
+            <!-- Right: Phone + CTA -->
             <div class="header__right">
-                <div class="header__dropdown header__dropdown--select">
-                    <button class="header__btn">
-                        <span>Выбрать помещение</span>
-                        <svg class="header__dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M3 4.5L6 7.5L9 4.5"/>
-                        </svg>
-                    </button>
-                    <div class="header__dropdown-menu header__dropdown-menu--select">
-                        <div class="header__dropdown-inner">
-                            <a href="rent.html" class="header__select-link">
-                                <span class="header__select-title">В аренду</span>
-                                <span class="header__select-desc">Складские и производственные помещения</span>
-                            </a>
-                            <a href="buy.html" class="header__select-link">
-                                <span class="header__select-title">Для покупки</span>
-                                <span class="header__select-desc">Готовые объекты и земельные участки</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <button class="header__fav" aria-label="Избранное">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M10 17.5L2.5 10C0.5 8 0.5 4.5 2.5 2.5C4.5 0.5 8 0.5 10 2.5C12 0.5 15.5 0.5 17.5 2.5C19.5 4.5 19.5 8 17.5 10L10 17.5Z"/>
+                <a href="tel:+73919899949" class="header__phone">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                     </svg>
-                </button>
+                    <span>+7 (391) 989-99-49</span>
+                </a>
+                <a href="rent.html" class="header__cta">
+                    <span>Подобрать</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
                 <button class="header__burger" id="burger" aria-label="Меню">
                     <span></span>
                     <span></span>
@@ -169,18 +122,10 @@
     <!-- Sidebar Menu -->
     <div class="menu" id="menu">
         <div class="menu__inner">
-            <!-- Toggle rent/buy -->
-            <div class="menu__toggle">
-                <button class="menu__toggle-btn is-active" data-type="rent">В аренду</button>
-                <button class="menu__toggle-btn" data-type="buy">Для покупки</button>
-            </div>
             <nav class="menu__nav">
                 <a href="about.html" class="menu__link">О парке</a>
-                <a href="projects.html" class="menu__link">Генплан</a>
                 <a href="formats.html" class="menu__link">Помещения</a>
                 <a href="buy.html" class="menu__link">Инвесторам</a>
-                <a href="residents.html" class="menu__link">Резиденты</a>
-                <a href="news.html" class="menu__link">Новости</a>
                 <a href="contacts.html" class="menu__link">Контакты</a>
             </nav>
             <div class="menu__bottom">
@@ -190,26 +135,9 @@
                 </a>
                 <div class="menu__contacts">
                     <div class="menu__contact">
-                        <span>отдел продаж</span>
+                        <span>мобильный</span>
                         <a href="tel:+79240424900">+7 924 042-49-00</a>
                     </div>
-                </div>
-                <div class="menu__socials">
-                    <a href="#" aria-label="YouTube">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M19.582 5.182a2.506 2.506 0 00-1.764-1.764C16.254 3 10 3 10 3s-6.254 0-7.818.418A2.506 2.506 0 00.418 5.182C0 6.746 0 10 0 10s0 3.254.418 4.818a2.506 2.506 0 001.764 1.764C3.746 17 10 17 10 17s6.254 0 7.818-.418a2.506 2.506 0 001.764-1.764C20 13.254 20 10 20 10s0-3.254-.418-4.818zM8 13V7l5.196 3L8 13z"/>
-                        </svg>
-                    </a>
-                    <a href="#" aria-label="Telegram">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M10 0C4.478 0 0 4.478 0 10s4.478 10 10 10 10-4.478 10-10S15.522 0 10 0zm4.7 6.833c-.125 1.317-.667 4.517-.942 5.992-.117.625-.35.833-.575.858-.483.042-.85-.317-1.317-.625-.733-.483-1.15-.783-1.858-1.25-.825-.542-.292-.842.183-1.325.125-.125 2.259-2.067 2.3-2.242a.17.17 0 00-.039-.147c-.05-.038-.12-.025-.171-.015-.073.015-1.241.789-3.504 2.317a1.63 1.63 0 01-.924.353c-.304-.006-.889-.172-1.324-.314-.534-.174-.958-.266-.921-.561.019-.154.232-.311.638-.472 2.5-1.088 4.17-1.806 5.009-2.153 2.386-.992 2.883-1.164 3.206-1.169.071-.001.23.016.333.099a.36.36 0 01.123.237c.011.072.025.236.014.365z"/>
-                        </svg>
-                    </a>
-                    <a href="#" aria-label="WhatsApp">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M10.008 0C4.505 0 .027 4.478.027 9.98c0 1.76.462 3.478 1.34 4.992L.01 20l5.17-1.357a9.93 9.93 0 004.828 1.247c5.503 0 9.982-4.478 9.982-9.98S15.51 0 10.008 0z"/>
-                        </svg>
-                    </a>
                 </div>
             </div>
         </div>
@@ -246,7 +174,7 @@
                 <a href="#booking" class="hero-split__btn" data-scroll-full>Записаться на просмотр</a>
             </div>
             <div class="hero-split__right">
-                <img src="assets/images/gallery/1.jpg" alt="Расположение Пром парка Красный Яр" class="hero-split__img">
+                <img src="assets/images/gallery/1.jpg" alt="Расположение Промпарка Красный Яр" class="hero-split__img">
             </div>
         </div>
     </section>
@@ -262,7 +190,7 @@
                 </div>
                 <div class="management-section__right" data-reveal="right">
                     <h2 class="management-section__title">Как нас найти</h2>
-                    <p class="management-section__text">Пром парк «Красный Яр» расположен в удобном месте с отличной транспортной доступностью для любого вида транспорта</p>
+                    <p class="management-section__text">Промпарк «Красный Яр» расположен в удобном месте с отличной транспортной доступностью для любого вида транспорта</p>
                     <div class="management-section__services">
                         <div class="management-service">
                             <span class="management-service__name">Адрес</span>
@@ -419,7 +347,7 @@
         <div class="booking__container">
             <div class="booking__layout">
                 <div class="booking__left" data-reveal="left">
-                    <img src="assets/images/gallery/17.jpg" alt="Пром парк Красный Яр" class="booking__image">
+                    <img src="assets/images/gallery/17.jpg" alt="Промпарк Красный Яр" class="booking__image">
                 </div>
                 <div class="booking__right" data-reveal="right">
                     <h2 class="booking__title">Записаться на просмотр</h2>

@@ -1287,11 +1287,93 @@
     };
 
     /**
+     * Spaces Catalog Table
+     */
+    const SpacesCatalog = {
+        init() {
+            const table = document.querySelector('.spaces-catalog__table');
+            if (!table) return;
+
+            const dealFilter = document.getElementById('catalog-deal-filter');
+            const typeFilter = document.getElementById('catalog-type-filter');
+            const rows = table.querySelectorAll('.spaces-catalog__row');
+
+            // Filter function
+            const filterRows = () => {
+                const dealValue = dealFilter?.value || '';
+                const typeValue = typeFilter?.value || '';
+
+                rows.forEach(row => {
+                    const rowDeal = row.dataset.deal || '';
+                    const rowType = row.dataset.type || '';
+
+                    const dealMatch = !dealValue || rowDeal === dealValue;
+                    const typeMatch = !typeValue || rowType === typeValue;
+
+                    row.style.display = (dealMatch && typeMatch) ? '' : 'none';
+                });
+            };
+
+            // Attach filter events
+            dealFilter?.addEventListener('change', filterRows);
+            typeFilter?.addEventListener('change', filterRows);
+
+            // Row click navigation
+            rows.forEach(row => {
+                row.addEventListener('click', (e) => {
+                    // Don't navigate if clicking on the link itself
+                    if (e.target.closest('.spaces-catalog__link')) return;
+
+                    const href = row.dataset.href;
+                    if (href) {
+                        window.location.href = href;
+                    }
+                });
+            });
+        }
+    };
+
+    /**
+     * Interactive Genplan
+     */
+    const Genplan = {
+        init() {
+            const points = document.querySelectorAll('.genplan__point');
+            const buildings = document.querySelectorAll('.genplan__building');
+            const defaultInfo = document.querySelector('.genplan__info-default');
+
+            if (!points.length) return;
+
+            points.forEach(point => {
+                point.addEventListener('click', () => {
+                    const buildingId = point.dataset.building;
+
+                    // Remove active from all points
+                    points.forEach(p => p.classList.remove('is-active'));
+                    point.classList.add('is-active');
+
+                    // Hide default info
+                    if (defaultInfo) defaultInfo.style.display = 'none';
+
+                    // Hide all buildings, show selected
+                    buildings.forEach(b => b.classList.remove('is-active'));
+                    const targetBuilding = document.getElementById('building-' + buildingId);
+                    if (targetBuilding) {
+                        targetBuilding.classList.add('is-active');
+                    }
+                });
+            });
+        }
+    };
+
+    /**
      * Initialize new modules
      */
     Calculator.init();
     LeadPopup.init();
     ChatWidget.init();
     FormsHandler.init();
+    SpacesCatalog.init();
+    Genplan.init();
 
 })();

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Каталог помещений в аренду — пром парк Красный Яр. Офисы, производственные и складские площади в Красноярске. Фильтры по типу, площади и этажу.">
-    <title>Каталог помещений — Пром парк Красный Яр</title>
+    <meta name="description" content="Каталог помещений в аренду — промпарк Красный Яр. Офисы, производственные и складские площади в Красноярске. Фильтры по типу, площади и этажу.">
+    <title>Каталог помещений — Промпарк Красный Яр</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -27,11 +27,11 @@
     <!-- /Yandex.Metrika counter -->
 
     <style>
-        /* Catalog Filters */
+        /* Catalog Filters - Compact Design */
         .catalog-filters {
-            background: #f5f5f5;
-            padding: 30px 0;
-            border-bottom: 1px solid #e0e0e0;
+            background: #fff;
+            padding: 20px 0;
+            border-bottom: 1px solid #e5e7eb;
         }
 
         .catalog-filters__container {
@@ -40,76 +40,118 @@
             padding: 0 40px;
         }
 
+        .catalog-filters__header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+
+        .catalog-filters__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #1f2937;
+            margin: 0;
+        }
+
+        .catalog-filters__count {
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        .catalog-filters__count span {
+            font-weight: 600;
+            color: #c41e3a;
+        }
+
         .catalog-filters__row {
             display: flex;
-            align-items: flex-end;
-            gap: 24px;
             flex-wrap: wrap;
+            align-items: flex-end;
+            gap: 20px;
         }
 
-        .catalog-filters__item {
+        .catalog-filters__group {
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 6px;
         }
 
-        .catalog-filters__item label {
+        .catalog-filters__label {
+            display: flex;
+            align-items: center;
+            gap: 6px;
             font-family: 'Roboto', sans-serif;
-            font-size: 13px;
-            font-weight: 500;
-            color: #666;
+            font-size: 11px;
+            font-weight: 600;
+            color: #6b7280;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
 
-        .catalog-filters__item select {
-            padding: 12px 40px 12px 16px;
+        .catalog-filters__label svg {
+            width: 14px;
+            height: 14px;
+            color: #9ca3af;
+        }
+
+        .catalog-filters__buttons {
+            display: flex;
+            gap: 6px;
+        }
+
+        .catalog-filters__chip {
+            padding: 6px 12px;
             font-family: 'Roboto', sans-serif;
-            font-size: 15px;
-            border: 1px solid #d0d0d0;
-            border-radius: 4px;
-            background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='none' stroke='%23333' stroke-width='1.5' d='M3 4.5L6 7.5L9 4.5'/%3E%3C/svg%3E") no-repeat right 14px center;
-            appearance: none;
+            font-size: 13px;
+            font-weight: 500;
+            color: #525252;
+            background: #f5f5f5;
+            border: 1px solid #e5e5e5;
+            border-radius: 6px;
             cursor: pointer;
-            min-width: 180px;
-            transition: border-color 0.2s, box-shadow 0.2s;
+            transition: all 0.2s ease;
         }
 
-        .catalog-filters__item select:hover {
-            border-color: #b22222;
+        .catalog-filters__chip:hover {
+            border-color: #c41e3a;
+            color: #c41e3a;
+            background: #fff;
         }
 
-        .catalog-filters__item select:focus {
-            outline: none;
-            border-color: #b22222;
-            box-shadow: 0 0 0 3px rgba(178, 34, 34, 0.1);
+        .catalog-filters__chip.is-active {
+            background: #c41e3a;
+            border-color: #c41e3a;
+            color: #fff;
         }
 
         .catalog-filters__range {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
         }
 
         .catalog-filters__range input[type="number"] {
-            width: 100px;
-            padding: 12px 16px;
+            width: 80px;
+            padding: 7px 10px;
             font-family: 'Roboto', sans-serif;
-            font-size: 15px;
-            border: 1px solid #d0d0d0;
-            border-radius: 4px;
-            background: #fff;
-            transition: border-color 0.2s, box-shadow 0.2s;
+            font-size: 13px;
+            border: 1px solid #e5e5e5;
+            border-radius: 6px;
+            background: #f5f5f5;
+            transition: all 0.2s ease;
         }
 
         .catalog-filters__range input[type="number"]:hover {
-            border-color: #b22222;
+            border-color: #d1d5db;
         }
 
         .catalog-filters__range input[type="number"]:focus {
             outline: none;
-            border-color: #b22222;
-            box-shadow: 0 0 0 3px rgba(178, 34, 34, 0.1);
+            border-color: #c41e3a;
+            background: #fff;
         }
 
         .catalog-filters__range input[type="number"]::-webkit-inner-spin-button,
@@ -122,285 +164,618 @@
             -moz-appearance: textfield;
         }
 
-        .catalog-filters__range span {
-            font-family: 'Roboto', sans-serif;
+        .catalog-filters__range-sep {
             font-size: 14px;
-            color: #666;
+            color: #9ca3af;
+        }
+
+        .catalog-filters__select {
+            padding: 7px 32px 7px 10px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 13px;
+            border: 1px solid #e5e5e5;
+            border-radius: 6px;
+            background: #f5f5f5 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 12 12'%3E%3Cpath fill='none' stroke='%236b7280' stroke-width='2' d='M3 4.5L6 7.5L9 4.5'/%3E%3C/svg%3E") no-repeat right 10px center;
+            appearance: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .catalog-filters__select:hover {
+            border-color: #d1d5db;
+        }
+
+        .catalog-filters__select:focus {
+            outline: none;
+            border-color: #c41e3a;
+            background-color: #fff;
+        }
+
+        .catalog-filters__actions {
+            display: flex;
+            gap: 10px;
+            margin-left: auto;
         }
 
         .catalog-filters__btn {
-            padding: 12px 32px;
-            font-family: 'Oswald', sans-serif;
-            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 13px;
             font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 1px;
             color: #fff;
-            background: #b22222;
+            background: #c41e3a;
             border: none;
-            border-radius: 4px;
+            border-radius: 6px;
             cursor: pointer;
-            transition: background-color 0.2s, transform 0.2s;
+            transition: all 0.2s ease;
         }
 
         .catalog-filters__btn:hover {
-            background: #8b1a1a;
-            transform: translateY(-1px);
+            background: #a01830;
+        }
+
+        .catalog-filters__btn svg {
+            width: 14px;
+            height: 14px;
         }
 
         .catalog-filters__reset {
-            padding: 12px 24px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
             font-family: 'Roboto', sans-serif;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 500;
-            color: #666;
-            background: transparent;
-            border: 1px solid #d0d0d0;
-            border-radius: 4px;
+            color: #6b7280;
+            background: #fff;
+            border: 1px solid #e5e5e5;
+            border-radius: 6px;
             cursor: pointer;
-            transition: border-color 0.2s, color 0.2s;
+            transition: all 0.2s ease;
         }
 
         .catalog-filters__reset:hover {
-            border-color: #b22222;
-            color: #b22222;
+            border-color: #c41e3a;
+            color: #c41e3a;
         }
 
-        /* Catalog Grid */
-        .catalog-grid {
-            padding: 60px 0;
-            background: #fff;
+        .catalog-filters__reset svg {
+            width: 14px;
+            height: 14px;
         }
 
-        .catalog-grid__container {
+        /* Spaces Catalog Table - Page Specific */
+        .spaces-catalog {
+            padding: 60px 0 100px;
+            background: #f8f9fa;
+        }
+
+        .spaces-catalog__container {
             max-width: 1400px;
             margin: 0 auto;
             padding: 0 40px;
         }
 
-        .catalog-grid__header {
+        .spaces-catalog__header {
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
             align-items: center;
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #e0e0e0;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 30px;
         }
 
-        .catalog-grid__count {
+        .spaces-catalog__title-row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .spaces-catalog__count {
             font-family: 'Roboto', sans-serif;
             font-size: 16px;
             color: #333;
         }
 
-        .catalog-grid__count strong {
+        .spaces-catalog__count strong {
             font-weight: 600;
             color: #b22222;
         }
 
-        .catalog-grid__sort {
-            padding: 10px 36px 10px 16px;
+        .spaces-catalog__filters {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .spaces-catalog__filter {
+            padding: 12px 40px 12px 16px;
             font-family: 'Roboto', sans-serif;
-            font-size: 14px;
+            font-size: 15px;
             border: 1px solid #d0d0d0;
-            border-radius: 4px;
-            background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='none' stroke='%23333' stroke-width='1.5' d='M3 4.5L6 7.5L9 4.5'/%3E%3C/svg%3E") no-repeat right 12px center;
+            border-radius: 8px;
+            background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='none' stroke='%23333' stroke-width='1.5' d='M3 4.5L6 7.5L9 4.5'/%3E%3C/svg%3E") no-repeat right 14px center;
             appearance: none;
             cursor: pointer;
+            min-width: 160px;
+            transition: border-color 0.2s, box-shadow 0.2s;
         }
 
-        .catalog-grid__items {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+        .spaces-catalog__filter:hover {
+            border-color: #b22222;
         }
 
-        /* Space Card */
-        .space-card {
+        .spaces-catalog__filter:focus {
+            outline: none;
+            border-color: #b22222;
+            box-shadow: 0 0 0 3px rgba(178, 34, 34, 0.1);
+        }
+
+        .spaces-catalog__table-wrap {
+            overflow-x: auto;
             background: #fff;
-            border-radius: 8px;
-            overflow: hidden;
+            border-radius: 12px;
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .space-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .space-card__image {
-            position: relative;
-            height: 220px;
-            overflow: hidden;
-        }
-
-        .space-card__image img {
+        .spaces-catalog__table {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
+            border-collapse: collapse;
+            min-width: 800px;
         }
 
-        .space-card:hover .space-card__image img {
-            transform: scale(1.05);
+        .spaces-catalog__table thead {
+            background: #2d2d2d;
         }
 
-        .space-card__badge {
-            position: absolute;
-            top: 16px;
-            left: 16px;
-            padding: 6px 14px;
-            font-family: 'Roboto', sans-serif;
+        .spaces-catalog__table th {
+            font-family: 'Oswald', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #fff;
+            padding: 18px 20px;
+            text-align: left;
+        }
+
+        .spaces-catalog__table tbody tr {
+            border-bottom: 1px solid #e5e5e5;
+            transition: background 0.2s;
+        }
+
+        .spaces-catalog__table tbody tr:hover {
+            background: rgba(178, 34, 34, 0.04);
+        }
+
+        .spaces-catalog__table tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        .spaces-catalog__table td {
+            padding: 20px;
+            font-size: 15px;
+            color: #525252;
+            vertical-align: middle;
+        }
+
+        .spaces-catalog__table td strong {
+            color: #2d2d2d;
+            font-weight: 500;
+        }
+
+        .spaces-catalog__area {
+            font-family: 'Oswald', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: #2d2d2d !important;
+        }
+
+        .spaces-catalog__badge {
+            display: inline-block;
+            padding: 6px 12px;
             font-size: 12px;
             font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            color: #fff;
-            background: #28a745;
             border-radius: 4px;
         }
 
-        .space-card__badge--reserved {
-            background: #ffc107;
-            color: #333;
+        .spaces-catalog__badge--office {
+            background: #e3f2fd;
+            color: #1565c0;
         }
 
-        .space-card__content {
-            padding: 24px;
+        .spaces-catalog__badge--production {
+            background: #fff3e0;
+            color: #e65100;
         }
 
-        .space-card__type {
-            font-family: 'Roboto', sans-serif;
+        .spaces-catalog__badge--warehouse {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .spaces-catalog__status {
+            display: inline-block;
+            padding: 6px 12px;
             font-size: 12px;
             font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #b22222;
-            margin-bottom: 8px;
+            border-radius: 20px;
         }
 
-        .space-card__area {
+        .spaces-catalog__status--free {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .spaces-catalog__status--build {
+            background: #fff8e1;
+            color: #f57c00;
+        }
+
+        .spaces-catalog__status--reserved {
+            background: #fce4ec;
+            color: #c2185b;
+        }
+
+        .spaces-catalog__link {
+            font-size: 14px;
+            font-weight: 500;
+            color: #b22222;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: color 0.2s;
+        }
+
+        .spaces-catalog__link:hover {
+            color: #8b1a1a;
+        }
+
+        .spaces-catalog__price {
+            font-family: 'Oswald', sans-serif;
+            font-size: 17px;
+            font-weight: 600;
+            color: #2d2d2d;
+            white-space: nowrap;
+        }
+
+        .spaces-catalog__price span {
+            font-family: 'Roboto', sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+            color: #737373;
+        }
+
+        .spaces-catalog__price--buy {
+            color: #c41e3a;
+        }
+
+        .spaces-catalog__detail {
+            font-size: 14px;
+            font-weight: 500;
+            color: #b22222;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: color 0.2s;
+        }
+
+        .spaces-catalog__row:hover .spaces-catalog__detail {
+            color: #8b1a1a;
+        }
+
+        /* Space Detail Modal */
+        .space-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .space-modal.is-active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .space-modal__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(4px);
+        }
+
+        .space-modal__container {
+            position: relative;
+            width: 90%;
+            max-width: 1000px;
+            max-height: 90vh;
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            transform: translateY(30px) scale(0.95);
+            transition: transform 0.4s ease;
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
+        }
+
+        .space-modal.is-active .space-modal__container {
+            transform: translateY(0) scale(1);
+        }
+
+        .space-modal__close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .space-modal__close:hover {
+            background: #c41e3a;
+            color: #fff;
+        }
+
+        .space-modal__close:hover svg {
+            stroke: #fff;
+        }
+
+        .space-modal__content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .space-modal__gallery {
+            position: relative;
+            min-height: 400px;
+        }
+
+        .space-modal__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .space-modal__badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 8px 16px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background: #22c55e;
+            color: #fff;
+            border-radius: 6px;
+        }
+
+        .space-modal__badge--build {
+            background: #f59e0b;
+        }
+
+        .space-modal__info {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .space-modal__title {
             font-family: 'Oswald', sans-serif;
             font-size: 32px;
             font-weight: 600;
-            color: #1a1a1a;
+            color: #2d2d2d;
             margin-bottom: 8px;
-            line-height: 1.1;
         }
 
-        .space-card__area span {
-            font-size: 20px;
-            font-weight: 400;
-            color: #666;
-        }
-
-        .space-card__location {
-            font-family: 'Roboto', sans-serif;
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 20px;
-            line-height: 1.5;
-        }
-
-        .space-card__location strong {
-            display: block;
-            color: #333;
-            font-weight: 500;
-        }
-
-        .space-card__actions {
+        .space-modal__address {
+            font-size: 16px;
+            color: #737373;
+            margin-bottom: 32px;
             display: flex;
-            gap: 12px;
+            align-items: center;
+            gap: 8px;
         }
 
-        .space-card__btn {
-            flex: 1;
-            padding: 12px 16px;
-            font-family: 'Roboto', sans-serif;
-            font-size: 13px;
+        .space-modal__address::before {
+            content: '';
+            width: 16px;
+            height: 16px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23737373' stroke-width='2'%3E%3Cpath d='M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z'/%3E%3Ccircle cx='12' cy='10' r='3'/%3E%3C/svg%3E") no-repeat center;
+        }
+
+        .space-modal__specs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .space-modal__spec {
+            padding: 16px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .space-modal__spec-label {
+            display: block;
+            font-size: 12px;
             font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #737373;
+            margin-bottom: 4px;
+        }
+
+        .space-modal__spec-value {
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #2d2d2d;
+        }
+
+        .space-modal__features {
+            margin-bottom: 32px;
+            flex-grow: 1;
+        }
+
+        .space-modal__features h4 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #2d2d2d;
+            margin-bottom: 16px;
+        }
+
+        .space-modal__features ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .space-modal__features li {
+            padding: 8px 16px;
+            font-size: 14px;
+            color: #525252;
+            background: #f0f9f0;
+            border-radius: 20px;
+            border: 1px solid #d1fae5;
+        }
+
+        .space-modal__actions {
+            display: flex;
+            gap: 16px;
+        }
+
+        .space-modal__btn {
+            flex: 1;
+            padding: 16px 24px;
+            font-family: 'Oswald', sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
             text-align: center;
             text-decoration: none;
-            border-radius: 4px;
+            border-radius: 8px;
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all 0.3s ease;
         }
 
-        .space-card__btn--primary {
+        .space-modal__btn--primary {
+            background: #c41e3a;
             color: #fff;
-            background: #b22222;
             border: none;
         }
 
-        .space-card__btn--primary:hover {
-            background: #8b1a1a;
+        .space-modal__btn--primary:hover {
+            background: #a01830;
         }
 
-        .space-card__btn--secondary {
-            color: #333;
+        .space-modal__btn--secondary {
             background: transparent;
-            border: 1px solid #d0d0d0;
+            color: #2d2d2d;
+            border: 2px solid #d4d4d4;
         }
 
-        .space-card__btn--secondary:hover {
-            border-color: #b22222;
-            color: #b22222;
+        .space-modal__btn--secondary:hover {
+            border-color: #c41e3a;
+            color: #c41e3a;
         }
 
-        /* Responsive */
-        @media (max-width: 1200px) {
-            .catalog-grid__items {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 768px) {
+        @media (max-width: 991px) {
             .catalog-filters__row {
                 flex-direction: column;
                 align-items: stretch;
+                gap: 16px;
             }
 
-            .catalog-filters__item {
+            .catalog-filters__actions {
+                margin-left: 0;
                 width: 100%;
-            }
-
-            .catalog-filters__item select {
-                width: 100%;
-                min-width: unset;
-            }
-
-            .catalog-filters__range {
-                flex-wrap: wrap;
-            }
-
-            .catalog-filters__range input[type="number"] {
-                flex: 1;
-                min-width: 80px;
             }
 
             .catalog-filters__btn,
             .catalog-filters__reset {
-                width: 100%;
+                flex: 1;
             }
 
-            .catalog-grid__items {
+            .space-modal__content {
                 grid-template-columns: 1fr;
             }
 
-            .catalog-grid__header {
-                flex-direction: column;
-                gap: 16px;
-                align-items: flex-start;
+            .space-modal__gallery {
+                min-height: 250px;
             }
 
-            .catalog-grid__sort {
-                width: 100%;
+            .space-modal__info {
+                padding: 24px;
             }
 
-            .catalog-filters__container,
-            .catalog-grid__container {
+            .space-modal__title {
+                font-size: 26px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .spaces-catalog {
+                padding: 40px 0 60px;
+            }
+
+            .spaces-catalog__container {
                 padding: 0 20px;
+            }
+
+            .catalog-filters__container {
+                padding: 0 20px;
+            }
+
+            .spaces-catalog__table th,
+            .spaces-catalog__table td {
+                padding: 14px 12px;
+            }
+
+            .space-modal__container {
+                width: 95%;
+                border-radius: 12px;
+            }
+
+            .space-modal__specs {
+                grid-template-columns: 1fr;
+            }
+
+            .space-modal__actions {
+                flex-direction: column;
             }
         }
     </style>
@@ -424,61 +799,35 @@
     <!-- Header -->
     <header class="header" id="header">
         <div class="header__inner">
-            <!-- Left: Logo + Call -->
+            <!-- Left: Logo -->
             <div class="header__left">
                 <a href="index.html" class="header__logo">
                     <img src="assets/images/logo.png" alt="Красный Яр" style="height: 40px; width: auto;">
                 </a>
-                <div class="header__dropdown header__dropdown--call">
-                    <button class="header__call">
-                        <span>Позвонить нам</span>
-                        <svg class="header__dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M3 4.5L6 7.5L9 4.5"/>
-                        </svg>
-                    </button>
-                    <div class="header__dropdown-menu header__dropdown-menu--call">
-                        <div class="header__dropdown-inner">
-                            <div class="header__phone-item">
-                                <span class="header__phone-label">отдел продаж</span>
-                                <a href="tel:+73919899949" class="header__phone-number">+7 (391) 989-99-49</a>
-                            </div>
-                            <div class="header__phone-item">
-                                <span class="header__phone-label">мобильный</span>
-                                <a href="tel:+79240424900" class="header__phone-number">+7 924 042-49-00</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <!-- Center: Navigation -->
             <nav class="header__nav">
-                <a href="about.html" class="header__link">О парке</a>
-
-                <!-- Infrastructure Dropdown -->
+                <!-- О парке Dropdown -->
                 <div class="header__dropdown">
                     <button class="header__link header__link--dropdown">
-                        <span>Инфраструктура</span>
+                        <span>О парке</span>
                         <svg class="header__dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
                             <path d="M3 4.5L6 7.5L9 4.5"/>
                         </svg>
                     </button>
                     <div class="header__dropdown-menu">
                         <div class="header__dropdown-inner">
-                            <a href="powers.html" class="header__dropdown-link">Мощности парка</a>
-                            <a href="communications.html" class="header__dropdown-link">Коммуникации</a>
-                            <a href="location.html" class="header__dropdown-link">Расположение</a>
-                            <a href="projects.html" class="header__dropdown-all">
-                                <span>Генплан</span>
-                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
-                                    <path d="M2.5 7H11.5M8 3.5L11.5 7L8 10.5"/>
-                                </svg>
-                            </a>
+                            <a href="about.html" class="header__dropdown-link">О компании</a>
+                            <a href="infrastructure.html" class="header__dropdown-link">Инфраструктура</a>
+                            <a href="projects.html" class="header__dropdown-link">Генплан</a>
+                            <a href="residents.html" class="header__dropdown-link">Резиденты</a>
+                            <a href="news.html" class="header__dropdown-link">Новости</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Formats Dropdown -->
+                <!-- Помещения Dropdown -->
                 <div class="header__dropdown">
                     <button class="header__link header__link--dropdown">
                         <span>Помещения</span>
@@ -488,52 +837,31 @@
                     </button>
                     <div class="header__dropdown-menu">
                         <div class="header__dropdown-inner">
-                            <a href="formats.html" class="header__dropdown-link">Производственные</a>
-                            <a href="formats.html" class="header__dropdown-link">Складские</a>
-                            <a href="formats.html" class="header__dropdown-link">Офисные</a>
-                            <a href="formats.html" class="header__dropdown-all">
-                                <span>Все форматы</span>
-                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
-                                    <path d="M2.5 7H11.5M8 3.5L11.5 7L8 10.5"/>
-                                </svg>
-                            </a>
+                            <a href="rent.html" class="header__dropdown-link">Аренда</a>
+                            <a href="buy.html" class="header__dropdown-link">Покупка</a>
+                            <a href="formats.html" class="header__dropdown-link">Все форматы</a>
                         </div>
                     </div>
                 </div>
 
                 <a href="buy.html" class="header__link">Инвесторам</a>
-                <a href="index.html#residents" class="header__link">Резиденты</a>
-                <a href="news.html" class="header__link">Новости</a>
                 <a href="contacts.html" class="header__link">Контакты</a>
             </nav>
 
-            <!-- Right: Button + Favorites + Burger -->
+            <!-- Right: Phone + CTA -->
             <div class="header__right">
-                <div class="header__dropdown header__dropdown--select">
-                    <button class="header__btn">
-                        <span>Выбрать помещение</span>
-                        <svg class="header__dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M3 4.5L6 7.5L9 4.5"/>
-                        </svg>
-                    </button>
-                    <div class="header__dropdown-menu header__dropdown-menu--select">
-                        <div class="header__dropdown-inner">
-                            <a href="rent.html" class="header__select-link">
-                                <span class="header__select-title">В аренду</span>
-                                <span class="header__select-desc">Складские и производственные помещения</span>
-                            </a>
-                            <a href="buy.html" class="header__select-link">
-                                <span class="header__select-title">Для покупки</span>
-                                <span class="header__select-desc">Готовые объекты и земельные участки</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <button class="header__fav" aria-label="Избранное">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M10 17.5L2.5 10C0.5 8 0.5 4.5 2.5 2.5C4.5 0.5 8 0.5 10 2.5C12 0.5 15.5 0.5 17.5 2.5C19.5 4.5 19.5 8 17.5 10L10 17.5Z"/>
+                <a href="tel:+73919899949" class="header__phone">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                     </svg>
-                </button>
+                    <span>+7 (391) 989-99-49</span>
+                </a>
+                <a href="rent.html" class="header__cta">
+                    <span>Подобрать</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
                 <button class="header__burger" id="burger" aria-label="Меню">
                     <span></span>
                     <span></span>
@@ -548,18 +876,10 @@
     <!-- Sidebar Menu -->
     <div class="menu" id="menu">
         <div class="menu__inner">
-            <!-- Toggle rent/buy -->
-            <div class="menu__toggle">
-                <button class="menu__toggle-btn is-active" data-type="rent">В аренду</button>
-                <button class="menu__toggle-btn" data-type="buy">Для покупки</button>
-            </div>
             <nav class="menu__nav">
                 <a href="about.html" class="menu__link">О парке</a>
-                <a href="projects.html" class="menu__link">Генплан</a>
                 <a href="formats.html" class="menu__link">Помещения</a>
                 <a href="buy.html" class="menu__link">Инвесторам</a>
-                <a href="residents.html" class="menu__link">Резиденты</a>
-                <a href="news.html" class="menu__link">Новости</a>
                 <a href="contacts.html" class="menu__link">Контакты</a>
             </nav>
             <div class="menu__bottom">
@@ -569,26 +889,9 @@
                 </a>
                 <div class="menu__contacts">
                     <div class="menu__contact">
-                        <span>отдел продаж</span>
+                        <span>мобильный</span>
                         <a href="tel:+79240424900">+7 924 042-49-00</a>
                     </div>
-                </div>
-                <div class="menu__socials">
-                    <a href="#" aria-label="YouTube">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M19.582 5.182a2.506 2.506 0 00-1.764-1.764C16.254 3 10 3 10 3s-6.254 0-7.818.418A2.506 2.506 0 00.418 5.182C0 6.746 0 10 0 10s0 3.254.418 4.818a2.506 2.506 0 001.764 1.764C3.746 17 10 17 10 17s6.254 0 7.818-.418a2.506 2.506 0 001.764-1.764C20 13.254 20 10 20 10s0-3.254-.418-4.818zM8 13V7l5.196 3L8 13z"/>
-                        </svg>
-                    </a>
-                    <a href="#" aria-label="Telegram">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M10 0C4.478 0 0 4.478 0 10s4.478 10 10 10 10-4.478 10-10S15.522 0 10 0zm4.7 6.833c-.125 1.317-.667 4.517-.942 5.992-.117.625-.35.833-.575.858-.483.042-.85-.317-1.317-.625-.733-.483-1.15-.783-1.858-1.25-.825-.542-.292-.842.183-1.325.125-.125 2.259-2.067 2.3-2.242a.17.17 0 00-.039-.147c-.05-.038-.12-.025-.171-.015-.073.015-1.241.789-3.504 2.317a1.63 1.63 0 01-.924.353c-.304-.006-.889-.172-1.324-.314-.534-.174-.958-.266-.921-.561.019-.154.232-.311.638-.472 2.5-1.088 4.17-1.806 5.009-2.153 2.386-.992 2.883-1.164 3.206-1.169.071-.001.23.016.333.099a.36.36 0 01.123.237c.011.072.025.236.014.365z"/>
-                        </svg>
-                    </a>
-                    <a href="#" aria-label="WhatsApp">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M10.008 0C4.505 0 .027 4.478.027 9.98c0 1.76.462 3.478 1.34 4.992L.01 20l5.17-1.357a9.93 9.93 0 004.828 1.247c5.503 0 9.982-4.478 9.982-9.98S15.51 0 10.008 0z"/>
-                        </svg>
-                    </a>
                 </div>
             </div>
         </div>
@@ -630,7 +933,7 @@
                 <a href="#catalog" class="hero-split__btn" data-scroll-full>Смотреть каталог</a>
             </div>
             <div class="hero-split__right">
-                <img src="assets/images/gallery/30.jpg" alt="Каталог помещений в пром парке Красный Яр" class="hero-split__img">
+                <img src="assets/images/gallery/30.jpg" alt="Каталог помещений в промпарке Красный Яр" class="hero-split__img">
             </div>
         </div>
     </section>
@@ -638,174 +941,172 @@
     <!-- Catalog Filters -->
     <section class="catalog-filters" id="filters">
         <div class="catalog-filters__container">
+            <div class="catalog-filters__header">
+                <h2 class="catalog-filters__title">Найдено: <span id="spaces-count">8</span> объектов</h2>
+            </div>
             <div class="catalog-filters__row">
-                <!-- Тип помещения -->
-                <div class="catalog-filters__item">
-                    <label>Тип</label>
-                    <select id="filter-type">
-                        <option value="">Все типы</option>
-                        <option value="production">Производственные</option>
-                        <option value="warehouse">Складские</option>
-                        <option value="office">Офисные</option>
-                    </select>
-                </div>
-                <!-- Площадь -->
-                <div class="catalog-filters__item">
-                    <label>Площадь</label>
-                    <div class="catalog-filters__range">
-                        <input type="number" id="filter-area-from" placeholder="от" min="0">
-                        <span>—</span>
-                        <input type="number" id="filter-area-to" placeholder="до" max="5000">
-                        <span>м²</span>
+                <!-- Тип сделки -->
+                <div class="catalog-filters__group">
+                    <label class="catalog-filters__label">Сделка</label>
+                    <div class="catalog-filters__buttons" id="filter-deal-btns">
+                        <button type="button" class="catalog-filters__chip is-active" data-value="">Все</button>
+                        <button type="button" class="catalog-filters__chip" data-value="rent">Аренда</button>
+                        <button type="button" class="catalog-filters__chip" data-value="buy">Покупка</button>
                     </div>
                 </div>
-                <!-- Этаж -->
-                <div class="catalog-filters__item">
-                    <label>Этаж</label>
-                    <select id="filter-floor">
-                        <option value="">Любой</option>
-                        <option value="1">1 этаж</option>
-                        <option value="2">2 этаж</option>
-                        <option value="3">3 этаж</option>
+                <!-- Тип помещения -->
+                <div class="catalog-filters__group">
+                    <label class="catalog-filters__label">Формат</label>
+                    <div class="catalog-filters__buttons" id="filter-type-btns">
+                        <button type="button" class="catalog-filters__chip is-active" data-value="">Все</button>
+                        <button type="button" class="catalog-filters__chip" data-value="office">Офис</button>
+                        <button type="button" class="catalog-filters__chip" data-value="production">Производство</button>
+                        <button type="button" class="catalog-filters__chip" data-value="warehouse">Склад</button>
+                    </div>
+                </div>
+                <!-- Площадь -->
+                <div class="catalog-filters__group">
+                    <label class="catalog-filters__label">Площадь, м²</label>
+                    <div class="catalog-filters__range">
+                        <input type="number" id="filter-area-from" placeholder="от" min="0">
+                        <span class="catalog-filters__range-sep">—</span>
+                        <input type="number" id="filter-area-to" placeholder="до" max="5000">
+                    </div>
+                </div>
+                <!-- Сортировка -->
+                <div class="catalog-filters__group">
+                    <label class="catalog-filters__label">Сортировка</label>
+                    <select class="catalog-filters__select" id="filter-sort">
+                        <option value="price-asc">Дешевле</option>
+                        <option value="price-desc">Дороже</option>
+                        <option value="area-asc">Меньше</option>
+                        <option value="area-desc">Больше</option>
                     </select>
                 </div>
-                <!-- Кнопки -->
-                <button class="catalog-filters__btn" id="filter-apply">Найти</button>
-                <button class="catalog-filters__reset" id="filter-reset">Сбросить</button>
+                <!-- Actions -->
+                <div class="catalog-filters__actions">
+                    <button class="catalog-filters__btn" id="filter-apply">Найти</button>
+                    <button class="catalog-filters__reset" id="filter-reset">Сброс</button>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Catalog Grid -->
-    <section class="catalog-grid" id="catalog">
-        <div class="catalog-grid__container">
-            <div class="catalog-grid__header">
-                <span class="catalog-grid__count">Найдено: <strong id="spaces-count">6</strong> помещений</span>
-                <select class="catalog-grid__sort" id="sort-select">
-                    <option value="area-asc">По площади (возр.)</option>
-                    <option value="area-desc">По площади (убыв.)</option>
-                </select>
-            </div>
-            <div class="catalog-grid__items" id="spaces-grid">
-                <!-- Офис 389,1 м² -->
-                <div class="space-card" data-type="office" data-area="389.1" data-floor="3">
-                    <div class="space-card__image">
-                        <img src="assets/images/gallery/6.jpg" alt="Офис 389,1 м²">
-                        <span class="space-card__badge">Свободно</span>
-                    </div>
-                    <div class="space-card__content">
-                        <div class="space-card__type">Офис</div>
-                        <div class="space-card__area">389,1 <span>м²</span></div>
-                        <div class="space-card__location">
-                            <strong>Кутузова 1, стр. 6</strong>
-                            3 этаж
-                        </div>
-                        <div class="space-card__actions">
-                            <a href="#request" class="space-card__btn space-card__btn--primary">Оставить заявку</a>
-                            <button class="space-card__btn space-card__btn--secondary">Подробнее</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Офис 400 м² -->
-                <div class="space-card" data-type="office" data-area="400" data-floor="2">
-                    <div class="space-card__image">
-                        <img src="assets/images/gallery/5.jpg" alt="Офис 400 м²">
-                        <span class="space-card__badge">Свободно</span>
-                    </div>
-                    <div class="space-card__content">
-                        <div class="space-card__type">Офис</div>
-                        <div class="space-card__area">400 <span>м²</span></div>
-                        <div class="space-card__location">
-                            <strong>Кутузова 1, стр. 6</strong>
-                            2 этаж
-                        </div>
-                        <div class="space-card__actions">
-                            <a href="#request" class="space-card__btn space-card__btn--primary">Оставить заявку</a>
-                            <button class="space-card__btn space-card__btn--secondary">Подробнее</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Производственное 747 м² -->
-                <div class="space-card" data-type="production" data-area="747" data-floor="1">
-                    <div class="space-card__image">
-                        <img src="assets/images/gallery/10.jpg" alt="Производственное 747 м²">
-                        <span class="space-card__badge">Свободно</span>
-                    </div>
-                    <div class="space-card__content">
-                        <div class="space-card__type">Производственное</div>
-                        <div class="space-card__area">747 <span>м²</span></div>
-                        <div class="space-card__location">
-                            <strong>Кутузова 1, стр. 37</strong>
-                            1 этаж
-                        </div>
-                        <div class="space-card__actions">
-                            <a href="#request" class="space-card__btn space-card__btn--primary">Оставить заявку</a>
-                            <button class="space-card__btn space-card__btn--secondary">Подробнее</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Офис 39,2 м² -->
-                <div class="space-card" data-type="office" data-area="39.2" data-floor="3">
-                    <div class="space-card__image">
-                        <img src="assets/images/gallery/15.jpg" alt="Офис 39,2 м²">
-                        <span class="space-card__badge">Свободно</span>
-                    </div>
-                    <div class="space-card__content">
-                        <div class="space-card__type">Офис</div>
-                        <div class="space-card__area">39,2 <span>м²</span></div>
-                        <div class="space-card__location">
-                            <strong>Кутузова 1, стр. 37</strong>
-                            каб. 3-30
-                        </div>
-                        <div class="space-card__actions">
-                            <a href="#request" class="space-card__btn space-card__btn--primary">Оставить заявку</a>
-                            <button class="space-card__btn space-card__btn--secondary">Подробнее</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Офис 50,4 м² -->
-                <div class="space-card" data-type="office" data-area="50.4" data-floor="3">
-                    <div class="space-card__image">
-                        <img src="assets/images/gallery/20.jpg" alt="Офис 50,4 м²">
-                        <span class="space-card__badge">Свободно</span>
-                    </div>
-                    <div class="space-card__content">
-                        <div class="space-card__type">Офис</div>
-                        <div class="space-card__area">50,4 <span>м²</span></div>
-                        <div class="space-card__location">
-                            <strong>Кутузова 1, стр. 37</strong>
-                            каб. 3-05
-                        </div>
-                        <div class="space-card__actions">
-                            <a href="#request" class="space-card__btn space-card__btn--primary">Оставить заявку</a>
-                            <button class="space-card__btn space-card__btn--secondary">Подробнее</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Офис 51,5 м² -->
-                <div class="space-card" data-type="office" data-area="51.5" data-floor="3">
-                    <div class="space-card__image">
-                        <img src="assets/images/gallery/17.jpg" alt="Офис 51,5 м²">
-                        <span class="space-card__badge">Свободно</span>
-                    </div>
-                    <div class="space-card__content">
-                        <div class="space-card__type">Офис</div>
-                        <div class="space-card__area">51,5 <span>м²</span></div>
-                        <div class="space-card__location">
-                            <strong>Кутузова 1, стр. 37</strong>
-                            каб. 3-04
-                        </div>
-                        <div class="space-card__actions">
-                            <a href="#request" class="space-card__btn space-card__btn--primary">Оставить заявку</a>
-                            <button class="space-card__btn space-card__btn--secondary">Подробнее</button>
-                        </div>
-                    </div>
-                </div>
+    <!-- Catalog Table -->
+    <section class="spaces-catalog" id="catalog">
+        <div class="spaces-catalog__container">
+            <div class="spaces-catalog__table-wrap">
+                <table class="spaces-catalog__table" id="spaces-table">
+                    <thead>
+                        <tr>
+                            <th>Корпус</th>
+                            <th>Формат</th>
+                            <th>Площадь</th>
+                            <th>Цена</th>
+                            <th>Этаж</th>
+                            <th>Статус</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="spaces-catalog__row" data-type="office" data-deal="rent" data-area="389.1" data-price="311280"
+                            data-title="Офис 389,1 м²" data-address="Кутузова 1, стр. 6" data-floor="3 этаж"
+                            data-height="3 м" data-power="стандартная" data-img="assets/images/gallery/6.jpg"
+                            data-features="Готовая отделка, Кондиционирование, Интернет, Парковка" data-price-text="311 280 ₽/мес">
+                            <td><strong>Кутузова 1, стр. 6</strong></td>
+                            <td><span class="spaces-catalog__badge spaces-catalog__badge--office">Офис</span></td>
+                            <td class="spaces-catalog__area">389,1 м²</td>
+                            <td class="spaces-catalog__price">311 280 ₽<span>/мес</span></td>
+                            <td>3 этаж</td>
+                            <td><span class="spaces-catalog__status spaces-catalog__status--free">Свободно</span></td>
+                            <td><span class="spaces-catalog__detail">Подробнее →</span></td>
+                        </tr>
+                        <tr class="spaces-catalog__row" data-type="office" data-deal="rent" data-area="400" data-price="320000"
+                            data-title="Офис 400 м²" data-address="Кутузова 1, стр. 6" data-floor="2 этаж"
+                            data-height="3 м" data-power="стандартная" data-img="assets/images/gallery/5.jpg"
+                            data-features="Готовая отделка, Кондиционирование, Интернет, Парковка" data-price-text="320 000 ₽/мес">
+                            <td><strong>Кутузова 1, стр. 6</strong></td>
+                            <td><span class="spaces-catalog__badge spaces-catalog__badge--office">Офис</span></td>
+                            <td class="spaces-catalog__area">400 м²</td>
+                            <td class="spaces-catalog__price">320 000 ₽<span>/мес</span></td>
+                            <td>2 этаж</td>
+                            <td><span class="spaces-catalog__status spaces-catalog__status--free">Свободно</span></td>
+                            <td><span class="spaces-catalog__detail">Подробнее →</span></td>
+                        </tr>
+                        <tr class="spaces-catalog__row" data-type="production" data-deal="rent" data-area="747" data-price="373500"
+                            data-title="Производственное 747 м²" data-address="Кутузова 1, стр. 37" data-floor="1 этаж"
+                            data-height="13 м" data-power="повышенная" data-img="assets/images/gallery/10.jpg"
+                            data-features="Кран-балка, Погрузочные доки, Подъездные пути, Охрана 24/7" data-price-text="373 500 ₽/мес">
+                            <td><strong>Кутузова 1, стр. 37</strong></td>
+                            <td><span class="spaces-catalog__badge spaces-catalog__badge--production">Производство</span></td>
+                            <td class="spaces-catalog__area">747 м²</td>
+                            <td class="spaces-catalog__price">373 500 ₽<span>/мес</span></td>
+                            <td>1 этаж</td>
+                            <td><span class="spaces-catalog__status spaces-catalog__status--free">Свободно</span></td>
+                            <td><span class="spaces-catalog__detail">Подробнее →</span></td>
+                        </tr>
+                        <tr class="spaces-catalog__row" data-type="office" data-deal="rent" data-area="39.2" data-price="31360"
+                            data-title="Офис 39,2 м²" data-address="Кутузова 1, стр. 37" data-floor="3 этаж, каб. 3-30"
+                            data-height="3 м" data-power="стандартная" data-img="assets/images/gallery/15.jpg"
+                            data-features="Готовая отделка, Интернет, Парковка" data-price-text="31 360 ₽/мес">
+                            <td><strong>Кутузова 1, стр. 37</strong></td>
+                            <td><span class="spaces-catalog__badge spaces-catalog__badge--office">Офис</span></td>
+                            <td class="spaces-catalog__area">39,2 м²</td>
+                            <td class="spaces-catalog__price">31 360 ₽<span>/мес</span></td>
+                            <td>3 этаж</td>
+                            <td><span class="spaces-catalog__status spaces-catalog__status--free">Свободно</span></td>
+                            <td><span class="spaces-catalog__detail">Подробнее →</span></td>
+                        </tr>
+                        <tr class="spaces-catalog__row" data-type="office" data-deal="rent" data-area="50.4" data-price="40320"
+                            data-title="Офис 50,4 м²" data-address="Кутузова 1, стр. 37" data-floor="3 этаж, каб. 3-05"
+                            data-height="3 м" data-power="стандартная" data-img="assets/images/gallery/20.jpg"
+                            data-features="Готовая отделка, Интернет, Парковка" data-price-text="40 320 ₽/мес">
+                            <td><strong>Кутузова 1, стр. 37</strong></td>
+                            <td><span class="spaces-catalog__badge spaces-catalog__badge--office">Офис</span></td>
+                            <td class="spaces-catalog__area">50,4 м²</td>
+                            <td class="spaces-catalog__price">40 320 ₽<span>/мес</span></td>
+                            <td>3 этаж</td>
+                            <td><span class="spaces-catalog__status spaces-catalog__status--free">Свободно</span></td>
+                            <td><span class="spaces-catalog__detail">Подробнее →</span></td>
+                        </tr>
+                        <tr class="spaces-catalog__row" data-type="office" data-deal="rent" data-area="51.5" data-price="41200"
+                            data-title="Офис 51,5 м²" data-address="Кутузова 1, стр. 37" data-floor="3 этаж, каб. 3-04"
+                            data-height="3 м" data-power="стандартная" data-img="assets/images/gallery/17.jpg"
+                            data-features="Готовая отделка, Интернет, Парковка" data-price-text="41 200 ₽/мес">
+                            <td><strong>Кутузова 1, стр. 37</strong></td>
+                            <td><span class="spaces-catalog__badge spaces-catalog__badge--office">Офис</span></td>
+                            <td class="spaces-catalog__area">51,5 м²</td>
+                            <td class="spaces-catalog__price">41 200 ₽<span>/мес</span></td>
+                            <td>3 этаж</td>
+                            <td><span class="spaces-catalog__status spaces-catalog__status--free">Свободно</span></td>
+                            <td><span class="spaces-catalog__detail">Подробнее →</span></td>
+                        </tr>
+                        <tr class="spaces-catalog__row" data-type="warehouse" data-deal="buy" data-area="480" data-price="28800000"
+                            data-title="Склад 480 м²" data-address="2-я очередь, блок А" data-floor="1 этаж"
+                            data-height="13 м" data-power="стандартная" data-img="assets/images/gallery/30.jpg"
+                            data-features="Погрузочные доки, Высокие потолки, Охрана 24/7, Видеонаблюдение" data-price-text="28,8 млн ₽">
+                            <td><strong>2-я очередь, блок А</strong></td>
+                            <td><span class="spaces-catalog__badge spaces-catalog__badge--warehouse">Склад</span></td>
+                            <td class="spaces-catalog__area">480 м²</td>
+                            <td class="spaces-catalog__price spaces-catalog__price--buy">28,8 млн ₽</td>
+                            <td>1 этаж</td>
+                            <td><span class="spaces-catalog__status spaces-catalog__status--build">Строится</span></td>
+                            <td><span class="spaces-catalog__detail">Подробнее →</span></td>
+                        </tr>
+                        <tr class="spaces-catalog__row" data-type="production" data-deal="buy" data-area="960" data-price="57600000"
+                            data-title="Производственное 960 м²" data-address="2-я очередь, блок Б" data-floor="1 этаж"
+                            data-height="13 м" data-power="повышенная" data-img="assets/images/gallery/42.jpg"
+                            data-features="Кран-балка, Погрузочные доки, Высокие потолки, Охрана 24/7" data-price-text="57,6 млн ₽">
+                            <td><strong>2-я очередь, блок Б</strong></td>
+                            <td><span class="spaces-catalog__badge spaces-catalog__badge--production">Производство</span></td>
+                            <td class="spaces-catalog__area">960 м²</td>
+                            <td class="spaces-catalog__price spaces-catalog__price--buy">57,6 млн ₽</td>
+                            <td>1 этаж</td>
+                            <td><span class="spaces-catalog__status spaces-catalog__status--build">Строится</span></td>
+                            <td><span class="spaces-catalog__detail">Подробнее →</span></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
@@ -815,7 +1116,7 @@
         <div class="booking__container">
             <div class="booking__layout">
                 <div class="booking__left" data-reveal="left">
-                    <img src="assets/images/gallery/17.jpg" alt="Пром парк Красный Яр" class="booking__image">
+                    <img src="assets/images/gallery/17.jpg" alt="Промпарк Красный Яр" class="booking__image">
                 </div>
                 <div class="booking__right" data-reveal="right">
                     <h2 class="booking__title">Записаться на просмотр</h2>
@@ -859,9 +1160,14 @@
             <div class="calc-request__content">
                 <!-- Calculator Left -->
                 <div class="calc-request__left" data-reveal="left">
-                    <h2 class="calc-request__title">Калькулятор аренды</h2>
-                    <p class="calc-request__desc">Рассчитайте примерную стоимость аренды</p>
+                    <h2 class="calc-request__title">Калькулятор стоимости</h2>
+                    <p class="calc-request__desc">Рассчитайте примерную стоимость</p>
                     <div class="calculator__form">
+                        <!-- Rent/Buy Toggle -->
+                        <div class="calculator__toggle">
+                            <button type="button" class="calculator__toggle-btn is-active" data-mode="rent">Аренда</button>
+                            <button type="button" class="calculator__toggle-btn" data-mode="buy">Покупка</button>
+                        </div>
                         <div class="calculator__field">
                             <label class="calculator__label">Тип помещения</label>
                             <div class="calculator__select-wrap">
@@ -1084,6 +1390,57 @@
         </div>
     </div>
 
+    <!-- Space Detail Modal -->
+    <div class="space-modal" id="space-modal">
+        <div class="space-modal__overlay" data-close-modal></div>
+        <div class="space-modal__container">
+            <button class="space-modal__close" data-close-modal>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6L18 18"/>
+                </svg>
+            </button>
+            <div class="space-modal__content">
+                <div class="space-modal__gallery">
+                    <img src="" alt="" class="space-modal__img" id="modal-img">
+                    <span class="space-modal__badge" id="modal-badge"></span>
+                </div>
+                <div class="space-modal__info">
+                    <h2 class="space-modal__title" id="modal-title"></h2>
+                    <p class="space-modal__address" id="modal-address"></p>
+
+                    <div class="space-modal__specs">
+                        <div class="space-modal__spec">
+                            <span class="space-modal__spec-label">Площадь</span>
+                            <span class="space-modal__spec-value" id="modal-area"></span>
+                        </div>
+                        <div class="space-modal__spec">
+                            <span class="space-modal__spec-label">Этаж</span>
+                            <span class="space-modal__spec-value" id="modal-floor"></span>
+                        </div>
+                        <div class="space-modal__spec">
+                            <span class="space-modal__spec-label">Высота потолков</span>
+                            <span class="space-modal__spec-value" id="modal-height"></span>
+                        </div>
+                        <div class="space-modal__spec">
+                            <span class="space-modal__spec-label">Электроснабжение</span>
+                            <span class="space-modal__spec-value" id="modal-power"></span>
+                        </div>
+                    </div>
+
+                    <div class="space-modal__features">
+                        <h4>Особенности</h4>
+                        <ul id="modal-features"></ul>
+                    </div>
+
+                    <div class="space-modal__actions">
+                        <a href="#request" class="space-modal__btn space-modal__btn--primary" data-close-modal>Оставить заявку</a>
+                        <a href="tel:+73919899949" class="space-modal__btn space-modal__btn--secondary">Позвонить</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Cookie Banner -->
     <div class="cookie-banner" id="cookie-banner">
         <div class="cookie-banner__content">
@@ -1097,78 +1454,171 @@
 
     <script src="js/main.js"></script>
     <script>
-        // Catalog Filter and Sort Logic
+        // Catalog Filters and Modal Logic
         document.addEventListener('DOMContentLoaded', function() {
-            const spacesGrid = document.getElementById('spaces-grid');
+            const table = document.getElementById('spaces-table');
+            const tbody = table.querySelector('tbody');
             const spacesCount = document.getElementById('spaces-count');
-            const filterType = document.getElementById('filter-type');
+            const modal = document.getElementById('space-modal');
+
+            // Filter elements - chip buttons
+            const filterDealBtns = document.querySelectorAll('#filter-deal-btns .catalog-filters__chip');
+            const filterTypeBtns = document.querySelectorAll('#filter-type-btns .catalog-filters__chip');
             const filterAreaFrom = document.getElementById('filter-area-from');
             const filterAreaTo = document.getElementById('filter-area-to');
-            const filterFloor = document.getElementById('filter-floor');
+            const filterSort = document.getElementById('filter-sort');
             const filterApply = document.getElementById('filter-apply');
             const filterReset = document.getElementById('filter-reset');
-            const sortSelect = document.getElementById('sort-select');
 
-            function getSpaceCards() {
-                return Array.from(spacesGrid.querySelectorAll('.space-card'));
+            // Current filter values
+            let currentDeal = '';
+            let currentType = '';
+
+            // Chip button click handlers
+            filterDealBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterDealBtns.forEach(b => b.classList.remove('is-active'));
+                    btn.classList.add('is-active');
+                    currentDeal = btn.dataset.value;
+                });
+            });
+
+            filterTypeBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterTypeBtns.forEach(b => b.classList.remove('is-active'));
+                    btn.classList.add('is-active');
+                    currentType = btn.dataset.value;
+                });
+            });
+
+            function getRows() {
+                return Array.from(tbody.querySelectorAll('.spaces-catalog__row'));
             }
 
             function filterAndSort() {
-                const cards = getSpaceCards();
-                const type = filterType.value;
+                const rows = getRows();
                 const areaFrom = parseFloat(filterAreaFrom.value) || 0;
                 const areaTo = parseFloat(filterAreaTo.value) || Infinity;
-                const floor = filterFloor.value;
-                const sortValue = sortSelect.value;
+                const sortValue = filterSort.value;
 
                 let visibleCount = 0;
 
                 // Filter
-                cards.forEach(card => {
-                    const cardType = card.dataset.type;
-                    const cardArea = parseFloat(card.dataset.area);
-                    const cardFloor = card.dataset.floor;
+                rows.forEach(row => {
+                    const rowDeal = row.dataset.deal || '';
+                    const rowType = row.dataset.type || '';
+                    const rowArea = parseFloat(row.dataset.area) || 0;
 
-                    let show = true;
+                    const dealMatch = !currentDeal || rowDeal === currentDeal;
+                    const typeMatch = !currentType || rowType === currentType;
+                    const areaMatch = rowArea >= areaFrom && rowArea <= areaTo;
 
-                    if (type && cardType !== type) show = false;
-                    if (cardArea < areaFrom || cardArea > areaTo) show = false;
-                    if (floor && cardFloor !== floor) show = false;
-
-                    card.style.display = show ? '' : 'none';
+                    const show = dealMatch && typeMatch && areaMatch;
+                    row.style.display = show ? '' : 'none';
                     if (show) visibleCount++;
                 });
 
-                // Sort visible cards
-                const visibleCards = cards.filter(card => card.style.display !== 'none');
-                visibleCards.sort((a, b) => {
-                    const areaA = parseFloat(a.dataset.area);
-                    const areaB = parseFloat(b.dataset.area);
+                // Sort visible rows
+                const visibleRows = rows.filter(row => row.style.display !== 'none');
+                visibleRows.sort((a, b) => {
+                    const areaA = parseFloat(a.dataset.area) || 0;
+                    const areaB = parseFloat(b.dataset.area) || 0;
+                    const priceA = parseFloat(a.dataset.price) || 0;
+                    const priceB = parseFloat(b.dataset.price) || 0;
 
-                    if (sortValue === 'area-asc') {
-                        return areaA - areaB;
-                    } else {
-                        return areaB - areaA;
+                    switch (sortValue) {
+                        case 'price-asc': return priceA - priceB;
+                        case 'price-desc': return priceB - priceA;
+                        case 'area-asc': return areaA - areaB;
+                        case 'area-desc': return areaB - areaA;
+                        default: return priceA - priceB;
                     }
                 });
 
                 // Reorder DOM
-                visibleCards.forEach(card => spacesGrid.appendChild(card));
-                cards.filter(card => card.style.display === 'none').forEach(card => spacesGrid.appendChild(card));
+                visibleRows.forEach(row => tbody.appendChild(row));
+                rows.filter(row => row.style.display === 'none').forEach(row => tbody.appendChild(row));
 
                 // Update count
                 spacesCount.textContent = visibleCount;
             }
 
             filterApply.addEventListener('click', filterAndSort);
-            sortSelect.addEventListener('change', filterAndSort);
+            filterSort.addEventListener('change', filterAndSort);
 
             filterReset.addEventListener('click', function() {
-                filterType.value = '';
+                // Reset chip buttons
+                filterDealBtns.forEach(b => b.classList.remove('is-active'));
+                filterTypeBtns.forEach(b => b.classList.remove('is-active'));
+                filterDealBtns[0].classList.add('is-active');
+                filterTypeBtns[0].classList.add('is-active');
+                currentDeal = '';
+                currentType = '';
+
                 filterAreaFrom.value = '';
                 filterAreaTo.value = '';
-                filterFloor.value = '';
+                filterSort.value = 'price-asc';
                 filterAndSort();
+            });
+
+            // Row click - open modal
+            const rows = getRows();
+            rows.forEach(row => {
+                row.style.cursor = 'pointer';
+                row.addEventListener('click', (e) => {
+                    if (e.target.closest('a')) return;
+                    openModal(row);
+                });
+            });
+
+            // Modal functions
+            function openModal(row) {
+                const data = row.dataset;
+
+                document.getElementById('modal-img').src = data.img;
+                document.getElementById('modal-title').textContent = data.title;
+                document.getElementById('modal-address').textContent = data.address;
+                document.getElementById('modal-area').textContent = data.area + ' м²';
+                document.getElementById('modal-floor').textContent = data.floor;
+                document.getElementById('modal-height').textContent = data.height;
+                document.getElementById('modal-power').textContent = data.power;
+
+                const badge = document.getElementById('modal-badge');
+                const statusEl = row.querySelector('.spaces-catalog__status');
+                if (statusEl.classList.contains('spaces-catalog__status--build')) {
+                    badge.textContent = 'Строится';
+                    badge.className = 'space-modal__badge space-modal__badge--build';
+                } else {
+                    badge.textContent = 'Свободно';
+                    badge.className = 'space-modal__badge';
+                }
+
+                const featuresEl = document.getElementById('modal-features');
+                featuresEl.innerHTML = '';
+                const features = data.features.split(', ');
+                features.forEach(f => {
+                    const li = document.createElement('li');
+                    li.textContent = f;
+                    featuresEl.appendChild(li);
+                });
+
+                modal.classList.add('is-active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeModal() {
+                modal.classList.remove('is-active');
+                document.body.style.overflow = '';
+            }
+
+            modal.querySelectorAll('[data-close-modal]').forEach(el => {
+                el.addEventListener('click', closeModal);
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.classList.contains('is-active')) {
+                    closeModal();
+                }
             });
 
             // Initial sort
