@@ -7,7 +7,7 @@
     <title>Инвестиции в недвижимость - Промпарк Красный Яр</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/compat.css">
@@ -17,7 +17,7 @@
         /* Invest Stats Section */
         .invest-stats {
             background: #2d2d2d;
-            padding: 80px 0;
+            padding: 50px 0;
         }
         .invest-stats__container {
             max-width: 1400px;
@@ -31,14 +31,14 @@
         }
         .invest-stat {
             text-align: center;
-            padding: 40px 20px;
+            padding: 24px 16px;
             border-right: 1px solid rgba(255,255,255,0.1);
         }
         .invest-stat:last-child {
             border-right: none;
         }
         .invest-stat__value {
-            font-family: 'Oswald', sans-serif;
+            font-family: 'PT Sans', sans-serif;
             font-size: 56px;
             font-weight: 700;
             color: #c41e3a;
@@ -47,7 +47,7 @@
             margin-bottom: 16px;
         }
         .invest-stat__label {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'PT Sans', sans-serif;
             font-size: 16px;
             color: rgba(255,255,255,0.7);
             text-transform: uppercase;
@@ -86,8 +86,8 @@
 
         /* Invest Formats Section */
         .invest-formats {
-            padding: 100px 0;
-            background: #fff;
+            padding: 60px 0;
+            background: #f5f5f5;
         }
         .invest-formats__container {
             max-width: 1400px;
@@ -96,88 +96,41 @@
         }
         .invest-formats__header {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
         }
         .invest-formats__title {
-            font-family: 'Oswald', sans-serif;
-            font-size: 48px;
-            font-weight: 600;
+            font-family: 'PT Sans', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
             color: #2d2d2d;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
         .invest-formats__subtitle {
             font-size: 18px;
             color: #666;
         }
+        .invest-formats__grid {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
         .invest-formats__item {
             display: grid;
-            grid-template-columns: 80px 1fr 400px;
-            gap: 40px;
-            align-items: center;
-            padding: 40px 0;
-            border-bottom: 1px solid #eee;
+            grid-template-columns: 420px 1fr;
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             transition: all 0.3s ease;
         }
         .invest-formats__item:hover {
-            background: #fafafa;
-            padding-left: 20px;
-            padding-right: 20px;
-            margin-left: -20px;
-            margin-right: -20px;
-        }
-        .invest-formats__item:first-child {
-            border-top: 1px solid #eee;
-        }
-        .invest-formats__number {
-            font-family: 'Oswald', sans-serif;
-            font-size: 48px;
-            font-weight: 700;
-            color: #c41e3a;
-            line-height: 1;
-        }
-        .invest-formats__content h3 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 28px;
-            font-weight: 600;
-            color: #2d2d2d;
-            margin-bottom: 12px;
-        }
-        .invest-formats__content p {
-            font-size: 16px;
-            color: #666;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-        .invest-formats__content ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            gap: 24px;
-            flex-wrap: wrap;
-        }
-        .invest-formats__content li {
-            font-size: 14px;
-            color: #2d2d2d;
-            position: relative;
-            padding-left: 20px;
-        }
-        .invest-formats__content li::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 8px;
-            height: 8px;
-            background: #c41e3a;
-            border-radius: 50%;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+            transform: translateY(-4px);
         }
         .invest-formats__image {
-            width: 400px;
-            height: 250px;
+            position: relative;
+            height: 280px;
             overflow: hidden;
-            border-radius: 8px;
         }
         .invest-formats__image img {
             width: 100%;
@@ -188,37 +141,82 @@
         .invest-formats__item:hover .invest-formats__image img {
             transform: scale(1.05);
         }
-        @media (max-width: 1024px) {
-            .invest-formats__item {
-                grid-template-columns: 60px 1fr;
-                gap: 24px;
-            }
-            .invest-formats__image {
-                display: none;
-            }
-            .invest-formats__number {
-                font-size: 36px;
-            }
+        .invest-formats__number {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 56px;
+            height: 56px;
+            background: #c41e3a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'PT Sans', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #fff;
+            z-index: 2;
         }
-        @media (max-width: 576px) {
+        .invest-formats__content {
+            padding: 36px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .invest-formats__content h3 {
+            font-family: 'PT Sans', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #2d2d2d;
+            margin-bottom: 12px;
+        }
+        .invest-formats__content p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+        .invest-formats__content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 24px;
+        }
+        .invest-formats__content li {
+            font-size: 15px;
+            color: #2d2d2d;
+            position: relative;
+            padding-left: 20px;
+        }
+        .invest-formats__content li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            background: #c41e3a;
+            border-radius: 50%;
+        }
+        @media (max-width: 900px) {
             .invest-formats__item {
                 grid-template-columns: 1fr;
             }
-            .invest-formats__number {
-                font-size: 32px;
+            .invest-formats__image {
+                height: 220px;
             }
-            .invest-formats__title {
-                font-size: 36px;
-            }
-            .invest-formats__content ul {
-                flex-direction: column;
-                gap: 12px;
+            .invest-formats__content {
+                padding: 28px;
             }
         }
 
         /* Why Us Section */
         .why-us {
-            padding: 100px 0;
+            padding: 60px 0;
             background: #f8f8f8;
         }
         .why-us__container {
@@ -228,10 +226,10 @@
         }
         .why-us__header {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 40px;
         }
         .why-us__title {
-            font-family: 'Oswald', sans-serif;
+            font-family: 'PT Sans', sans-serif;
             font-size: 48px;
             font-weight: 600;
             color: #2d2d2d;
@@ -244,11 +242,11 @@
         .why-us__grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
+            gap: 24px;
         }
         .why-us__item {
             background: #fff;
-            padding: 40px;
+            padding: 28px;
             border-radius: 8px;
             transition: all 0.3s ease;
             border: 1px solid #eee;
@@ -276,7 +274,7 @@
             fill: none;
         }
         .why-us__item h3 {
-            font-family: 'Oswald', sans-serif;
+            font-family: 'PT Sans', sans-serif;
             font-size: 22px;
             font-weight: 600;
             color: #2d2d2d;
@@ -303,8 +301,8 @@
 
         /* Calculator Section */
         .invest-calc {
-            padding: 100px 0;
-            background: #f8f8f8;
+            padding: 60px 0;
+            background: #2d2d2d;
         }
         .invest-calc__container {
             max-width: 1400px;
@@ -314,26 +312,26 @@
         .invest-calc__layout {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            gap: 40px;
             align-items: start;
         }
         .invest-calc__left,
         .invest-calc__right {
-            background: #fff;
-            padding: 48px;
+            background: #3a3a3a;
+            padding: 32px;
             border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
         }
         .invest-calc__title {
-            font-family: 'Oswald', sans-serif;
+            font-family: 'PT Sans', sans-serif;
             font-size: 32px;
             font-weight: 600;
-            color: #2d2d2d;
+            color: #fff;
             margin-bottom: 12px;
         }
         .invest-calc__desc {
             font-size: 16px;
-            color: #666;
+            color: rgba(255,255,255,0.7);
             margin-bottom: 32px;
         }
         .calculator__toggle {
@@ -344,19 +342,19 @@
         .calculator__toggle-btn {
             flex: 1;
             padding: 14px 24px;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'PT Sans', sans-serif;
             font-size: 15px;
             font-weight: 500;
-            color: #525252;
-            background: #f5f5f5;
-            border: 1px solid #e5e5e5;
+            color: rgba(255,255,255,0.7);
+            background: #2d2d2d;
+            border: 1px solid #4a4a4a;
             border-radius: 8px;
             cursor: pointer;
             transition: all 0.3s ease;
         }
         .calculator__toggle-btn:hover {
             border-color: #c41e3a;
-            color: #c41e3a;
+            color: #fff;
         }
         .calculator__toggle-btn.is-active {
             background: #c41e3a;
@@ -370,7 +368,7 @@
             display: block;
             font-size: 14px;
             font-weight: 500;
-            color: #666;
+            color: rgba(255,255,255,0.7);
             margin-bottom: 8px;
         }
         .calculator__select-wrap {
@@ -379,25 +377,30 @@
         .calculator__select {
             width: 100%;
             padding: 14px 40px 14px 16px;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'PT Sans', sans-serif;
             font-size: 15px;
-            border: 1px solid #e5e5e5;
+            color: #fff;
+            border: 1px solid #4a4a4a;
             border-radius: 8px;
-            background: #f5f5f5 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='none' stroke='%23666' stroke-width='2' d='M3 4.5L6 7.5L9 4.5'/%3E%3C/svg%3E") no-repeat right 16px center;
+            background: #2d2d2d url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='none' stroke='%23999' stroke-width='2' d='M3 4.5L6 7.5L9 4.5'/%3E%3C/svg%3E") no-repeat right 16px center;
             appearance: none;
             cursor: pointer;
             transition: all 0.3s ease;
         }
+        .calculator__select option {
+            background: #2d2d2d;
+            color: #fff;
+        }
         .calculator__select:focus {
             outline: none;
             border-color: #c41e3a;
-            background-color: #fff;
+            background-color: #3a3a3a;
         }
         .calculator__range {
             width: 100%;
             height: 6px;
             border-radius: 3px;
-            background: #e5e5e5;
+            background: #4a4a4a;
             appearance: none;
             cursor: pointer;
         }
@@ -409,24 +412,24 @@
             background: #c41e3a;
             cursor: pointer;
             border: 3px solid #fff;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
         }
         .calculator__range-value {
             text-align: center;
-            font-family: 'Oswald', sans-serif;
+            font-family: 'PT Sans', sans-serif;
             font-size: 24px;
             font-weight: 600;
-            color: #2d2d2d;
+            color: #fff;
             margin-top: 12px;
         }
         .calculator__request {
             margin-top: 32px;
             padding-top: 24px;
-            border-top: 1px solid #eee;
+            border-top: 1px solid #4a4a4a;
         }
         .calculator__request-text {
             font-size: 14px;
-            color: #666;
+            color: rgba(255,255,255,0.7);
             margin-bottom: 16px;
         }
         .calculator__request-fields {
@@ -438,17 +441,21 @@
         .calculator__input {
             width: 100%;
             padding: 14px 16px;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'PT Sans', sans-serif;
             font-size: 15px;
-            border: 1px solid #e5e5e5;
+            color: #fff;
+            border: 1px solid #4a4a4a;
             border-radius: 8px;
-            background: #f5f5f5;
+            background: #2d2d2d;
             transition: all 0.3s ease;
+        }
+        .calculator__input::placeholder {
+            color: rgba(255,255,255,0.5);
         }
         .calculator__input:focus {
             outline: none;
             border-color: #c41e3a;
-            background: #fff;
+            background: #3a3a3a;
         }
         .calculator__btn {
             width: 100%;
@@ -459,7 +466,7 @@
             border-radius: 8px;
             font-size: 16px;
             font-weight: 600;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'PT Sans', sans-serif;
             cursor: pointer;
             transition: background 0.3s ease;
         }
@@ -513,7 +520,7 @@
             align-items: center;
         }
         .investor-booking__content h2 {
-            font-family: 'Oswald', sans-serif;
+            font-family: 'PT Sans', sans-serif;
             font-size: 48px;
             font-weight: 600;
             color: #fff;
@@ -549,7 +556,7 @@
             border-radius: 12px;
         }
         .investor-booking__form h3 {
-            font-family: 'Oswald', sans-serif;
+            font-family: 'PT Sans', sans-serif;
             font-size: 28px;
             font-weight: 600;
             color: #2d2d2d;
@@ -565,7 +572,7 @@
         .investor-booking__field label {
             display: block;
             font-size: 14px;
-            color: #666;
+            color: rgba(255,255,255,0.7);
             margin-bottom: 8px;
             font-weight: 500;
         }
@@ -573,16 +580,26 @@
         .investor-booking__field select {
             width: 100%;
             padding: 14px 16px;
-            border: 1px solid #ddd;
+            border: 1px solid #4a4a4a;
             border-radius: 6px;
             font-size: 16px;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'PT Sans', sans-serif;
+            background: #2d2d2d;
+            color: #fff;
             transition: border-color 0.3s ease;
+        }
+        .investor-booking__field input::placeholder {
+            color: rgba(255,255,255,0.5);
+        }
+        .investor-booking__field select option {
+            background: #2d2d2d;
+            color: #fff;
         }
         .investor-booking__field input:focus,
         .investor-booking__field select:focus {
             outline: none;
             border-color: #c41e3a;
+            background: #3a3a3a;
         }
         .investor-booking__submit {
             width: 100%;
@@ -593,7 +610,7 @@
             border-radius: 6px;
             font-size: 16px;
             font-weight: 600;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'PT Sans', sans-serif;
             cursor: pointer;
             transition: background 0.3s ease;
         }
@@ -695,9 +712,8 @@
                     </button>
                     <div class="header__dropdown-menu">
                         <div class="header__dropdown-inner">
-                            <a href="rent.html" class="header__dropdown-link">Аренда</a>
-                            <a href="buy.html" class="header__dropdown-link">Покупка</a>
-                            <a href="formats.html" class="header__dropdown-link">Все форматы</a>
+                            <a href="rent.html" class="header__dropdown-link">Каталог помещений</a>
+                            <a href="formats.html" class="header__dropdown-link">Форматы помещений</a>
                         </div>
                     </div>
                 </div>
@@ -783,10 +799,10 @@
             <div class="hero-split__left">
                 <h1 class="hero-split__heading">Инвестиции в промышленную недвижимость</h1>
                 <p class="hero-split__text">Надежные вложения с доходностью 12-15% годовых. Первый промышленный парк Красноярского края в федеральном реестре Минпромторга РФ с 14-летней историей успешной работы.</p>
-                <a href="#request" class="hero-split__btn" data-scroll-full>Обсудить инвестиции</a>
+                <a href="#calculator" class="hero-split__btn" data-scroll-full>Обсудить инвестиции</a>
             </div>
             <div class="hero-split__right">
-                <img src="assets/images/gallery/35.jpg" alt="Инвестиции в Промпарк Красный Яр" class="hero-split__img">
+                <img src="assets/images/gallery/invest-hero.jpg" alt="Инвестиции в Промпарк Красный Яр" class="hero-split__img">
             </div>
         </div>
     </section>
@@ -823,51 +839,55 @@
                 <p class="invest-formats__subtitle">Выберите оптимальный вариант вложений под ваши цели</p>
             </div>
 
-            <div class="invest-formats__item">
-                <div class="invest-formats__number">01</div>
-                <div class="invest-formats__content">
-                    <h3>Готовые помещения</h3>
-                    <p>Арендный бизнес с гарантированным доходом от 12% годовых. Действующие объекты с проверенными арендаторами.</p>
-                    <ul>
-                        <li>Площади от 500 м²</li>
-                        <li>Действующие арендаторы</li>
-                        <li>Управление УК</li>
-                    </ul>
+            <div class="invest-formats__grid">
+                <div class="invest-formats__item">
+                    <div class="invest-formats__image">
+                        <div class="invest-formats__number">01</div>
+                        <img src="assets/images/gallery/invest-ready.jpg" alt="Готовые помещения">
+                    </div>
+                    <div class="invest-formats__content">
+                        <h3>Готовые помещения</h3>
+                        <p>Готовые объекты с инженерной инфраструктурой</p>
+                        <ul>
+                            <li>Площади от 500 м²</li>
+                            <li>Управление УК</li>
+                            <li>Сопровождение в получении мер гос поддержки</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="invest-formats__image">
-                    <img src="assets/images/gallery/1.jpg" alt="Готовые помещения">
-                </div>
-            </div>
 
-            <div class="invest-formats__item">
-                <div class="invest-formats__number">02</div>
-                <div class="invest-formats__content">
-                    <h3>Земельные участки</h3>
-                    <p>Участки с готовой инфраструктурой для собственного строительства. Все коммуникации подведены.</p>
-                    <ul>
-                        <li>21 000 м² - 2-я очередь</li>
-                        <li>Все коммуникации</li>
-                        <li>Гибкие условия</li>
-                    </ul>
+                <div class="invest-formats__item">
+                    <div class="invest-formats__image">
+                        <div class="invest-formats__number">02</div>
+                        <img src="assets/images/gallery/invest-land.jpg" alt="Земельные участки">
+                    </div>
+                    <div class="invest-formats__content">
+                        <h3>Земельные участки</h3>
+                        <p>Участки с готовой инфраструктурой для строительства. Все коммуникации подведены.</p>
+                        <ul>
+                            <li>21 000 м² - 2-я очередь</li>
+                            <li>Все коммуникации</li>
+                            <li>Гибкие условия</li>
+                            <li>Проектное решение</li>
+                            <li>Сопровождение в получении мер гос поддержки</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="invest-formats__image">
-                    <img src="assets/images/gallery/25.jpg" alt="Земельные участки">
-                </div>
-            </div>
 
-            <div class="invest-formats__item">
-                <div class="invest-formats__number">03</div>
-                <div class="invest-formats__content">
-                    <h3>Build-to-Suit</h3>
-                    <p>Строительство объекта под требования конкретного арендатора с гарантированным долгосрочным договором.</p>
-                    <ul>
-                        <li>Проект под клиента</li>
-                        <li>Договор от 7 лет</li>
-                        <li>Полное сопровождение</li>
-                    </ul>
-                </div>
-                <div class="invest-formats__image">
-                    <img src="assets/images/gallery/30.jpg" alt="Build-to-Suit">
+                <div class="invest-formats__item">
+                    <div class="invest-formats__image">
+                        <div class="invest-formats__number">03</div>
+                        <img src="assets/images/gallery/invest-bts.jpg" alt="Build-to-Suit">
+                    </div>
+                    <div class="invest-formats__content">
+                        <h3>Build-to-Suit</h3>
+                        <p>Строительство объекта под требования инвестора с гарантированным сроком выполнения.</p>
+                        <ul>
+                            <li>Проект под клиента</li>
+                            <li>Полное сопровождение</li>
+                            <li>Сопровождение в получении мер гос поддержки</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -885,24 +905,22 @@
                 <div class="why-us__item">
                     <div class="why-us__icon">
                         <svg viewBox="0 0 24 24">
-                            <path d="M12 2L2 7L12 12L22 7L12 2Z"/>
-                            <path d="M2 17L12 22L22 17"/>
-                            <path d="M2 12L12 17L22 12"/>
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
                         </svg>
                     </div>
-                    <h3>Федеральный статус</h3>
-                    <p>Первый парк Красноярского края в реестре промышленных парков Минпромторга РФ</p>
+                    <h3>Локация</h3>
+                    <p>Парк обеспечен транспортной и пешей доступностью</p>
                 </div>
 
                 <div class="why-us__item">
                     <div class="why-us__icon">
                         <svg viewBox="0 0 24 24">
-                            <path d="M12 2V22"/>
-                            <path d="M17 5H9.5C8.57174 5 7.6815 5.36875 7.02513 6.02513C6.36875 6.6815 6 7.57174 6 8.5C6 9.42826 6.36875 10.3185 7.02513 10.9749C7.6815 11.6313 8.57174 12 9.5 12H14.5C15.4283 12 16.3185 12.3687 16.9749 13.0251C17.6313 13.6815 18 14.5717 18 15.5C18 16.4283 17.6313 17.3185 16.9749 17.9749C16.3185 18.6313 15.4283 19 14.5 19H6"/>
+                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z"/>
                         </svg>
                     </div>
-                    <h3>Стабильный доход</h3>
-                    <p>ROI 12-15% годовых при заполняемости парка более 95%</p>
+                    <h3>Развитая инфраструктура</h3>
+                    <p>Парк обеспечен инженерной и транспортной инфраструктурой</p>
                 </div>
 
                 <div class="why-us__item">
@@ -919,11 +937,12 @@
                 <div class="why-us__item">
                     <div class="why-us__icon">
                         <svg viewBox="0 0 24 24">
-                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z"/>
+                            <path d="M12 2V22"/>
+                            <path d="M17 5H9.5C8.57174 5 7.6815 5.36875 7.02513 6.02513C6.36875 6.6815 6 7.57174 6 8.5C6 9.42826 6.36875 10.3185 7.02513 10.9749C7.6815 11.6313 8.57174 12 9.5 12H14.5C15.4283 12 16.3185 12.3687 16.9749 13.0251C17.6313 13.6815 18 14.5717 18 15.5C18 16.4283 17.6313 17.3185 16.9749 17.9749C16.3185 18.6313 15.4283 19 14.5 19H6"/>
                         </svg>
                     </div>
-                    <h3>Развитая инфраструктура</h3>
-                    <p>Все коммуникации подведены, электрическая мощность до 31,5 МВт</p>
+                    <h3>Стабильный рост</h3>
+                    <p>ROI 12-15% годовых при заполняемости парка более 95%</p>
                 </div>
 
                 <div class="why-us__item">
@@ -933,19 +952,20 @@
                             <path d="M12 6V12L16 14"/>
                         </svg>
                     </div>
-                    <h3>Проверенная история</h3>
+                    <h3>История проверенная временем</h3>
                     <p>14 лет успешной работы, более 50 резидентов, 1300+ рабочих мест</p>
                 </div>
 
                 <div class="why-us__item">
                     <div class="why-us__icon">
                         <svg viewBox="0 0 24 24">
-                            <path d="M9 11L12 14L22 4"/>
-                            <path d="M21 12V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16"/>
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z"/>
+                            <path d="M2 17L12 22L22 17"/>
+                            <path d="M2 12L12 17L22 12"/>
                         </svg>
                     </div>
-                    <h3>Прозрачность</h3>
-                    <p>Полная финансовая отчетность, аудит, юридическая чистота сделок</p>
+                    <h3>Федеральный статус</h3>
+                    <p>Первый парк Красноярского края в реестре промышленных парков Минпромторга РФ</p>
                 </div>
             </div>
         </div>
@@ -960,11 +980,6 @@
                     <h2 class="invest-calc__title">Калькулятор стоимости</h2>
                     <p class="invest-calc__desc">Рассчитайте примерную стоимость покупки</p>
                     <div class="calculator__form">
-                        <!-- Buy Mode Toggle -->
-                        <div class="calculator__toggle">
-                            <button type="button" class="calculator__toggle-btn" data-mode="rent">Аренда</button>
-                            <button type="button" class="calculator__toggle-btn is-active" data-mode="buy">Покупка</button>
-                        </div>
                         <div class="calculator__field">
                             <label class="calculator__label">Тип помещения</label>
                             <div class="calculator__select-wrap">
@@ -998,77 +1013,9 @@
                 </div>
                 <!-- Request Form Right -->
                 <div class="invest-calc__right">
-                    <h2 class="invest-calc__title">Обсудить инвестиции</h2>
+                    <h2 class="invest-calc__title">Заявка на встречу</h2>
                     <p class="invest-calc__desc">Наш инвестиционный менеджер свяжется с вами</p>
                     <form id="invest-request-form">
-                        <div class="investor-booking__fields">
-                            <div class="investor-booking__field">
-                                <label>Имя *</label>
-                                <input type="text" name="name" required placeholder="Ваше имя">
-                            </div>
-                            <div class="investor-booking__field">
-                                <label>Телефон *</label>
-                                <input type="tel" name="phone" required placeholder="+7 (___) ___-__-__">
-                            </div>
-                            <div class="investor-booking__field">
-                                <label>Email</label>
-                                <input type="email" name="email" placeholder="email@example.com">
-                            </div>
-                            <div class="investor-booking__field">
-                                <label>Формат инвестиций</label>
-                                <select name="interest">
-                                    <option value="consult">Консультация</option>
-                                    <option value="building">Готовые здания</option>
-                                    <option value="land">Земельные участки</option>
-                                    <option value="bts">Build-to-Suit</option>
-                                </select>
-                            </div>
-                        </div>
-                        <button type="submit" class="investor-booking__submit">Отправить заявку</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. Investor Booking Section -->
-    <section class="investor-booking" id="request">
-        <div class="investor-booking__container">
-            <div class="investor-booking__layout">
-                <div class="investor-booking__content">
-                    <h2>Обсудить инвестиции</h2>
-                    <p>Оставьте заявку - наш инвестиционный менеджер свяжется с вами и подготовит индивидуальное предложение</p>
-                    <div class="investor-booking__benefits">
-                        <div class="investor-booking__benefit">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
-                            <span>Бесплатная встреча</span>
-                        </div>
-                        <div class="investor-booking__benefit">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
-                            <span>Персональный менеджер</span>
-                        </div>
-                        <div class="investor-booking__benefit">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
-                            <span>Презентация объектов</span>
-                        </div>
-                        <div class="investor-booking__benefit">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
-                            <span>Финансовая модель доходности</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="investor-booking__form">
-                    <h3>Заявка на встречу</h3>
-                    <form id="booking-form">
                         <div class="investor-booking__fields">
                             <div class="investor-booking__field">
                                 <label>Имя *</label>
@@ -1106,8 +1053,7 @@
                 <div class="footer__nav">
                     <div class="footer__col">
                         <span class="footer__col-title">Помещения</span>
-                        <a href="rent.html">В аренду</a>
-                        <a href="buy.html">Для покупки</a>
+                        <a href="rent.html">Каталог помещений</a>
                     </div>
                     <div class="footer__col">
                         <span class="footer__col-title">Компания</span>
@@ -1243,8 +1189,6 @@
             const areaInput = document.getElementById('calc-area-input-buy');
             const typeSelect = document.getElementById('calc-type-buy');
             const typeInput = document.getElementById('calc-type-input-buy');
-            const toggleBtns = document.querySelectorAll('.calculator__toggle-btn');
-
             if (areaRange && areaValue) {
                 areaRange.addEventListener('input', function() {
                     areaValue.textContent = this.value;
@@ -1257,16 +1201,6 @@
                     typeInput.value = this.value;
                 });
             }
-
-            toggleBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    toggleBtns.forEach(b => b.classList.remove('is-active'));
-                    this.classList.add('is-active');
-                    if (this.dataset.mode === 'rent') {
-                        window.location.href = 'rent.html#request';
-                    }
-                });
-            });
         });
     </script>
 </body>

@@ -26,8 +26,8 @@
     --red-light: rgba(196, 30, 58, 0.1);
 
     /* Typography */
-    --font: 'Roboto', Arial, Helvetica, sans-serif;
-    --font-heading: 'Oswald', 'Arial Black', sans-serif;
+    --font: 'PT Sans', Arial, Helvetica, sans-serif;
+    --font-heading: 'PT Sans', Arial, sans-serif;
 
     /* Easing */
     --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
@@ -1283,7 +1283,7 @@ address {
 .about__stat-num {
     font-size: 72px;
     font-weight: 700;
-    line-height: 1;
+    line-height: 1.15;
     letter-spacing: 0.02em;
     color: var(--black);
 }
@@ -1291,7 +1291,7 @@ address {
 /* Counter Drum Animation */
 .counter-drum {
     display: inline-flex;
-    overflow: hidden;
+    overflow: visible;
     line-height: 1;
 }
 
@@ -1318,8 +1318,12 @@ address {
 
 .counter-char {
     display: inline-block;
-    height: 1em;
     line-height: 1;
+}
+
+.counter-digit-wrap:has(.counter-char) {
+    overflow: visible;
+    height: auto;
 }
 
 .about__stat-unit {
