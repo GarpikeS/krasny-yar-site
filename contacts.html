@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/compat.css">
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -181,110 +182,120 @@
         </div>
     </section>
 
-    <!-- UNIQUE: Full-screen Map with Contacts Sidebar -->
-    <section class="contacts-map" id="contacts-info">
-        <div class="contacts-map__wrapper">
-            <div class="contacts-map__iframe" data-reveal="scale">
-                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Akrasnyy_yar&source=constructor&ll=92.796944%2C56.077222&z=15&pt=92.796944%2C56.077222%2Cpm2rdm1" width="100%" height="600" frameborder="0"></iframe>
-            </div>
-            <div class="contacts-map__info" data-reveal="right">
-                <h2>Как связаться</h2>
-                <div class="contacts-map__item">
-                    <span class="contacts-map__icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                            <circle cx="12" cy="10" r="3"/>
-                        </svg>
-                    </span>
-                    <div>
-                        <strong>Адрес</strong>
-                        <p>660050, г. Красноярск,<br>ул. Кутузова, 1, стр. 37, оф. 3-14</p>
-                    </div>
-                </div>
-                <div class="contacts-map__item">
-                    <span class="contacts-map__icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <!-- Как связаться - Contact Cards -->
+    <section class="contact-cards" id="contacts-info">
+        <div class="contact-cards__container">
+            <h2 class="contact-cards__title" data-reveal="up">Как связаться</h2>
+            <div class="contact-cards__grid">
+                <a href="tel:+73919899949" class="contact-card" data-reveal="up" data-delay="1">
+                    <div class="contact-card__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                         </svg>
-                    </span>
-                    <div>
-                        <strong>Телефоны</strong>
-                        <p><a href="tel:+73919899949">+7 (391) 989-99-49</a></p>
-                        <p><a href="tel:+79240424900">+7 924 042-49-00</a></p>
                     </div>
-                </div>
-                <div class="contacts-map__item">
-                    <span class="contacts-map__icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <span class="contact-card__label">Отдел продаж</span>
+                    <span class="contact-card__value">+7 (391) 989-99-49</span>
+                    <span class="contact-card__hint">Нажмите для звонка</span>
+                </a>
+                <a href="tel:+79240424900" class="contact-card" data-reveal="up" data-delay="2">
+                    <div class="contact-card__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                            <line x1="12" y1="18" x2="12.01" y2="18"/>
+                        </svg>
+                    </div>
+                    <span class="contact-card__label">Мобильный</span>
+                    <span class="contact-card__value">+7 924 042-49-00</span>
+                    <span class="contact-card__hint">Нажмите для звонка</span>
+                </a>
+                <a href="mailto:red-yar@mail.ru" class="contact-card" data-reveal="up" data-delay="3">
+                    <div class="contact-card__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                             <polyline points="22,6 12,13 2,6"/>
                         </svg>
-                    </span>
-                    <div>
-                        <strong>Email</strong>
-                        <p><a href="mailto:red-yar@mail.ru">red-yar@mail.ru</a></p>
                     </div>
-                </div>
-                <div class="contacts-map__item">
-                    <span class="contacts-map__icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <span class="contact-card__label">Email</span>
+                    <span class="contact-card__value">red-yar@mail.ru</span>
+                    <span class="contact-card__hint">Написать письмо</span>
+                </a>
+                <div class="contact-card contact-card--info" data-reveal="up" data-delay="4">
+                    <div class="contact-card__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="12" cy="12" r="10"/>
                             <polyline points="12,6 12,12 16,14"/>
                         </svg>
-                    </span>
-                    <div>
-                        <strong>Режим работы</strong>
-                        <p>Пн-Пт: 9:00 - 18:00</p>
                     </div>
+                    <span class="contact-card__label">Режим работы</span>
+                    <span class="contact-card__value">Пн-Пт: 9:00 - 18:00</span>
+                    <span class="contact-card__hint">Сб-Вс: выходной</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- UNIQUE: How to Get There - Route Cards -->
-    <section class="contacts-routes" id="how-to-get">
-        <div class="contacts-routes__container">
-            <h2 class="contacts-routes__title" data-reveal="up">Как добраться</h2>
-            <div class="contacts-routes__grid">
-                <div class="contacts-routes__item" data-reveal="up" data-delay="1">
-                    <div class="contacts-routes__icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M5 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0M15 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0"/>
-                            <path d="M5 17H3V6a1 1 0 0 1 1-1h9v12m-4 0h6m4 0h2v-6h-8m0-5h5l3 5"/>
-                        </svg>
-                    </div>
-                    <h3>На автомобиле</h3>
-                    <p>15 минут от центра города по ул. Кутузова. Удобная парковка на территории парка.</p>
-                </div>
-                <div class="contacts-routes__item" data-reveal="up" data-delay="2">
-                    <div class="contacts-routes__icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M8 6v6M15 6v6M2 12h19.6M18 18h3s.5-1.5.5-4-.5-8.5-.5-8.5-.5-1.5-1-1.5H4c-.5 0-1 1-1 1.5s-.5 5-.5 8.5.5 4 .5 4h3"/>
-                            <circle cx="7" cy="18" r="2"/>
-                            <circle cx="17" cy="18" r="2"/>
-                        </svg>
-                    </div>
-                    <h3>На общественном транспорте</h3>
-                    <p>Автобусы 12, 43, 65 до остановки "Завод Сибэлектросталь" или "Кутузова".</p>
-                </div>
-                <div class="contacts-routes__item" data-reveal="up" data-delay="3">
-                    <div class="contacts-routes__icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M1 3h15v13H1zM16 8h4l3 5v5h-7V8z"/>
-                            <circle cx="5.5" cy="18.5" r="2.5"/>
-                            <circle cx="18.5" cy="18.5" r="2.5"/>
-                        </svg>
-                    </div>
-                    <h3>Для грузового транспорта</h3>
-                    <p>Удобный подъезд для фур, КПП работает 24/7. Собственная ЖД ветка на территории.</p>
-                </div>
+    <!-- Карта + Как добраться -->
+    <section class="location-section" id="how-to-get">
+        <div class="location-section__container">
+            <div class="location-section__map" data-reveal="left">
+                <iframe src="https://yandex.ru/map-widget/v1/?ll=92.997327%2C55.997090&z=13&l=map&pt=92.997327%2C55.997090%2Cpm2rdm" width="100%" height="100%" frameborder="0"></iframe>
             </div>
-            <a href="https://yandex.ru/maps/?ll=92.796944%2C56.077222&z=15&pt=92.796944%2C56.077222" target="_blank" class="contacts-routes__link" data-reveal="up">
-                <span>Открыть в Яндекс.Картах</span>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M3 8H13M9 4L13 8L9 12"/>
-                </svg>
-            </a>
+            <div class="location-section__info" data-reveal="right">
+                <h2 class="location-section__title">Как добраться</h2>
+                <address class="location-section__address">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    <span>660050, г. Красноярск, ул. Кутузова, 1, стр. 37, оф. 307</span>
+                </address>
+                <div class="location-section__routes">
+                    <div class="location-route">
+                        <div class="location-route__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M5 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0M15 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0"/>
+                                <path d="M5 17H3V6a1 1 0 0 1 1-1h9v12m-4 0h6m4 0h2v-6h-8m0-5h5l3 5"/>
+                            </svg>
+                        </div>
+                        <div class="location-route__content">
+                            <strong>На автомобиле</strong>
+                            <p>15 минут от центра города. Бесплатная парковка.</p>
+                        </div>
+                    </div>
+                    <div class="location-route">
+                        <div class="location-route__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M8 6v6M15 6v6M2 12h19.6M18 18h3s.5-1.5.5-4-.5-8.5-.5-8.5-.5-1.5-1-1.5H4c-.5 0-1 1-1 1.5s-.5 5-.5 8.5.5 4 .5 4h3"/>
+                                <circle cx="7" cy="18" r="2"/>
+                                <circle cx="17" cy="18" r="2"/>
+                            </svg>
+                        </div>
+                        <div class="location-route__content">
+                            <strong>Общественный транспорт</strong>
+                            <p>Автобусы 12, 43, 65 до ост. "Кутузова"</p>
+                        </div>
+                    </div>
+                    <div class="location-route">
+                        <div class="location-route__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M1 3h15v13H1zM16 8h4l3 5v5h-7V8z"/>
+                                <circle cx="5.5" cy="18.5" r="2.5"/>
+                                <circle cx="18.5" cy="18.5" r="2.5"/>
+                            </svg>
+                        </div>
+                        <div class="location-route__content">
+                            <strong>Грузовой транспорт</strong>
+                            <p>КПП 24/7. Ж/Д ветка на территории.</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://yandex.ru/maps/-/CPuYnU0u" target="_blank" class="location-section__link">
+                    <span>Открыть в Яндекс.Картах</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M3 8H13M9 4L13 8L9 12"/>
+                    </svg>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -464,6 +475,7 @@
         </div>
     </div>
 
+    <script src="js/polyfills.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

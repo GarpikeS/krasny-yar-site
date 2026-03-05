@@ -1,0 +1,506 @@
+/* ===== CROSS-BROWSER COMPATIBILITY ===== */
+/* Support: Chrome, Firefox, Safari, Edge, Opera, Yandex Browser */
+
+/* ===== FLEXBOX FALLBACKS ===== */
+/* Safari < 9, older browsers */
+.preloader,
+.preloader__counter,
+.preloader__hint,
+.header__inner,
+.header__left,
+.header__nav,
+.nav__list,
+.nav__item,
+.nav__link,
+.nav__sub,
+.header__contacts,
+.header__phone,
+.burger,
+.mobile-menu,
+.mobile-nav,
+.hero,
+.hero__content,
+.about__content,
+.formats__grid,
+.projects__grid,
+.footer__inner,
+.footer__top,
+.footer__bottom,
+.btn,
+.card,
+.modal,
+.gallery,
+.tabs,
+.form,
+.breadcrumb {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+/* ===== TRANSFORM PREFIXES ===== */
+/* For animations and transitions */
+@supports not (transform: translateY(0)) {
+    [data-anim] {
+        -webkit-transform: translateY(80px);
+        -ms-transform: translateY(80px);
+        transform: translateY(80px);
+    }
+
+    [data-anim].is-visible {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+/* ===== INSET FALLBACK ===== */
+/* Safari < 14.1, older Edge */
+@supports not (inset: 0) {
+    .preloader,
+    .modal__overlay,
+    .hero__overlay,
+    .card__overlay,
+    .gallery__overlay {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+/* ===== GAP FALLBACK FOR FLEXBOX ===== */
+/* Safari < 14.1, older browsers */
+@supports not (gap: 1px) {
+    /* Use margins instead of gap */
+    .nav__list > * + *,
+    .header__contacts > * + *,
+    .footer__links > * + * {
+        margin-left: 32px;
+    }
+
+    .formats__grid > *,
+    .projects__grid > *,
+    .gallery__grid > * {
+        margin: 20px;
+    }
+}
+
+/* ===== BACKDROP-FILTER ===== */
+/* Safari, Chrome, Firefox */
+.header.is-scrolled,
+.mobile-menu,
+.modal__content,
+[class*="blur"] {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+/* Fallback for browsers without backdrop-filter */
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+    .header.is-scrolled,
+    .mobile-menu,
+    .modal__content {
+        background-color: rgba(255, 255, 255, 0.95) !important;
+    }
+}
+
+/* ===== OBJECT-FIT WITH PREFIXES ===== */
+/* Safari, Opera, all browsers */
+figure img,
+.image img,
+[class*="__img"],
+[class*="__image"] img,
+[class*="-img"],
+[class*="-image"] img,
+.gallery img,
+[class*="gallery"] img,
+[class*="card"] img,
+[class*="hero"] img,
+[class*="slide"] img {
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+/* ===== OBJECT-FIT FALLBACK ===== */
+/* IE11, older browsers */
+@supports not (object-fit: cover) {
+    .hero__bg img,
+    .card__image img,
+    .gallery__image img,
+    [class*="__image"] img,
+    [class*="gallery"] img,
+    [class*="card"] img,
+    [class*="hero"] img,
+    [class*="slide"] img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    /* Container needs relative positioning */
+    [class*="__image"],
+    [class*="gallery"],
+    [class*="card"],
+    [class*="hero"],
+    [class*="slide"] {
+        position: relative;
+        overflow: hidden;
+    }
+}
+
+/* ===== CSS VARIABLES FALLBACK ===== */
+/* IE11 and older browsers */
+@supports not (--css: variables) {
+    :root {
+        /* Fallback values will be applied via JS polyfill */
+    }
+
+    body {
+        font-family: 'Roboto', Arial, Helvetica, sans-serif;
+        color: #000;
+        background: #fff;
+    }
+
+    .btn-primary {
+        background: #c41e3a;
+    }
+
+    .header {
+        height: 92px;
+    }
+}
+
+/* ===== TRANSITION PREFIXES ===== */
+/* Older Safari, Android */
+*,
+*::before,
+*::after {
+    -webkit-transition-property: inherit;
+    -webkit-transition-duration: inherit;
+    -webkit-transition-timing-function: inherit;
+}
+
+.btn,
+.card,
+.nav__link,
+.gallery__item,
+[data-anim] {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+/* ===== ANIMATION PREFIXES ===== */
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@-moz-keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@-o-keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@-webkit-keyframes slideUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(30px);
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+@-moz-keyframes slideUp {
+    from {
+        opacity: 0;
+        -moz-transform: translateY(30px);
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        -moz-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== SCROLL BEHAVIOR ===== */
+/* Safari fallback handled by JS */
+@supports not (scroll-behavior: smooth) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* ===== ASPECT-RATIO FALLBACK ===== */
+/* Safari < 15, older browsers */
+@supports not (aspect-ratio: 1) {
+    .video-container,
+    .embed-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        height: 0;
+        overflow: hidden;
+    }
+
+    .video-container iframe,
+    .video-container video,
+    .embed-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* ===== GRID FALLBACK ===== */
+/* IE11, older browsers */
+@supports not (display: grid) {
+    .formats__grid,
+    .projects__grid,
+    .gallery__grid,
+    .news__grid {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .formats__grid > *,
+    .projects__grid > *,
+    .gallery__grid > *,
+    .news__grid > * {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 calc(33.333% - 40px);
+        -ms-flex: 0 0 calc(33.333% - 40px);
+        flex: 0 0 calc(33.333% - 40px);
+        margin: 20px;
+    }
+}
+
+/* ===== CLIP-PATH FALLBACK ===== */
+@supports not (clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)) {
+    .hero__shape,
+    .decorative-shape {
+        display: none;
+    }
+}
+
+/* ===== POSITION STICKY FALLBACK ===== */
+.sidebar,
+.sticky-element {
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+/* ===== WEBKIT SCROLLBAR (Chrome, Safari, Opera, Yandex, Edge) ===== */
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+/* ===== FIREFOX SCROLLBAR ===== */
+* {
+    scrollbar-width: none;
+}
+
+/* ===== IE/EDGE LEGACY SCROLLBAR ===== */
+* {
+    -ms-overflow-style: none;
+}
+
+/* ===== FONT SMOOTHING ===== */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* ===== TOUCH ACTION FOR MOBILE ===== */
+.slider,
+.gallery,
+.swiper {
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+}
+
+/* ===== USER SELECT ===== */
+.btn,
+.nav__link,
+.card {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* ===== APPEARANCE RESET FOR FORMS ===== */
+input,
+textarea,
+select,
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* ===== BOX SIZING ===== */
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* ===== WILL-CHANGE OPTIMIZATION ===== */
+[data-anim],
+.modal,
+.gallery__item {
+    will-change: transform, opacity;
+}
+
+/* Remove will-change after animation */
+.is-visible {
+    will-change: auto;
+}
+
+/* ===== RESPONSIVE FLEX PREFIXES ===== */
+/* Ensure flex works on all screen sizes in all browsers */
+@media (max-width: 1200px) {
+    .formats__grid,
+    .projects__grid,
+    .gallery__grid,
+    .news__grid {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__inner,
+    .footer__inner,
+    .nav__list {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    /* Fix mobile menu for all browsers */
+    .mobile-menu,
+    .mobile-nav {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Stack everything vertically on small screens */
+    .btn-group,
+    .form__row,
+    .card__actions {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-group > *,
+    .form__row > *,
+    .card__actions > * {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* ===== TOUCH DEVICE OPTIMIZATIONS ===== */
+@media (hover: none) and (pointer: coarse) {
+    /* Larger touch targets */
+    .btn,
+    .nav__link,
+    a,
+    button {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    /* Disable hover effects on touch */
+    .card:hover,
+    .btn:hover {
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+    }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+    .header,
+    .footer,
+    .modal,
+    .preloader,
+    .btn,
+    nav {
+        display: none !important;
+    }
+
+    body {
+        background: white !important;
+        color: black !important;
+    }
+
+    a[href]::after {
+        content: " (" attr(href) ")";
+    }
+}

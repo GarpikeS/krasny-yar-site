@@ -1346,23 +1346,29 @@
 
             points.forEach(point => {
                 point.addEventListener('click', () => {
-                    const buildingId = point.dataset.building;
-
-                    // Remove active from all points
-                    points.forEach(p => p.classList.remove('is-active'));
-                    point.classList.add('is-active');
-
-                    // Hide default info
-                    if (defaultInfo) defaultInfo.style.display = 'none';
-
-                    // Hide all buildings, show selected
-                    buildings.forEach(b => b.classList.remove('is-active'));
-                    const targetBuilding = document.getElementById('building-' + buildingId);
-                    if (targetBuilding) {
-                        targetBuilding.classList.add('is-active');
-                    }
+                    this.showBuilding(point.dataset.building, points, buildings, defaultInfo);
                 });
             });
+
+            // Show first building by default
+            this.showBuilding('1', points, buildings, defaultInfo);
+        },
+
+        showBuilding(buildingId, points, buildings, defaultInfo) {
+            // Remove active from all points
+            points.forEach(p => p.classList.remove('is-active'));
+            const activePoint = document.querySelector('.genplan__point[data-building="' + buildingId + '"]');
+            if (activePoint) activePoint.classList.add('is-active');
+
+            // Hide default info
+            if (defaultInfo) defaultInfo.style.display = 'none';
+
+            // Hide all buildings, show selected
+            buildings.forEach(b => b.classList.remove('is-active'));
+            const targetBuilding = document.getElementById('building-' + buildingId);
+            if (targetBuilding) {
+                targetBuilding.classList.add('is-active');
+            }
         }
     };
 
