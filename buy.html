@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
     <!-- Unique Investor Page Styles -->
     <style>
@@ -299,6 +300,187 @@
             }
         }
 
+        /* Calculator Section */
+        .invest-calc {
+            padding: 100px 0;
+            background: #f8f8f8;
+        }
+        .invest-calc__container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        .invest-calc__layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        .invest-calc__left,
+        .invest-calc__right {
+            background: #fff;
+            padding: 48px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        .invest-calc__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 32px;
+            font-weight: 600;
+            color: #2d2d2d;
+            margin-bottom: 12px;
+        }
+        .invest-calc__desc {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 32px;
+        }
+        .calculator__toggle {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+        .calculator__toggle-btn {
+            flex: 1;
+            padding: 14px 24px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            color: #525252;
+            background: #f5f5f5;
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .calculator__toggle-btn:hover {
+            border-color: #c41e3a;
+            color: #c41e3a;
+        }
+        .calculator__toggle-btn.is-active {
+            background: #c41e3a;
+            border-color: #c41e3a;
+            color: #fff;
+        }
+        .calculator__field {
+            margin-bottom: 24px;
+        }
+        .calculator__label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        .calculator__select-wrap {
+            position: relative;
+        }
+        .calculator__select {
+            width: 100%;
+            padding: 14px 40px 14px 16px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            background: #f5f5f5 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='none' stroke='%23666' stroke-width='2' d='M3 4.5L6 7.5L9 4.5'/%3E%3C/svg%3E") no-repeat right 16px center;
+            appearance: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .calculator__select:focus {
+            outline: none;
+            border-color: #c41e3a;
+            background-color: #fff;
+        }
+        .calculator__range {
+            width: 100%;
+            height: 6px;
+            border-radius: 3px;
+            background: #e5e5e5;
+            appearance: none;
+            cursor: pointer;
+        }
+        .calculator__range::-webkit-slider-thumb {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #c41e3a;
+            cursor: pointer;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+        .calculator__range-value {
+            text-align: center;
+            font-family: 'Oswald', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: #2d2d2d;
+            margin-top: 12px;
+        }
+        .calculator__request {
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid #eee;
+        }
+        .calculator__request-text {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 16px;
+        }
+        .calculator__request-fields {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        .calculator__input {
+            width: 100%;
+            padding: 14px 16px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            background: #f5f5f5;
+            transition: all 0.3s ease;
+        }
+        .calculator__input:focus {
+            outline: none;
+            border-color: #c41e3a;
+            background: #fff;
+        }
+        .calculator__btn {
+            width: 100%;
+            padding: 16px;
+            background: #c41e3a;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: 'Roboto', sans-serif;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .calculator__btn:hover {
+            background: #a01830;
+        }
+        @media (max-width: 992px) {
+            .invest-calc__layout {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+        }
+        @media (max-width: 576px) {
+            .invest-calc__left,
+            .invest-calc__right {
+                padding: 32px 24px;
+            }
+            .invest-calc__title {
+                font-size: 26px;
+            }
+        }
+
         /* Investor Booking Section */
         .investor-booking {
             padding: 100px 0;
@@ -496,6 +678,7 @@
                             <a href="infrastructure.html" class="header__dropdown-link">Инфраструктура</a>
                             <a href="projects.html" class="header__dropdown-link">Генплан</a>
                             <a href="residents.html" class="header__dropdown-link">Резиденты</a>
+                            <a href="management.html" class="header__dropdown-link">Управляющая компания</a>
                             <a href="news.html" class="header__dropdown-link">Новости</a>
                         </div>
                     </div>
@@ -767,7 +950,87 @@
         </div>
     </section>
 
-    <!-- 5. Investor Booking Section -->
+    <!-- 5. Calculator + Request Section -->
+    <section class="invest-calc" id="calculator">
+        <div class="invest-calc__container">
+            <div class="invest-calc__layout">
+                <!-- Calculator Left -->
+                <div class="invest-calc__left">
+                    <h2 class="invest-calc__title">Калькулятор стоимости</h2>
+                    <p class="invest-calc__desc">Рассчитайте примерную стоимость покупки</p>
+                    <div class="calculator__form">
+                        <!-- Buy Mode Toggle -->
+                        <div class="calculator__toggle">
+                            <button type="button" class="calculator__toggle-btn" data-mode="rent">Аренда</button>
+                            <button type="button" class="calculator__toggle-btn is-active" data-mode="buy">Покупка</button>
+                        </div>
+                        <div class="calculator__field">
+                            <label class="calculator__label">Тип помещения</label>
+                            <div class="calculator__select-wrap">
+                                <select class="calculator__select" id="calc-type-buy">
+                                    <option value="production">Производственное</option>
+                                    <option value="warehouse">Складское</option>
+                                    <option value="flexible">Гибкий формат</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="calculator__field">
+                            <label class="calculator__label">Площадь, м²</label>
+                            <input type="range" class="calculator__range" id="calc-area-buy" min="200" max="2000" value="500" step="50">
+                            <div class="calculator__range-value"><span id="calc-area-value-buy">500</span> м²</div>
+                        </div>
+                        <!-- Request form for calculation -->
+                        <div class="calculator__request">
+                            <p class="calculator__request-text">Для получения расчёта оставьте контакты</p>
+                            <form class="calculator__request-form" id="calc-request-form-buy">
+                                <input type="hidden" name="calc-mode" value="buy">
+                                <input type="hidden" name="calc-type" id="calc-type-input-buy" value="production">
+                                <input type="hidden" name="calc-area" id="calc-area-input-buy" value="500">
+                                <div class="calculator__request-fields">
+                                    <input type="text" class="calculator__input" name="name" required placeholder="Ваше имя">
+                                    <input type="tel" class="calculator__input" name="phone" required placeholder="+7 (___) ___-__-__">
+                                </div>
+                                <button type="submit" class="calculator__btn">Получить расчёт</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Request Form Right -->
+                <div class="invest-calc__right">
+                    <h2 class="invest-calc__title">Обсудить инвестиции</h2>
+                    <p class="invest-calc__desc">Наш инвестиционный менеджер свяжется с вами</p>
+                    <form id="invest-request-form">
+                        <div class="investor-booking__fields">
+                            <div class="investor-booking__field">
+                                <label>Имя *</label>
+                                <input type="text" name="name" required placeholder="Ваше имя">
+                            </div>
+                            <div class="investor-booking__field">
+                                <label>Телефон *</label>
+                                <input type="tel" name="phone" required placeholder="+7 (___) ___-__-__">
+                            </div>
+                            <div class="investor-booking__field">
+                                <label>Email</label>
+                                <input type="email" name="email" placeholder="email@example.com">
+                            </div>
+                            <div class="investor-booking__field">
+                                <label>Формат инвестиций</label>
+                                <select name="interest">
+                                    <option value="consult">Консультация</option>
+                                    <option value="building">Готовые здания</option>
+                                    <option value="land">Земельные участки</option>
+                                    <option value="bts">Build-to-Suit</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="investor-booking__submit">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Investor Booking Section -->
     <section class="investor-booking" id="request">
         <div class="investor-booking__container">
             <div class="investor-booking__layout">
@@ -876,7 +1139,7 @@
                 <div class="footer__right">
                     <div class="footer__map-block">
                         <div class="footer__map">
-                            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Akrasnyy_yar&source=constructor&ll=92.796944%2C56.077222&z=15&pt=92.796944%2C56.077222%2Cpm2rdm1" width="300" height="250" frameborder="0"></iframe>
+                            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Akrasnyy_yar&source=constructor&ll=92.796944%2C56.077222&z=15&pt=92.796944%2C56.077222%2Cpm2rdm1" width="100%" height="100%" frameborder="0" style="position: absolute; top: 0; left: 0;"></iframe>
                         </div>
                         <address class="footer__address">660050, г. Красноярск,<br>ул. Кутузова, 1, стр. 37, оф. 307</address>
                     </div>
@@ -970,5 +1233,39 @@
     </div>
 
     <script src="js/main.js"></script>
+    <script>
+        // Calculator functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const areaRange = document.getElementById('calc-area-buy');
+            const areaValue = document.getElementById('calc-area-value-buy');
+            const areaInput = document.getElementById('calc-area-input-buy');
+            const typeSelect = document.getElementById('calc-type-buy');
+            const typeInput = document.getElementById('calc-type-input-buy');
+            const toggleBtns = document.querySelectorAll('.calculator__toggle-btn');
+
+            if (areaRange && areaValue) {
+                areaRange.addEventListener('input', function() {
+                    areaValue.textContent = this.value;
+                    if (areaInput) areaInput.value = this.value;
+                });
+            }
+
+            if (typeSelect && typeInput) {
+                typeSelect.addEventListener('change', function() {
+                    typeInput.value = this.value;
+                });
+            }
+
+            toggleBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    toggleBtns.forEach(b => b.classList.remove('is-active'));
+                    this.classList.add('is-active');
+                    if (this.dataset.mode === 'rent') {
+                        window.location.href = 'rent.html#request';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

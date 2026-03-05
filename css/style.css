@@ -119,10 +119,36 @@ body.no-scroll {
     animation: none !important;
 }
 
-img {
+img, picture, video, canvas, svg {
     display: block;
     max-width: 100%;
     height: auto;
+}
+
+video {
+    width: 100%;
+}
+
+iframe {
+    max-width: 100%;
+    border: 0;
+}
+
+/* Responsive image containers */
+[class*="__image"],
+[class*="__img"],
+[class*="__photo"],
+[class*="__picture"] {
+    overflow: hidden;
+}
+
+[class*="__image"] img,
+[class*="__img"] img,
+[class*="__photo"] img,
+[class*="__picture"] img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 a {
