@@ -3046,8 +3046,8 @@ address {
     z-index: 10;
 }
 
-.genplan__point--1 { top: 32%; left: 28%; }
-.genplan__point--2 { top: 28%; left: 62%; }
+.genplan__point--1 { top: 54%; left: 28%; }
+.genplan__point--2 { top: 51%; left: 62%; }
 .genplan__point--3 { top: 35%; left: 82%; }
 
 .genplan__point-num {

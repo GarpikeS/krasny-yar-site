@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Генплан Промпарк Красный Яр — три очереди строительства промышленного парка в Красноярске">
     <title>Генплан и очереди — Промпарк Красный Яр</title>
@@ -16,7 +17,7 @@
     <style>
         /* Queue Section - Unique Design */
         .queue-section {
-            padding: 100px 0;
+            padding: 50px 0;
             background: linear-gradient(180deg, #0a0a0a 0%, #111111 100%);
         }
 
@@ -28,7 +29,7 @@
 
         .queue-section__header {
             text-align: center;
-            margin-bottom: 80px;
+            margin-bottom: 40px;
         }
 
         .queue-section__title {
@@ -49,7 +50,7 @@
         .queue-section__list {
             display: flex;
             flex-direction: column;
-            gap: 40px;
+            gap: 24px;
         }
 
         .queue-section__item {
@@ -104,24 +105,21 @@
         }
 
         .queue-section__badge {
-            position: absolute;
-            top: 24px;
-            right: 24px;
-            padding: 8px 20px;
+            padding: 6px 16px;
             border-radius: 100px;
-            font-size: 13px;
+            font-size: 11px;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.05em;
             color: #fff;
-            z-index: 2;
+            white-space: nowrap;
         }
 
         .queue-section__item-header {
             display: flex;
             align-items: center;
-            gap: 24px;
-            padding: 32px 40px;
+            gap: 20px;
+            padding: 24px 32px;
             border-bottom: 1px solid rgba(255,255,255,0.08);
         }
 
@@ -153,8 +151,8 @@
         .queue-section__content {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 40px;
-            padding: 40px;
+            gap: 24px;
+            padding: 24px 32px;
         }
 
         .queue-section__image {
@@ -238,91 +236,6 @@
             height: 16px;
         }
 
-        /* Territory Map Section */
-        .territory-map {
-            padding: 100px 0;
-            background: #0a0a0a;
-        }
-
-        .territory-map__container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 40px;
-        }
-
-        .territory-map__header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .territory-map__title {
-            font-family: 'PT Sans', sans-serif;
-            font-size: clamp(32px, 5vw, 56px);
-            font-weight: 600;
-            color: #fff;
-            text-transform: uppercase;
-            letter-spacing: 0.02em;
-            margin-bottom: 16px;
-        }
-
-        .territory-map__subtitle {
-            font-size: 18px;
-            color: rgba(255,255,255,0.5);
-        }
-
-        .territory-map__wrapper {
-            position: relative;
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 40px 80px rgba(0,0,0,0.5);
-        }
-
-        .territory-map__image {
-            width: 100%;
-            display: block;
-        }
-
-        .territory-map__legend {
-            position: absolute;
-            bottom: 40px;
-            left: 40px;
-            background: rgba(0,0,0,0.85);
-            backdrop-filter: blur(10px);
-            padding: 24px 32px;
-            border-radius: 16px;
-            display: flex;
-            gap: 32px;
-        }
-
-        .legend-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .legend-item__dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-        }
-
-        .legend-item__dot--done {
-            background: #22c55e;
-        }
-
-        .legend-item__dot--progress {
-            background: #eab308;
-        }
-
-        .legend-item__dot--planned {
-            background: #6b7280;
-        }
-
-        .legend-item__text {
-            font-size: 14px;
-            color: rgba(255,255,255,0.8);
-        }
-
         /* Responsive */
         @media (max-width: 1024px) {
             .queue-section__content {
@@ -350,76 +263,55 @@
             .queue-section__content {
                 padding: 24px;
             }
-
-            .territory-map__legend {
-                position: relative;
-                bottom: auto;
-                left: auto;
-                border-radius: 0 0 24px 24px;
-                flex-wrap: wrap;
-                gap: 16px;
-            }
         }
 
         @media (max-width: 768px) {
             .queue-section {
-                padding: 60px 0;
+                padding: 30px 0;
             }
 
             .queue-section__container {
-                padding: 0 20px;
+                padding: 0 16px;
             }
 
             .queue-section__header {
-                margin-bottom: 40px;
+                margin-bottom: 24px;
             }
 
             .queue-section__list {
-                gap: 24px;
-            }
-
-            .queue-section__badge {
-                top: 16px;
-                right: 16px;
-                padding: 6px 14px;
-                font-size: 11px;
-            }
-
-            .queue-section__item-header {
                 gap: 16px;
             }
 
+            .queue-section__badge {
+                padding: 4px 10px;
+                font-size: 9px;
+            }
+
+            .queue-section__item-header {
+                gap: 12px;
+                padding: 16px;
+                flex-wrap: wrap;
+            }
+
             .queue-section__num {
-                font-size: 40px;
+                font-size: 32px;
             }
 
             .queue-section__item-header h2 {
-                font-size: 20px;
+                font-size: 18px;
+                flex: 1;
             }
 
             .queue-section__year {
-                font-size: 24px;
-                width: 100%;
-                order: -1;
-                text-align: right;
+                font-size: 20px;
+            }
+
+            .queue-section__content {
+                padding: 16px;
             }
 
             .stat__value {
-                font-size: 28px;
-            }
-
-            .territory-map {
-                padding: 60px 0;
-            }
-
-            .territory-map__container {
-                padding: 0 20px;
-            }
-
-            .territory-map__legend {
-                padding: 20px;
-                flex-direction: column;
-                gap: 12px;
+                font-size: 24px;
             }
         }
     </style>
@@ -585,7 +477,7 @@
         <div class="hero-split__container">
             <div class="hero-split__left">
                 <h1 class="hero-split__heading">Генплан и очереди</h1>
-                <p class="hero-split__text">Три очереди строительства на территории 12,2 гектара с полной инфраструктурой в Красноярске</p>
+                <p class="hero-split__text">Три очереди строительства на территории 12,2 гектара с готовой инфраструктурой в Красноярске</p>
                 <a href="#booking" class="hero-split__btn" data-scroll-full>Записаться на экскурсию</a>
             </div>
             <div class="hero-split__right">
@@ -605,15 +497,15 @@
             <div class="queue-section__list">
                 <!-- Первая очередь - Введено -->
                 <div class="queue-section__item queue-section__item--done" data-reveal="up">
-                    <div class="queue-section__badge">Введено</div>
                     <div class="queue-section__item-header">
                         <span class="queue-section__num">1</span>
                         <h2>Первая очередь</h2>
                         <span class="queue-section__year">2012</span>
+                        <div class="queue-section__badge">Введено</div>
                     </div>
                     <div class="queue-section__content">
                         <div class="queue-section__image">
-                            <img src="assets/images/gallery/1.jpg" alt="Первая очередь">
+                            <img src="assets/images/gallery/queue-1.jpg" alt="Первая очередь">
                         </div>
                         <div class="queue-section__stats">
                             <div class="stat">
@@ -639,15 +531,15 @@
 
                 <!-- Вторая очередь - Строится -->
                 <div class="queue-section__item queue-section__item--progress" data-reveal="up">
-                    <div class="queue-section__badge">Строится</div>
                     <div class="queue-section__item-header">
                         <span class="queue-section__num">2</span>
                         <h2>Вторая очередь</h2>
                         <span class="queue-section__year">2025</span>
+                        <div class="queue-section__badge">Строится</div>
                     </div>
                     <div class="queue-section__content">
                         <div class="queue-section__image">
-                            <img src="assets/images/gallery/25.jpg" alt="Вторая очередь">
+                            <img src="assets/images/gallery/queue-2.jpg" alt="Вторая очередь">
                         </div>
                         <div class="queue-section__stats">
                             <div class="stat">
@@ -673,15 +565,15 @@
 
                 <!-- Третья очередь - Планируется -->
                 <div class="queue-section__item queue-section__item--planned" data-reveal="up">
-                    <div class="queue-section__badge">Планируется</div>
                     <div class="queue-section__item-header">
                         <span class="queue-section__num">3</span>
                         <h2>Третья очередь</h2>
                         <span class="queue-section__year">2027+</span>
+                        <div class="queue-section__badge">Планируется</div>
                     </div>
                     <div class="queue-section__content">
                         <div class="queue-section__image">
-                            <img src="assets/images/gallery/30.jpg" alt="Третья очередь">
+                            <img src="assets/images/gallery/queue-3.jpg" alt="Третья очередь">
                         </div>
                         <div class="queue-section__stats">
                             <div class="stat">
@@ -708,28 +600,145 @@
         </div>
     </section>
 
-    <!-- 3. Territory Map Section -->
-    <section class="territory-map" id="territory">
-        <div class="territory-map__container">
-            <div class="territory-map__header" data-reveal="up">
-                <h2 class="territory-map__title">Схема территории</h2>
-                <p class="territory-map__subtitle">Генеральный план промышленного парка</p>
+    <!-- 3. Генплан -->
+    <section class="genplan" id="genplan">
+        <div class="genplan__container">
+            <div class="genplan__header">
+                <h2 class="genplan__title">Генплан парка</h2>
+                <p class="genplan__subtitle">Выберите объект на карте для просмотра информации</p>
             </div>
-            <div class="territory-map__wrapper" data-reveal="up">
-                <img src="assets/images/gallery/44.jpg" alt="Генплан территории парка" class="territory-map__image">
-                <div class="territory-map__legend">
-                    <div class="legend-item">
-                        <span class="legend-item__dot legend-item__dot--done"></span>
-                        <span class="legend-item__text">1-я очередь (введено)</span>
+            <div class="genplan__content">
+                <div class="genplan__map">
+                    <img src="assets/images/genplan.jpg" alt="Генплан Промпарка Красный Яр" class="genplan__img">
+
+                    <!-- Interactive Points -->
+                    <div class="genplan__point genplan__point--1" data-building="1">
+                        <span class="genplan__point-num">1</span>
+                        <div class="genplan__point-pulse"></div>
                     </div>
-                    <div class="legend-item">
-                        <span class="legend-item__dot legend-item__dot--progress"></span>
-                        <span class="legend-item__text">2-я очередь (строится)</span>
+                    <div class="genplan__point genplan__point--2" data-building="2">
+                        <span class="genplan__point-num">2</span>
+                        <div class="genplan__point-pulse"></div>
                     </div>
-                    <div class="legend-item">
-                        <span class="legend-item__dot legend-item__dot--planned"></span>
-                        <span class="legend-item__text">3-я очередь (планируется)</span>
+                    <div class="genplan__point genplan__point--3" data-building="3">
+                        <span class="genplan__point-num">3</span>
+                        <div class="genplan__point-pulse"></div>
                     </div>
+                </div>
+
+                <div class="genplan__info" id="genplan-info">
+                    <div class="genplan__info-default">
+                        <div class="genplan__info-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M24 4L4 14V34L24 44L44 34V14L24 4Z"/>
+                                <path d="M4 14L24 24M24 24V44M24 24L44 14"/>
+                            </svg>
+                        </div>
+                        <p>Нажмите на точку на карте<br>для просмотра информации</p>
+                    </div>
+
+                    <!-- Building 1 Info -->
+                    <div class="genplan__building" id="building-1">
+                        <span class="genplan__building-tag">Введено в эксплуатацию</span>
+                        <h3 class="genplan__building-title">1-я очередь</h3>
+                        <p class="genplan__building-desc">Производственно-складские и офисные помещения</p>
+                        <div class="genplan__building-specs">
+                            <div class="genplan__building-spec">
+                                <span>Общая площадь</span>
+                                <strong>57 000 м²</strong>
+                            </div>
+                            <div class="genplan__building-spec">
+                                <span>Производство/склад</span>
+                                <strong>50 000 м²</strong>
+                            </div>
+                            <div class="genplan__building-spec">
+                                <span>Офисы</span>
+                                <strong>7 000 м²</strong>
+                            </div>
+                            <div class="genplan__building-spec">
+                                <span>Высота потолков</span>
+                                <strong>до 13 м</strong>
+                            </div>
+                        </div>
+                        <div class="genplan__building-actions">
+                            <a href="rent.html" class="genplan__building-btn genplan__building-btn--primary">Арендовать</a>
+                            <a href="#queues" class="genplan__building-btn">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <!-- Building 2 Info -->
+                    <div class="genplan__building" id="building-2">
+                        <span class="genplan__building-tag genplan__building-tag--progress">В реализации</span>
+                        <h3 class="genplan__building-title">2-я очередь</h3>
+                        <p class="genplan__building-desc">Гибкие помещения Light Industrial</p>
+                        <div class="genplan__building-specs">
+                            <div class="genplan__building-spec">
+                                <span>Общая площадь</span>
+                                <strong>21 800 м²</strong>
+                            </div>
+                            <div class="genplan__building-spec">
+                                <span>Минимальный блок</span>
+                                <strong>от 480 м²</strong>
+                            </div>
+                            <div class="genplan__building-spec">
+                                <span>Высота потолков</span>
+                                <strong>6-8 м</strong>
+                            </div>
+                            <div class="genplan__building-spec">
+                                <span>Электроснабжение</span>
+                                <strong>повышенное</strong>
+                            </div>
+                        </div>
+                        <div class="genplan__building-actions">
+                            <a href="buy.html" class="genplan__building-btn genplan__building-btn--primary">Инвестировать</a>
+                            <a href="#queues" class="genplan__building-btn">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <!-- Building 3 Info -->
+                    <div class="genplan__building" id="building-3">
+                        <span class="genplan__building-tag genplan__building-tag--soon">Скоро</span>
+                        <h3 class="genplan__building-title">3-я очередь</h3>
+                        <p class="genplan__building-desc">Перспективная территория развития</p>
+                        <div class="genplan__building-specs">
+                            <div class="genplan__building-spec">
+                                <span>Статус</span>
+                                <strong>Планируется</strong>
+                            </div>
+                            <div class="genplan__building-spec">
+                                <span>Формат</span>
+                                <strong>Build-to-suit</strong>
+                            </div>
+                            <div class="genplan__building-spec">
+                                <span>Земельный участок</span>
+                                <strong>доступен</strong>
+                            </div>
+                            <div class="genplan__building-spec">
+                                <span>Инфраструктура</span>
+                                <strong>готова</strong>
+                            </div>
+                        </div>
+                        <div class="genplan__building-actions">
+                            <a href="#booking" class="genplan__building-btn genplan__building-btn--primary">Оставить заявку</a>
+                            <a href="contacts.html" class="genplan__building-btn">Связаться</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Legend -->
+            <div class="genplan__legend">
+                <div class="genplan__legend-item">
+                    <span class="genplan__legend-dot genplan__legend-dot--active"></span>
+                    <span>Введено в эксплуатацию</span>
+                </div>
+                <div class="genplan__legend-item">
+                    <span class="genplan__legend-dot genplan__legend-dot--progress"></span>
+                    <span>В реализации</span>
+                </div>
+                <div class="genplan__legend-item">
+                    <span class="genplan__legend-dot genplan__legend-dot--soon"></span>
+                    <span>Планируется</span>
                 </div>
             </div>
         </div>
@@ -779,25 +788,32 @@
     </section>
 
     <!-- 5. Footer -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer__container">
             <div class="footer__main">
                 <div class="footer__nav">
                     <div class="footer__col">
-                        <span class="footer__col-title">Помещения</span>
-                        <a href="rent.html">Каталог помещений</a>
-                    </div>
-                    <div class="footer__col">
-                        <span class="footer__col-title">Компания</span>
+                        <span class="footer__col-title">Промпарк</span>
                         <a href="about.html">О компании</a>
+                        <a href="infrastructure.html">Инфраструктура</a>
                         <a href="projects.html">Генплан</a>
-                        <a href="formats.html">Форматы</a>
+                        <a href="residents.html">Резиденты</a>
+                        <a href="management.html">Управляющая компания</a>
+                        <a href="news.html">Новости</a>
                     </div>
                     <div class="footer__col">
-                        <span class="footer__col-title">Информация</span>
-                        <a href="buy.html">Инвесторам</a>
-                        <a href="news.html">Новости</a>
-                        <a href="contacts.html">Контакты</a>
+                        <span class="footer__col-title">Помещения</span>
+                        <a href="rent.html">Аренда</a>
+                        <a href="buy.html">Покупка</a>
+                        <a href="formats.html">Все форматы</a>
+                    </div>
+                    <div class="footer__col">
+                        <span class="footer__col-title">Контакты</span>
+                        <a href="contacts.html">Связаться с нами</a>
+                        <a href="location.html">Как добраться</a>
+                        <a href="documents.html">Документы</a>
+                        <a href="vacancies.html">Вакансии</a>
                     </div>
                 </div>
                 <div class="footer__contacts">
@@ -817,7 +833,7 @@
                 <div class="footer__right">
                     <div class="footer__map-block">
                         <div class="footer__map">
-                            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Akrasnyy_yar&source=constructor&ll=92.796944%2C56.077222&z=15&pt=92.796944%2C56.077222%2Cpm2rdm1" width="100%" height="100%" frameborder="0" style="position: absolute; top: 0; left: 0;"></iframe>
+                            <iframe src="https://yandex.ru/map-widget/v1/?ll=92.997327%2C55.997090&z=12&l=map&pt=92.997327%2C55.997090%2Cpm2rdm" width="100%" height="100%" frameborder="0"></iframe>
                         </div>
                         <address class="footer__address">660050, г. Красноярск,<br>ул. Кутузова, 1, стр. 37, оф. 307</address>
                     </div>

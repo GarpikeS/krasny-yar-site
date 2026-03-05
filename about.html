@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="О промышленном парке «Красный Яр» — первый парк Красноярского края в реестре Минпромторга РФ">
     <title>О парке — Промпарк Красный Яр</title>
@@ -16,7 +17,7 @@
     <style>
         /* ===== HISTORY TIMELINE ===== */
         .history-timeline {
-            padding: 100px 0;
+            padding: 60px 0;
             background: #f8f8f8;
         }
 
@@ -32,7 +33,7 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.02em;
-            margin-bottom: 60px;
+            margin-bottom: 40px;
             text-align: center;
             color: #1a1a1a;
         }
@@ -58,7 +59,7 @@
             position: relative;
             display: flex;
             align-items: flex-start;
-            margin-bottom: 60px;
+            margin-bottom: 40px;
             opacity: 0;
             transform: translateY(30px);
             animation: fadeInUp 0.6s ease forwards;
@@ -175,7 +176,7 @@
         /* ===== STATS BAR (Numbers Section) ===== */
         .stats-bar {
             background: #2a2a2a;
-            padding: 80px 0;
+            padding: 50px 0;
         }
 
         .stats-bar__container {
@@ -197,17 +198,12 @@
 
         .stats-bar__value {
             font-family: 'PT Sans', sans-serif;
-            font-size: clamp(48px, 6vw, 72px);
+            font-size: clamp(36px, 5vw, 56px);
             font-weight: 700;
             color: #c8102e;
             line-height: 1;
             margin-bottom: 12px;
-        }
-
-        .stats-bar__value span {
-            font-size: 0.5em;
-            color: #fff;
-            font-weight: 400;
+            white-space: nowrap;
         }
 
         .stats-bar__label {
@@ -232,7 +228,7 @@
 
         /* ===== ACHIEVEMENTS SECTION ===== */
         .achievements {
-            padding: 100px 0;
+            padding: 60px 0;
             background: #fff;
         }
 
@@ -244,67 +240,69 @@
 
         .achievements__header {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 40px;
         }
 
         .achievements__title {
             font-family: 'PT Sans', sans-serif;
-            font-size: clamp(32px, 5vw, 48px);
-            font-weight: 600;
+            font-size: clamp(28px, 4vw, 40px);
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.02em;
             color: #1a1a1a;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
 
         .achievements__subtitle {
             font-family: 'PT Sans', sans-serif;
-            font-size: 18px;
+            font-size: 16px;
             color: #666;
         }
 
         .achievements__grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+            gap: 24px;
         }
 
         .achievement-card {
             background: #f8f8f8;
             border-radius: 16px;
-            padding: 40px 30px;
+            padding: 32px 24px;
             text-align: center;
-            transition: all 0.4s ease;
+            transition: all 0.3s ease;
             border: 2px solid transparent;
         }
 
         .achievement-card:hover {
             background: #fff;
             border-color: #c8102e;
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(200, 16, 46, 0.15);
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(200, 16, 46, 0.12);
         }
 
         .achievement-card__icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 24px;
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 20px;
             background: linear-gradient(135deg, #c8102e 0%, #a00d25 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #fff;
         }
 
         .achievement-card__icon svg {
-            width: 36px;
-            height: 36px;
+            width: 32px;
+            height: 32px;
+            stroke: #fff;
+            fill: none;
+            stroke-width: 2;
         }
 
         .achievement-card__rank {
             font-family: 'PT Sans', sans-serif;
-            font-size: 48px;
+            font-size: 40px;
             font-weight: 700;
             color: #c8102e;
             line-height: 1;
@@ -313,47 +311,159 @@
 
         .achievement-card__title {
             font-family: 'PT Sans', sans-serif;
-            font-size: 20px;
-            font-weight: 600;
+            font-size: 16px;
+            font-weight: 700;
             color: #1a1a1a;
-            margin-bottom: 12px;
-            text-transform: uppercase;
+            margin-bottom: 8px;
         }
 
         .achievement-card__desc {
             font-family: 'PT Sans', sans-serif;
-            font-size: 15px;
+            font-size: 14px;
             color: #666;
             line-height: 1.5;
         }
 
-        @media (max-width: 992px) {
-            .achievements__grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 600px) {
+        @media (max-width: 900px) {
             .achievements__grid {
                 grid-template-columns: 1fr;
+                max-width: 400px;
+                margin: 0 auto;
             }
         }
 
         /* ===== LEADERSHIP SECTION ===== */
         .leadership {
-            padding: 100px 0;
-            background: linear-gradient(135deg, #f8f8f8 0%, #eee 100%);
+            padding: 60px 0;
+            background: #f8f8f8;
         }
 
         .leadership__container {
-            max-width: 1100px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 0 24px;
         }
 
         .leadership__header {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 40px;
+        }
+
+        .leadership__title {
+            font-family: 'PT Sans', sans-serif;
+            font-size: clamp(28px, 4vw, 40px);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            color: #1a1a1a;
+        }
+
+        .leadership__card {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+        }
+
+        .leadership__photo {
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .leadership__photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        .leadership__info {
+            padding: 40px 40px 40px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .leadership__position {
+            display: inline-block;
+            font-family: 'PT Sans', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #fff;
+            background: #c8102e;
+            padding: 8px 16px;
+            border-radius: 4px;
+            margin-bottom: 16px;
+            width: fit-content;
+        }
+
+        .leadership__name {
+            font-family: 'PT Sans', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .leadership__bio {
+            font-family: 'PT Sans', sans-serif;
+            font-size: 15px;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 24px;
+        }
+
+        .leadership__bio p {
+            margin-bottom: 12px;
+        }
+
+        .leadership__bio p:last-child {
+            margin-bottom: 0;
+        }
+
+        .leadership__quote {
+            padding: 20px;
+            background: #f8f8f8;
+            border-left: 4px solid #c8102e;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .leadership__quote p {
+            font-family: 'PT Sans', sans-serif;
+            font-size: 14px;
+            font-style: italic;
+            color: #444;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        @media (max-width: 800px) {
+            .leadership__card {
+                grid-template-columns: 1fr;
+            }
+            .leadership__photo {
+                height: 300px;
+            }
+            .leadership__info {
+                padding: 30px;
+            }
+        }
+
+        .leadership__container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .leadership__header {
+            text-align: center;
+            margin-bottom: 40px;
         }
 
         .leadership__title {
@@ -362,83 +472,96 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.02em;
-            color: #1a1a1a;
+            color: #fff;
         }
 
         .leadership__card {
-            display: grid;
-            grid-template-columns: 350px 1fr;
-            gap: 60px;
-            background: #fff;
-            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            background: linear-gradient(135deg, #fff 0%, #f8f8f8 100%);
+            border-radius: 24px;
             overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            padding: 40px;
         }
 
         .leadership__photo {
             position: relative;
-            height: 450px;
+            flex-shrink: 0;
+            width: 280px;
+            height: 350px;
+            border-radius: 16px;
             overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .leadership__photo::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(135deg, #c8102e 0%, #a00d25 100%);
+            border-radius: 20px;
+            z-index: -1;
         }
 
         .leadership__photo img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            filter: grayscale(20%);
-            transition: filter 0.4s ease;
+            object-position: center top;
+            border-radius: 16px;
+            transition: transform 0.4s ease;
         }
 
         .leadership__card:hover .leadership__photo img {
-            filter: grayscale(0%);
-        }
-
-        .leadership__photo::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 100px;
-            background: linear-gradient(to top, rgba(0,0,0,0.3), transparent);
+            transform: scale(1.05);
         }
 
         .leadership__info {
-            padding: 50px 50px 50px 0;
+            flex: 1;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
 
         .leadership__position {
+            display: inline-block;
             font-family: 'PT Sans', sans-serif;
-            font-size: 14px;
-            font-weight: 500;
+            font-size: 12px;
+            font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: #c8102e;
-            margin-bottom: 12px;
+            letter-spacing: 0.15em;
+            color: #fff;
+            background: #c8102e;
+            padding: 8px 16px;
+            border-radius: 20px;
+            margin-bottom: 16px;
+            width: fit-content;
         }
 
         .leadership__name {
             font-family: 'PT Sans', sans-serif;
-            font-size: clamp(28px, 4vw, 36px);
-            font-weight: 600;
+            font-size: clamp(26px, 3.5vw, 32px);
+            font-weight: 700;
             color: #1a1a1a;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
             line-height: 1.2;
         }
 
         .leadership__bio {
             font-family: 'PT Sans', sans-serif;
-            font-size: 16px;
+            font-size: 15px;
             line-height: 1.7;
             color: #555;
-            margin-bottom: 30px;
+            margin-bottom: 24px;
         }
 
         .leadership__bio p {
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
 
         .leadership__bio p:last-child {
@@ -447,15 +570,15 @@
 
         .leadership__quote {
             position: relative;
-            padding: 24px;
-            background: #f8f8f8;
+            padding: 20px 24px;
+            background: linear-gradient(135deg, #f0f0f0 0%, #e8e8e8 100%);
             border-left: 4px solid #c8102e;
-            border-radius: 0 8px 8px 0;
+            border-radius: 0 12px 12px 0;
         }
 
         .leadership__quote p {
             font-family: 'PT Sans', sans-serif;
-            font-size: 15px;
+            font-size: 14px;
             font-style: italic;
             color: #444;
             line-height: 1.6;
@@ -464,15 +587,22 @@
 
         @media (max-width: 900px) {
             .leadership__card {
-                grid-template-columns: 1fr;
+                flex-direction: column;
+                text-align: center;
+                padding: 30px;
             }
 
             .leadership__photo {
-                height: 350px;
+                width: 220px;
+                height: 280px;
+            }
+
+            .leadership__position {
+                margin: 0 auto 16px;
             }
 
             .leadership__info {
-                padding: 30px;
+                align-items: center;
             }
         }
     </style>
@@ -638,58 +768,22 @@
         <div class="hero-split__container">
             <div class="hero-split__left">
                 <h1 class="hero-split__heading">О промышленном парке</h1>
-                <p class="hero-split__text">Первый парк Красноярского края в федеральном реестре промышленных парков Минпромторга РФ. Основан в 2012 году на базе завода «Сибэлектросталь».</p>
+                <p class="hero-split__text">Современный промышленный парк в Красноярске с полной инфраструктурой для производственных и складских предприятий.</p>
                 <a href="#booking" class="hero-split__btn" data-scroll-full>Записаться на экскурсию</a>
             </div>
             <div class="hero-split__right">
-                <img src="assets/images/gallery/15.jpg" alt="Промпарк Красный Яр" class="hero-split__img">
+                <img src="assets/images/gallery/about-hero.jpg" alt="Промпарк Красный Яр" class="hero-split__img">
             </div>
         </div>
     </section>
 
-    <!-- 2. History Timeline -->
-    <section class="history-timeline" id="history">
-        <div class="history-timeline__container">
-            <h2>История развития</h2>
-            <div class="history-timeline__items">
-                <div class="history-timeline__item">
-                    <span class="history-timeline__year">2012</span>
-                    <div class="history-timeline__content">
-                        <h3>Основание парка</h3>
-                        <p>Создан на базе завода «Сибэлектросталь»</p>
-                    </div>
-                </div>
-                <div class="history-timeline__item">
-                    <span class="history-timeline__year">2015</span>
-                    <div class="history-timeline__content">
-                        <h3>Федеральный реестр</h3>
-                        <p>Первый парк Красноярского края в реестре Минпромторга</p>
-                    </div>
-                </div>
-                <div class="history-timeline__item">
-                    <span class="history-timeline__year">2020</span>
-                    <div class="history-timeline__content">
-                        <h3>1300 рабочих мест</h3>
-                        <p>Достигнута отметка по количеству созданных рабочих мест</p>
-                    </div>
-                </div>
-                <div class="history-timeline__item">
-                    <span class="history-timeline__year">2025</span>
-                    <div class="history-timeline__content">
-                        <h3>Вторая очередь</h3>
-                        <p>Старт строительства 21 800 м² Light Industrial</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- 3. Stats Bar (Big Numbers) -->
     <section class="stats-bar" id="stats">
         <div class="stats-bar__container">
             <div class="stats-bar__grid">
                 <div class="stats-bar__item">
-                    <div class="stats-bar__value">50&nbsp;000 <span>м²</span></div>
+                    <div class="stats-bar__value">50 000 м²</div>
                     <div class="stats-bar__label">Производственно-складских помещений</div>
                 </div>
                 <div class="stats-bar__item">
@@ -697,62 +791,13 @@
                     <div class="stats-bar__label">Рабочих мест создано</div>
                 </div>
                 <div class="stats-bar__item">
-                    <div class="stats-bar__value">742 <span>млн</span></div>
+                    <div class="stats-bar__value">742 млн ₽</div>
                     <div class="stats-bar__label">Инвестиций в развитие парка</div>
-                </div>
-                <div class="stats-bar__item">
-                    <div class="stats-bar__value">14 <span>лет</span></div>
-                    <div class="stats-bar__label">Успешной работы на рынке</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 4. Achievements Section -->
-    <section class="achievements" id="achievements">
-        <div class="achievements__container">
-            <div class="achievements__header">
-                <h2 class="achievements__title">Рейтинги и достижения</h2>
-                <p class="achievements__subtitle">Признание на федеральном уровне</p>
-            </div>
-            <div class="achievements__grid">
-                <div class="achievement-card">
-                    <div class="achievement-card__icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-                        </svg>
-                    </div>
-                    <div class="achievement-card__rank">ТОП-50</div>
-                    <h3 class="achievement-card__title">По клиентоориентированности</h3>
-                    <p class="achievement-card__desc">Среди промышленных парков России по уровню сервиса и поддержки резидентов</p>
-                </div>
-                <div class="achievement-card">
-                    <div class="achievement-card__icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 20V10"/>
-                            <path d="M18 20V4"/>
-                            <path d="M6 20V16"/>
-                        </svg>
-                    </div>
-                    <div class="achievement-card__rank">ТОП-20</div>
-                    <h3 class="achievement-card__title">По вкладу в экономику</h3>
-                    <p class="achievement-card__desc">Вклад в развитие экономики Российской Федерации и создание рабочих мест</p>
-                </div>
-                <div class="achievement-card">
-                    <div class="achievement-card__icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M8 21L12 17L16 21"/>
-                            <path d="M12 17V12"/>
-                            <circle cx="12" cy="7" r="4"/>
-                        </svg>
-                    </div>
-                    <div class="achievement-card__rank">29</div>
-                    <h3 class="achievement-card__title">Место в рейтинге России</h3>
-                    <p class="achievement-card__desc">В общем рейтинге промышленных парков Российской Федерации</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- 5. Leadership Section -->
     <section class="leadership" id="leadership">
@@ -762,7 +807,7 @@
             </div>
             <div class="leadership__card">
                 <div class="leadership__photo">
-                    <img src="assets/images/gallery/20.jpg" alt="Сиваев Александр Владимирович">
+                    <img src="assets/images/gallery/sivaev.jpg" alt="Сиваев Александр Владимирович">
                 </div>
                 <div class="leadership__info">
                     <span class="leadership__position">Генеральный директор</span>
@@ -784,7 +829,7 @@
         <div class="booking__container">
             <div class="booking__layout">
                 <div class="booking__left" data-reveal="left">
-                    <img src="assets/images/gallery/17.jpg" alt="Экскурсия по парку" class="booking__image">
+                    <img src="assets/images/gallery/about-booking.jpg" alt="Экскурсия по парку" class="booking__image">
                 </div>
                 <div class="booking__right" data-reveal="right">
                     <h2 class="booking__title">Записаться на экскурсию</h2>
@@ -821,28 +866,32 @@
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="footer__container">
             <div class="footer__main">
                 <div class="footer__nav">
                     <div class="footer__col">
-                        <span class="footer__col-title">Помещения</span>
-                        <a href="rent.html">Каталог помещений</a>
-                    </div>
-                    <div class="footer__col">
-                        <span class="footer__col-title">Компания</span>
+                        <span class="footer__col-title">Промпарк</span>
                         <a href="about.html">О компании</a>
-                        <a href="projects.html">Проекты</a>
-                        <a href="formats.html">Форматы</a>
+                        <a href="infrastructure.html">Инфраструктура</a>
+                        <a href="projects.html">Генплан</a>
+                        <a href="residents.html">Резиденты</a>
+                        <a href="management.html">Управляющая компания</a>
+                        <a href="news.html">Новости</a>
                     </div>
                     <div class="footer__col">
-                        <span class="footer__col-title">Информация</span>
-                        <a href="#">Инвесторам</a>
-                        <a href="news.html">Новости</a>
-                        <a href="#">Блог</a>
-                        <a href="contacts.html">Контакты</a>
+                        <span class="footer__col-title">Помещения</span>
+                        <a href="rent.html">Аренда</a>
+                        <a href="buy.html">Покупка</a>
+                        <a href="formats.html">Все форматы</a>
+                    </div>
+                    <div class="footer__col">
+                        <span class="footer__col-title">Контакты</span>
+                        <a href="contacts.html">Связаться с нами</a>
+                        <a href="location.html">Как добраться</a>
+                        <a href="documents.html">Документы</a>
+                        <a href="vacancies.html">Вакансии</a>
                     </div>
                 </div>
                 <div class="footer__contacts">
@@ -862,7 +911,7 @@
                 <div class="footer__right">
                     <div class="footer__map-block">
                         <div class="footer__map">
-                            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Akrasnyy_yar&source=constructor&ll=92.796944%2C56.077222&z=15&pt=92.796944%2C56.077222%2Cpm2rdm1" width="100%" height="100%" frameborder="0" style="position: absolute; top: 0; left: 0;"></iframe>
+                            <iframe src="https://yandex.ru/map-widget/v1/?ll=92.997327%2C55.997090&z=12&l=map&pt=92.997327%2C55.997090%2Cpm2rdm" width="100%" height="100%" frameborder="0"></iframe>
                         </div>
                         <address class="footer__address">660050, г. Красноярск,<br>ул. Кутузова, 1, стр. 37, оф. 307</address>
                     </div>

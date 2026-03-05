@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Резиденты промышленного парка «Красный Яр» — производственные компании Красноярска">
     <title>Резиденты — Промпарк Красный Яр</title>
@@ -12,24 +13,73 @@
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/compat.css">
     <style>
-        .residents-grid { padding: 80px 0; background: #fafafa; }
-        .residents-grid__container { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
-        .residents-grid__header { text-align: center; margin-bottom: 60px; }
-        .residents-grid__title { font-family: 'PT Sans', sans-serif; font-size: 48px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.02em; margin-bottom: 16px; }
-        .residents-grid__subtitle { font-size: 18px; color: #737373; }
-        .residents-grid__items { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-        .resident-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 1px 2px rgba(0,0,0,0.04), 0 4px 8px rgba(0,0,0,0.04), 0 16px 32px rgba(0,0,0,0.04); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s; }
-        .resident-card:hover { transform: translateY(-8px); box-shadow: 0 4px 8px rgba(0,0,0,0.04), 0 16px 24px rgba(0,0,0,0.08), 0 32px 64px rgba(0,0,0,0.12); }
-        .resident-card__header { padding: 30px; border-bottom: 1px solid #f5f5f5; position: relative; }
-        .resident-card__year { display: inline-block; padding: 4px 12px; background: #c41e3a; color: #fff; font-size: 12px; font-weight: 600; border-radius: 4px; margin-bottom: 16px; }
-        .resident-card__logo { height: 36px; max-width: 120px; object-fit: contain; position: absolute; top: 24px; right: 24px; }
-        .resident-card__name { font-family: 'PT Sans', sans-serif; font-size: 20px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.02em; margin-bottom: 8px; line-height: 1.2; }
-        .resident-card__area { font-size: 28px; font-weight: 700; color: #c41e3a; }
-        .resident-card__area span { font-size: 16px; font-weight: 400; color: #737373; }
-        .resident-card__body { padding: 30px; }
-        .resident-card__desc { font-size: 15px; line-height: 1.6; color: #525252; }
+        /* About section - graphite background */
+        .about--residents { background: #1a1a1a; padding: 50px 0; }
+        .about--residents .about__right { background: #1a1a1a; padding: 0; }
+        .about--residents .about__title { color: #fff; }
+        .about--residents .about__text { color: rgba(255,255,255,0.7); }
+        .about--residents .about__more { color: #fff; }
+        .about--residents .about__stat { background: #242424; border-radius: 12px; padding: 24px; border: none; box-shadow: none; }
+        .about--residents .about__stat-num { color: #c41e3a; }
+        .about--residents .about__stat-unit { color: #c41e3a; }
+        .about--residents .about__stat-label { color: rgba(255,255,255,0.7); }
+
+        /* Residents Grid */
+        .residents-grid { padding: 50px 0; background: #1a1a1a; }
+        .residents-grid__container { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
+        .residents-grid__header { text-align: center; margin-bottom: 40px; }
+        .residents-grid__title { font-family: 'PT Sans', sans-serif; font-size: 40px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.02em; margin-bottom: 12px; color: #fff; }
+        .residents-grid__subtitle { font-size: 16px; color: rgba(255,255,255,0.5); }
+        .residents-grid__items { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+        /* Resident Card - reference style */
+        .resident-card {
+            background: #242424;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .resident-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        .resident-card__image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+        .resident-card__content { padding: 20px; }
+        .resident-card__top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+        .resident-card__area { font-family: 'PT Sans', sans-serif; font-size: 32px; font-weight: 700; color: #fff; line-height: 1; }
+        .resident-card__area span { font-size: 14px; font-weight: 400; color: rgba(255,255,255,0.5); }
+        .resident-card__year {
+            padding: 4px 10px;
+            background: #c41e3a;
+            color: #fff;
+            font-size: 11px;
+            font-weight: 600;
+            border-radius: 4px;
+        }
+        .resident-card__name {
+            font-family: 'PT Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+        .resident-card__desc { font-size: 13px; line-height: 1.5; color: rgba(255,255,255,0.6); }
+
         @media (max-width: 1200px) { .residents-grid__items { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 768px) { .residents-grid__items { grid-template-columns: 1fr; } .residents-grid__title { font-size: 36px; } }
+        @media (max-width: 768px) {
+            .residents-grid { padding: 30px 0; }
+            .residents-grid__container { padding: 0 16px; }
+            .residents-grid__items { grid-template-columns: 1fr; gap: 16px; }
+            .residents-grid__title { font-size: 28px; }
+            .about--residents { padding: 30px 0; }
+        }
     </style>
 </head>
 <body class="js js-loading">
@@ -180,13 +230,13 @@
                 <a href="#booking" class="hero-split__btn" data-scroll-full>Стать резидентом</a>
             </div>
             <div class="hero-split__right">
-                <img src="assets/images/gallery/42.jpg" alt="Резиденты парка Красный Яр" class="hero-split__img">
+                <img src="assets/images/gallery/hero-residents.jpg" alt="Резиденты парка Красный Яр" class="hero-split__img">
             </div>
         </div>
     </section>
 
     <!-- About with Statistics -->
-    <section class="about about--split" id="about">
+    <section class="about about--split about--residents" id="about">
         <div class="about__container">
             <div class="about__content">
                 <div class="about__left" data-reveal="left">
@@ -242,105 +292,110 @@
                 <p class="residents-grid__subtitle">Производственные предприятия промышленного парка</p>
             </div>
             <div class="residents-grid__items">
-                <div class="resident-card" data-reveal="up" data-delay="1">
-                    <div class="resident-card__header">
-                        <img src="assets/images/residents/spectm.png" alt="Спецтехномаш" class="resident-card__logo">
-                        <span class="resident-card__year">с 2013</span>
+                <div class="resident-card" data-reveal="up">
+                    <img src="assets/images/residents/res-1.jpg" alt="Спецтехномаш" class="resident-card__image">
+                    <div class="resident-card__content">
+                        <div class="resident-card__top">
+                            <div class="resident-card__area">8 900 <span>м²</span></div>
+                            <span class="resident-card__year">2013</span>
+                        </div>
                         <h3 class="resident-card__name">АО «Спецтехномаш»</h3>
-                        <div class="resident-card__area">8 900 <span>м²</span></div>
-                    </div>
-                    <div class="resident-card__body">
-                        <p class="resident-card__desc">Производство обогатительного оборудования для добывающей, перерабатывающей промышленности, строительного и энергетического комплекса</p>
+                        <p class="resident-card__desc">Производство обогатительного оборудования для добывающей и перерабатывающей промышленности</p>
                     </div>
                 </div>
 
-                <div class="resident-card" data-reveal="up" data-delay="2">
-                    <div class="resident-card__header">
-                        <img src="assets/images/residents/ust.svg" alt="УралСибТрейд" class="resident-card__logo">
-                        <span class="resident-card__year">с 2017</span>
+                <div class="resident-card" data-reveal="up">
+                    <img src="assets/images/residents/res-2.jpg" alt="УралСибТрейд" class="resident-card__image">
+                    <div class="resident-card__content">
+                        <div class="resident-card__top">
+                            <div class="resident-card__area">11 978 <span>м²</span></div>
+                            <span class="resident-card__year">2017</span>
+                        </div>
                         <h3 class="resident-card__name">ООО «УралСибТрейд-Красноярск»</h3>
-                        <div class="resident-card__area">11 978 <span>м²</span></div>
-                    </div>
-                    <div class="resident-card__body">
-                        <p class="resident-card__desc">Изготовление изделий из проволоки и пружин для различных отраслей промышленности</p>
+                        <p class="resident-card__desc">Изготовление изделий из проволоки и пружин для различных отраслей</p>
                     </div>
                 </div>
 
-                <div class="resident-card" data-reveal="up" data-delay="3">
-                    <div class="resident-card__header">
-                        <img src="assets/images/residents/grmeh.svg" alt="Грузовая механика" class="resident-card__logo">
-                        <span class="resident-card__year">с 2023</span>
+                <div class="resident-card" data-reveal="up">
+                    <img src="assets/images/residents/res-3.jpg" alt="Грузовая механика" class="resident-card__image">
+                    <div class="resident-card__content">
+                        <div class="resident-card__top">
+                            <div class="resident-card__area">11 713 <span>м²</span></div>
+                            <span class="resident-card__year">2023</span>
+                        </div>
                         <h3 class="resident-card__name">ООО «Грузовая механика»</h3>
-                        <div class="resident-card__area">11 713 <span>м²</span></div>
-                    </div>
-                    <div class="resident-card__body">
-                        <p class="resident-card__desc">Выпуск тканевых стропов, стальных цепей, подвесов и торговля подъёмными механизмами</p>
+                        <p class="resident-card__desc">Выпуск тканевых стропов, стальных цепей и подъёмных механизмов</p>
                     </div>
                 </div>
 
-                <div class="resident-card" data-reveal="up" data-delay="1">
-                    <div class="resident-card__header">
-                        <span class="resident-card__year">с 2017</span>
+                <div class="resident-card" data-reveal="up">
+                    <img src="assets/images/residents/res-4.jpg" alt="Завод металлоконструкций" class="resident-card__image">
+                    <div class="resident-card__content">
+                        <div class="resident-card__top">
+                            <div class="resident-card__area">5 870 <span>м²</span></div>
+                            <span class="resident-card__year">2017</span>
+                        </div>
                         <h3 class="resident-card__name">ООО «Завод металлоконструкций»</h3>
-                        <div class="resident-card__area">5 870 <span>м²</span></div>
-                    </div>
-                    <div class="resident-card__body">
-                        <p class="resident-card__desc">Производство металлоконструкций, бункеров, рам и резервуаров для промышленных предприятий</p>
+                        <p class="resident-card__desc">Производство металлоконструкций, бункеров и резервуаров</p>
                     </div>
                 </div>
 
-                <div class="resident-card" data-reveal="up" data-delay="2">
-                    <div class="resident-card__header">
-                        <span class="resident-card__year">с 2025</span>
+                <div class="resident-card" data-reveal="up">
+                    <img src="assets/images/residents/res-5.jpg" alt="ИлАр" class="resident-card__image">
+                    <div class="resident-card__content">
+                        <div class="resident-card__top">
+                            <div class="resident-card__area">1 761 <span>м²</span></div>
+                            <span class="resident-card__year">2025</span>
+                        </div>
                         <h3 class="resident-card__name">ООО «ИлАр»</h3>
-                        <div class="resident-card__area">1 761 <span>м²</span></div>
-                    </div>
-                    <div class="resident-card__body">
-                        <p class="resident-card__desc">Производство строительных конструкций из металла, сеток, цистерн, котлов и прицепов</p>
+                        <p class="resident-card__desc">Производство строительных конструкций из металла и сеток</p>
                     </div>
                 </div>
 
-                <div class="resident-card" data-reveal="up" data-delay="3">
-                    <div class="resident-card__header">
-                        <span class="resident-card__year">с 2025</span>
+                <div class="resident-card" data-reveal="up">
+                    <img src="assets/images/residents/res-6.jpg" alt="ТР Резерв" class="resident-card__image">
+                    <div class="resident-card__content">
+                        <div class="resident-card__top">
+                            <div class="resident-card__area">1 959 <span>м²</span></div>
+                            <span class="resident-card__year">2025</span>
+                        </div>
                         <h3 class="resident-card__name">ООО «ТР Резерв»</h3>
-                        <div class="resident-card__area">1 959 <span>м²</span></div>
-                    </div>
-                    <div class="resident-card__body">
-                        <p class="resident-card__desc">Выпуск строительных металлических конструкций, цистерн и котлов</p>
+                        <p class="resident-card__desc">Выпуск строительных металлических конструкций и цистерн</p>
                     </div>
                 </div>
 
-                <div class="resident-card" data-reveal="up" data-delay="1">
-                    <div class="resident-card__header">
-                        <span class="resident-card__year">с 2018</span>
+                <div class="resident-card" data-reveal="up">
+                    <img src="assets/images/residents/res-7.jpg" alt="Континенталь" class="resident-card__image">
+                    <div class="resident-card__content">
+                        <div class="resident-card__top">
+                            <div class="resident-card__area">1 170 <span>м²</span></div>
+                            <span class="resident-card__year">2018</span>
+                        </div>
                         <h3 class="resident-card__name">ООО «Континенталь»</h3>
-                        <div class="resident-card__area">1 170 <span>м²</span></div>
-                    </div>
-                    <div class="resident-card__body">
                         <p class="resident-card__desc">Обработка металла и торговля металлопрокатом</p>
                     </div>
                 </div>
 
-                <div class="resident-card" data-reveal="up" data-delay="2">
-                    <div class="resident-card__header">
-                        <span class="resident-card__year">с 2022</span>
+                <div class="resident-card" data-reveal="up">
+                    <img src="assets/images/residents/res-8.jpg" alt="ОТК" class="resident-card__image">
+                    <div class="resident-card__content">
+                        <div class="resident-card__top">
+                            <div class="resident-card__area">1 008 <span>м²</span></div>
+                            <span class="resident-card__year">2022</span>
+                        </div>
                         <h3 class="resident-card__name">ООО «ОТК»</h3>
-                        <div class="resident-card__area">1 008 <span>м²</span></div>
-                    </div>
-                    <div class="resident-card__body">
-                        <p class="resident-card__desc">Производство металлических конструкций, изделий и их частей, обработка металлических изделий</p>
+                        <p class="resident-card__desc">Производство металлических конструкций и изделий</p>
                     </div>
                 </div>
 
-                <div class="resident-card" data-reveal="up" data-delay="3">
-                    <div class="resident-card__header">
-                        <img src="assets/images/residents/4uprint.svg" alt="4UPRINT" class="resident-card__logo">
-                        <span class="resident-card__year">с 2017</span>
+                <div class="resident-card" data-reveal="up">
+                    <img src="assets/images/residents/res-9.jpg" alt="4UPRINT" class="resident-card__image">
+                    <div class="resident-card__content">
+                        <div class="resident-card__top">
+                            <div class="resident-card__area">514 <span>м²</span></div>
+                            <span class="resident-card__year">2017</span>
+                        </div>
                         <h3 class="resident-card__name">4UPRINT</h3>
-                        <div class="resident-card__area">514 <span>м²</span></div>
-                    </div>
-                    <div class="resident-card__body">
                         <p class="resident-card__desc">Полиграфическая деятельность и издание печатной продукции</p>
                     </div>
                 </div>
@@ -353,7 +408,7 @@
         <div class="booking__container">
             <div class="booking__layout">
                 <div class="booking__left" data-reveal="left">
-                    <img src="assets/images/gallery/30.jpg" alt="Стать резидентом" class="booking__image">
+                    <img src="assets/images/gallery/booking-residents.jpg" alt="Стать резидентом" class="booking__image">
                 </div>
                 <div class="booking__right" data-reveal="right">
                     <h2 class="booking__title">Стать резидентом</h2>
@@ -388,28 +443,32 @@
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="footer__container">
             <div class="footer__main">
                 <div class="footer__nav">
                     <div class="footer__col">
-                        <span class="footer__col-title">Помещения</span>
-                        <a href="rent.html">Каталог помещений</a>
-                    </div>
-                    <div class="footer__col">
-                        <span class="footer__col-title">Компания</span>
+                        <span class="footer__col-title">Промпарк</span>
                         <a href="about.html">О компании</a>
-                        <a href="projects.html">Проекты</a>
-                        <a href="formats.html">Форматы</a>
+                        <a href="infrastructure.html">Инфраструктура</a>
+                        <a href="projects.html">Генплан</a>
+                        <a href="residents.html">Резиденты</a>
+                        <a href="management.html">Управляющая компания</a>
+                        <a href="news.html">Новости</a>
                     </div>
                     <div class="footer__col">
-                        <span class="footer__col-title">Информация</span>
-                        <a href="buy.html">Инвесторам</a>
-                        <a href="news.html">Новости</a>
-                        <a href="residents.html">Резиденты</a>
-                        <a href="contacts.html">Контакты</a>
+                        <span class="footer__col-title">Помещения</span>
+                        <a href="rent.html">Аренда</a>
+                        <a href="buy.html">Покупка</a>
+                        <a href="formats.html">Все форматы</a>
+                    </div>
+                    <div class="footer__col">
+                        <span class="footer__col-title">Контакты</span>
+                        <a href="contacts.html">Связаться с нами</a>
+                        <a href="location.html">Как добраться</a>
+                        <a href="documents.html">Документы</a>
+                        <a href="vacancies.html">Вакансии</a>
                     </div>
                 </div>
                 <div class="footer__contacts">
@@ -429,7 +488,7 @@
                 <div class="footer__right">
                     <div class="footer__map-block">
                         <div class="footer__map">
-                            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Akrasnyy_yar&source=constructor&ll=92.796944%2C56.077222&z=15&pt=92.796944%2C56.077222%2Cpm2rdm1" width="100%" height="100%" frameborder="0" style="position: absolute; top: 0; left: 0;"></iframe>
+                            <iframe src="https://yandex.ru/map-widget/v1/?ll=92.997327%2C55.997090&z=12&l=map&pt=92.997327%2C55.997090%2Cpm2rdm" width="100%" height="100%" frameborder="0"></iframe>
                         </div>
                         <address class="footer__address">660050, г. Красноярск,<br>ул. Кутузова, 1, стр. 37, оф. 307</address>
                     </div>
@@ -439,6 +498,8 @@
                 <span class="footer__copy">&copy; 2026 ООО «Красный Яр»</span>
                 <span class="footer__divider">|</span>
                 <a href="/privacy">Политика обработки данных</a>
+                <span class="footer__divider">|</span>
+                <a href="/cookies">Политика использования cookies</a>
             </div>
         </div>
     </footer>
