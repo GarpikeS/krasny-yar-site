@@ -203,6 +203,44 @@
             background: #c41e3a;
             border-radius: 50%;
         }
+        .invest-formats__item {
+            text-decoration: none;
+            color: inherit;
+            display: grid;
+            cursor: pointer;
+        }
+        .invest-formats__arrow {
+            position: absolute;
+            right: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 48px;
+            height: 48px;
+            background: #c41e3a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .invest-formats__arrow svg {
+            width: 24px;
+            height: 24px;
+            stroke: #fff;
+            stroke-width: 2;
+            fill: none;
+            transition: transform 0.3s ease;
+        }
+        .invest-formats__item:hover .invest-formats__arrow {
+            background: #a01830;
+            transform: translateY(-50%) scale(1.1);
+        }
+        .invest-formats__item:hover .invest-formats__arrow svg {
+            transform: translateX(4px);
+        }
+        .invest-formats__content {
+            position: relative;
+        }
         @media (max-width: 900px) {
             .invest-formats__item {
                 grid-template-columns: 1fr;
@@ -841,7 +879,7 @@
             </div>
 
             <div class="invest-formats__grid">
-                <div class="invest-formats__item">
+                <a href="rent.html?type=production" class="invest-formats__item">
                     <div class="invest-formats__image">
                         <div class="invest-formats__number">01</div>
                         <img src="assets/images/gallery/invest-ready.jpg" alt="Готовые помещения">
@@ -854,10 +892,13 @@
                             <li>Управление УК</li>
                             <li>Сопровождение в получении мер гос поддержки</li>
                         </ul>
+                        <div class="invest-formats__arrow">
+                            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="invest-formats__item">
+                <a href="rent.html?type=land" class="invest-formats__item">
                     <div class="invest-formats__image">
                         <div class="invest-formats__number">02</div>
                         <img src="assets/images/gallery/invest-land.jpg" alt="Земельные участки">
@@ -872,10 +913,13 @@
                             <li>Проектное решение</li>
                             <li>Сопровождение в получении мер гос поддержки</li>
                         </ul>
+                        <div class="invest-formats__arrow">
+                            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="invest-formats__item">
+                <a href="rent.html?type=bts" class="invest-formats__item">
                     <div class="invest-formats__image">
                         <div class="invest-formats__number">03</div>
                         <img src="assets/images/gallery/invest-bts.jpg" alt="Build-to-Suit">
@@ -888,8 +932,11 @@
                             <li>Полное сопровождение</li>
                             <li>Сопровождение в получении мер гос поддержки</li>
                         </ul>
+                        <div class="invest-formats__arrow">
+                            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
