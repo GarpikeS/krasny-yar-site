@@ -964,19 +964,6 @@ html {
     }
 }
 
-/* ===== LEAD POPUP RESPONSIVE ===== */
-@media (max-width: 576px) {
-    .lead-popup__box {
-        width: 95%;
-        padding: 32px 24px;
-        margin: 16px;
-    }
-
-    .lead-popup__title {
-        font-size: 24px;
-    }
-}
-
 /* ===== NEWS GRID RESPONSIVE ===== */
 .news-grid__container {
     display: grid;
@@ -1387,7 +1374,6 @@ html, body {
     .footer,
     .chat-widget,
     .cookie-banner,
-    .lead-popup,
     .preloader {
         display: none !important;
     }

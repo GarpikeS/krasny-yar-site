@@ -1066,93 +1066,6 @@
     };
 
     /**
-     * Lead Popup
-     */
-    const LeadPopup = {
-        popup: null,
-        shown: false,
-
-        init() {
-            this.popup = document.getElementById('lead-popup');
-            if (!this.popup) return;
-
-            // Close buttons - always attach
-            this.popup.querySelectorAll('[data-close-popup]').forEach(btn => {
-                btn.addEventListener('click', () => this.close());
-            });
-
-            // Form submit
-            document.getElementById('lead-form')?.addEventListener('submit', (e) => this.submit(e));
-
-            // Escape
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && this.popup.classList.contains('is-active')) {
-                    this.close();
-                }
-            });
-
-            // Check if already shown - only skip auto-show
-            if (sessionStorage.getItem('lead-popup-shown')) return;
-
-            // Show on scroll
-            window.addEventListener('scroll', () => this.checkScroll(), { passive: true });
-        },
-
-        checkScroll() {
-            if (this.shown) return;
-
-            const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-
-            if (scrollPercent > 50) {
-                this.show();
-            }
-        },
-
-        show() {
-            this.shown = true;
-            this.popup.classList.add('is-active');
-            document.body.classList.add('no-scroll');
-            sessionStorage.setItem('lead-popup-shown', 'true');
-
-            if (typeof ym !== 'undefined') {
-                ym(99999999, 'reachGoal', 'lead_popup_shown');
-            }
-        },
-
-        close() {
-            this.popup.classList.remove('is-active');
-            document.body.classList.remove('no-scroll');
-        },
-
-        submit(e) {
-            e.preventDefault();
-            const form = e.target;
-            const email = form.querySelector('input[name="email"]').value;
-            const btn = form.querySelector('.lead-popup__btn');
-
-            btn.disabled = true;
-            btn.textContent = 'Отправка...';
-
-            setTimeout(() => {
-                btn.textContent = 'Отправлено!';
-                btn.style.background = '#22c55e';
-
-                if (typeof ym !== 'undefined') {
-                    ym(99999999, 'reachGoal', 'lead_download', { email });
-                }
-
-                setTimeout(() => {
-                    this.close();
-                    form.reset();
-                    btn.textContent = 'Скачать бесплатно';
-                    btn.style.background = '';
-                    btn.disabled = false;
-                }, 1500);
-            }, 1000);
-        }
-    };
-
-    /**
      * Chat Widget
      */
     const ChatWidget = {
@@ -1241,16 +1154,6 @@
                 dateInput.value = tomorrow.toISOString().split('T')[0];
             }
 
-            // Case downloads
-            document.querySelectorAll('[data-download]').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const caseId = btn.dataset.download;
-                    LeadPopup.show();
-                    if (typeof ym !== 'undefined') {
-                        ym(99999999, 'reachGoal', 'case_download', { caseId });
-                    }
-                });
-            });
         },
 
         handleSubmit(e, goalName) {
@@ -1376,7 +1279,6 @@
      * Initialize new modules
      */
     Calculator.init();
-    LeadPopup.init();
     ChatWidget.init();
     FormsHandler.init();
     SpacesCatalog.init();
