@@ -183,151 +183,6 @@
             color: #e63950;
         }
 
-        /* ===== 4. GENPLAN ===== */
-        .genplan {
-            padding: 60px 0;
-            background: #f8f8f8;
-        }
-        .genplan__container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 40px;
-        }
-        .genplan__header {
-            background: #2d2d2d;
-            border-radius: 16px 16px 0 0;
-            padding: 40px 50px;
-            color: #fff;
-        }
-        .genplan__title {
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
-        .genplan__subtitle {
-            font-size: 16px;
-            color: rgba(255,255,255,0.7);
-        }
-        .genplan__map {
-            position: relative;
-            border-radius: 0 0 16px 16px;
-            overflow: hidden;
-        }
-        .genplan__map img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        .genplan__map-hint {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0,0,0,0.7);
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-size: 14px;
-        }
-        .genplan__marker {
-            position: absolute;
-            width: 40px;
-            height: 40px;
-            background: #c41e3a;
-            border: 3px solid #fff;
-            border-radius: 50%;
-            color: #fff;
-            font-size: 16px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 4px 15px rgba(196, 30, 58, 0.4);
-        }
-        .genplan__marker:hover,
-        .genplan__marker.is-active {
-            transform: scale(1.2);
-            box-shadow: 0 6px 25px rgba(196, 30, 58, 0.6);
-        }
-        .genplan__marker--1 { top: 30%; left: 25%; }
-        .genplan__marker--2 { top: 50%; left: 55%; }
-        .genplan__marker--3 { top: 70%; left: 35%; }
-        .genplan__cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            margin-top: 40px;
-        }
-        .genplan__card {
-            background: #fff;
-            border-radius: 12px;
-            padding: 28px;
-            cursor: pointer;
-            transition: box-shadow 0.3s, border-color 0.3s;
-            border: 2px solid transparent;
-        }
-        .genplan__card:hover,
-        .genplan__card.is-active {
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            border-color: #c41e3a;
-        }
-        .genplan__card-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 16px;
-        }
-        .genplan__card-num {
-            width: 32px;
-            height: 32px;
-            background: #c41e3a;
-            border-radius: 50%;
-            color: #fff;
-            font-size: 14px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-        .genplan__card-tag {
-            padding: 6px 12px;
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            background: #27ae60;
-            color: #fff;
-            border-radius: 4px;
-        }
-        .genplan__card-tag--progress { background: #c41e3a; }
-        .genplan__card-tag--soon { background: #666; }
-        .genplan__card-title {
-            font-size: 22px;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-        .genplan__card-desc {
-            font-size: 14px;
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        .genplan__card-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 14px;
-            font-weight: 600;
-            color: #c41e3a;
-            transition: gap 0.3s;
-        }
-        .genplan__card-link:hover {
-            gap: 14px;
-        }
-
         /* ===== 5. CONTACT FORM ===== */
         .contact-form {
             padding: 60px 0;
@@ -749,15 +604,6 @@
             .format-card__img {
                 width: 300px;
             }
-            .genplan__cards {
-                grid-template-columns: 1fr;
-            }
-            .genplan__header {
-                padding: 30px;
-            }
-            .genplan__title {
-                font-size: 32px;
-            }
             .efficiency__slide {
                 grid-template-columns: 1fr;
                 gap: 40px;
@@ -907,14 +753,12 @@
     </div>
 
     <!-- 1. HERO -->
-    <section class="hero" id="hero">
+    <section class="hero hero--fullbg" id="hero" style="background-image: url('assets/images/gallery/about-hero.jpg');">
+        <div class="hero__overlay"></div>
         <div class="hero__content">
             <h1 class="hero__title">Промпарк<br>для бизнеса</h1>
             <p class="hero__text">Современная производственно-складская площадка в Красноярске с полным комплексом инженерных коммуникаций и готовой инфраструктурой.</p>
-            <a href="#contact" class="hero__btn">Оставить заявку</a>
-        </div>
-        <div class="hero__media">
-            <img src="assets/images/gallery/about-hero.jpg" alt="Промпарк Красный Яр" class="hero__img">
+            <a href="#contact" class="hero__btn hero__btn--dark">Оставить заявку</a>
         </div>
     </section>
 
@@ -1024,55 +868,132 @@
                 <h2 class="genplan__title">Генплан парка</h2>
                 <p class="genplan__subtitle">Выберите объект на карте для просмотра информации</p>
             </div>
-            <div class="genplan__map">
-                <img src="assets/images/genplan.jpg" alt="Генплан промпарка Красный Яр">
-                <div class="genplan__marker genplan__marker--1" data-card="1">1</div>
-                <div class="genplan__marker genplan__marker--2" data-card="2">2</div>
-                <div class="genplan__marker genplan__marker--3" data-card="3">3</div>
-                <div class="genplan__map-hint">Нажмите на точку для просмотра информации</div>
+            <div class="genplan__content">
+                <div class="genplan__map">
+                    <img src="assets/images/genplan.jpg" alt="Генплан Промпарка Красный Яр" class="genplan__img">
+                    <!-- Interactive Points -->
+                    <div class="genplan__point genplan__point--1" data-building="1">
+                        <span class="genplan__point-num">1</span>
+                        <div class="genplan__point-pulse"></div>
+                    </div>
+                    <div class="genplan__point genplan__point--2" data-building="2">
+                        <span class="genplan__point-num">2</span>
+                        <div class="genplan__point-pulse"></div>
+                    </div>
+                    <div class="genplan__point genplan__point--3" data-building="3">
+                        <span class="genplan__point-num">3</span>
+                        <div class="genplan__point-pulse"></div>
+                    </div>
+                </div>
+                <div class="genplan__info" id="genplan-info">
+                    <div class="genplan__info-default">
+                        <div class="genplan__info-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M24 4L4 14V34L24 44L44 34V14L24 4Z"/>
+                                <path d="M4 14L24 24M24 24V44M24 24L44 14"/>
+                            </svg>
+                        </div>
+                        <p>Нажмите на точку на карте<br>для просмотра информации</p>
+                    </div>
+                    <!-- Building 1 Info -->
+                    <div class="genplan__building" id="building-1">
+                        <span class="genplan__building-tag">Введено в эксплуатацию</span>
+                        <h3 class="genplan__building-title">1-я очередь</h3>
+                        <p class="genplan__building-desc">Производственно-складские и офисные помещения</p>
+                        <div class="genplan__building-specs">
+                            <div class="genplan__building-spec">
+                                <span>Общая площадь</span>
+                                <strong>57 000 м²</strong>
+                            </div>
+                            <div class="genplan__building-spec">
+                                <span>Производство/склад</span>
+                                <strong>50 000 м²</strong>
+                            </div>
+                            <div class="genplan__building-spec">
+                                <span>Офисы</span>
+                                <strong>7 000 м²</strong>
+                            </div>
+                            <div class="genplan__building-spec">
+                                <span>Высота потолков</span>
+                                <strong>до 13 м</strong>
+                            </div>
+                        </div>
+                        <div class="genplan__building-actions">
+                            <a href="rent.html" class="genplan__building-btn genplan__building-btn--primary">Арендовать</a>
+                            <a href="projects.html" class="genplan__building-btn">Подробнее</a>
+                        </div>
+                    </div>
+                    <!-- Building 2 Info -->
+                    <div class="genplan__building" id="building-2">
+                        <span class="genplan__building-tag genplan__building-tag--progress">В реализации</span>
+                        <h3 class="genplan__building-title">2-я очередь</h3>
+                        <p class="genplan__building-desc">Гибкие помещения Light Industrial</p>
+                        <div class="genplan__building-specs">
+                            <div class="genplan__building-spec">
+                                <span>Общая площадь</span>
+                                <strong>21 800 м²</strong>
+                            </div>
+                            <div class="genplan__building-spec">
+                                <span>Минимальный блок</span>
+                                <strong>от 480 м²</strong>
+                            </div>
+                            <div class="genplan__building-spec">
+                                <span>Высота потолков</span>
+                                <strong>6-8 м</strong>
+                            </div>
+                            <div class="genplan__building-spec">
+                                <span>Электроснабжение</span>
+                                <strong>повышенное</strong>
+                            </div>
+                        </div>
+                        <div class="genplan__building-actions">
+                            <a href="buy.html" class="genplan__building-btn genplan__building-btn--primary">Инвестировать</a>
+                            <a href="projects.html" class="genplan__building-btn">Подробнее</a>
+                        </div>
+                    </div>
+                    <!-- Building 3 Info -->
+                    <div class="genplan__building" id="building-3">
+                        <span class="genplan__building-tag genplan__building-tag--soon">Скоро</span>
+                        <h3 class="genplan__building-title">3-я очередь</h3>
+                        <p class="genplan__building-desc">Перспективная территория развития</p>
+                        <div class="genplan__building-specs">
+                            <div class="genplan__building-spec">
+                                <span>Статус</span>
+                                <strong>Планируется</strong>
+                            </div>
+                            <div class="genplan__building-spec">
+                                <span>Формат</span>
+                                <strong>Build-to-suit</strong>
+                            </div>
+                            <div class="genplan__building-spec">
+                                <span>Земельный участок</span>
+                                <strong>доступен</strong>
+                            </div>
+                            <div class="genplan__building-spec">
+                                <span>Инфраструктура</span>
+                                <strong>готова</strong>
+                            </div>
+                        </div>
+                        <div class="genplan__building-actions">
+                            <a href="#contact" class="genplan__building-btn genplan__building-btn--primary">Оставить заявку</a>
+                            <a href="contacts.html" class="genplan__building-btn">Связаться</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="genplan__cards">
-                <div class="genplan__card" data-card="1">
-                    <div class="genplan__card-header">
-                        <div class="genplan__card-num">1</div>
-                        <span class="genplan__card-tag">Введено в эксплуатацию</span>
-                    </div>
-                    <h3 class="genplan__card-title">1-я очередь</h3>
-                    <p class="genplan__card-desc">57 000 м² — производственные, складские и офисные помещения с высотой потолков до 12 м</p>
-                    <a href="rent.html" class="genplan__card-link">
-                        Арендовать
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M5 12h14M12 5l7 7-7 7"/>
-                        </svg>
-                    </a>
+            <!-- Legend -->
+            <div class="genplan__legend">
+                <div class="genplan__legend-item">
+                    <span class="genplan__legend-dot genplan__legend-dot--active"></span>
+                    <span>Введено в эксплуатацию</span>
                 </div>
-                <div class="genplan__card" data-card="2">
-                    <div class="genplan__card-header">
-                        <div class="genplan__card-num">2</div>
-                        <span class="genplan__card-tag genplan__card-tag--progress">В реализации</span>
-                    </div>
-                    <h3 class="genplan__card-title">2-я очередь</h3>
-                    <p class="genplan__card-desc">21 800 м² — Light Industrial помещения от 480 м² с офисной частью</p>
-                    <a href="buy.html" class="genplan__card-link">
-                        Инвестировать
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M5 12h14M12 5l7 7-7 7"/>
-                        </svg>
-                    </a>
+                <div class="genplan__legend-item">
+                    <span class="genplan__legend-dot genplan__legend-dot--progress"></span>
+                    <span>В реализации</span>
                 </div>
-                <div class="genplan__card" data-card="3">
-                    <div class="genplan__card-header">
-                        <div class="genplan__card-num">3</div>
-                        <span class="genplan__card-tag genplan__card-tag--soon">Планируется</span>
-                    </div>
-                    <h3 class="genplan__card-title">3-я очередь</h3>
-                    <p class="genplan__card-desc">Build-to-Suit проекты на территории парка с готовой инфраструктурой</p>
-                    <a href="#contact" class="genplan__card-link">
-                        Оставить заявку
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M5 12h14M12 5l7 7-7 7"/>
-                        </svg>
-                    </a>
+                <div class="genplan__legend-item">
+                    <span class="genplan__legend-dot genplan__legend-dot--soon"></span>
+                    <span>Планируется</span>
                 </div>
             </div>
         </div>
