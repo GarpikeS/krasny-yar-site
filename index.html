@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- v2.2 -->
+<!-- v3.1 - parametr.space exact structure -->
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -10,9 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=2.3">
-    <link rel="stylesheet" href="css/responsive.css?v=2.3">
-    <link rel="stylesheet" href="css/compat.css?v=2.3">
+    <link rel="stylesheet" href="css/style.css?v=3.1">
+    <link rel="stylesheet" href="css/responsive.css?v=3.1">
+    <link rel="stylesheet" href="css/compat.css?v=3.1">
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -29,6 +29,779 @@
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/99999999" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
+
+    <style>
+        /* ===== 2. COMPANY METRICS - 3 in row with dividers ===== */
+        .company {
+            padding: 60px 0;
+            background: #fff;
+        }
+        .company__container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 80px;
+            align-items: center;
+        }
+        .company__text {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #333;
+        }
+        .company__text p {
+            margin-bottom: 20px;
+        }
+        .company__link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #c41e3a;
+            margin-top: 10px;
+            transition: gap 0.3s;
+        }
+        .company__link:hover {
+            gap: 16px;
+        }
+        .company__metrics {
+            display: flex;
+            justify-content: space-between;
+        }
+        .company__metric {
+            text-align: center;
+            padding: 0 40px;
+            border-right: 1px solid #e0e0e0;
+        }
+        .company__metric:last-child {
+            border-right: none;
+        }
+        .company__metric-value {
+            font-size: 72px;
+            font-weight: 700;
+            line-height: 1;
+            color: #1a1a1a;
+        }
+        .company__metric-value span {
+            font-size: 36px;
+        }
+        .company__metric-label {
+            font-size: 14px;
+            color: #666;
+            margin-top: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* ===== 3. FORMATS - Horizontal cards, text left, image right ===== */
+        .formats-grid {
+            padding: 60px 0;
+            background: #2d2d2d;
+        }
+        .formats-grid__container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        .formats-grid__title {
+            font-size: 56px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            margin-bottom: 50px;
+            color: #fff;
+        }
+        .formats-grid__cards {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .format-card {
+            display: flex;
+            flex-direction: row;
+            background: #3a3a3a;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.4s, box-shadow 0.4s;
+            border: 1px solid #444;
+        }
+        .format-card:hover {
+            transform: translateX(8px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            border-color: #c41e3a;
+        }
+        .format-card__content {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            order: 1;
+        }
+        .format-card__img {
+            width: 400px;
+            min-height: 220px;
+            overflow: hidden;
+            order: 2;
+        }
+        .format-card__img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s;
+        }
+        .format-card:hover .format-card__img img {
+            transform: scale(1.05);
+        }
+        .format-card__name {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #fff;
+        }
+        .format-card__desc {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #aaa;
+            margin-bottom: 24px;
+        }
+        .format-card__link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #c41e3a;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: gap 0.3s, color 0.3s;
+        }
+        .format-card__link:hover {
+            gap: 14px;
+            color: #e63950;
+        }
+
+        /* ===== 4. GENPLAN ===== */
+        .genplan {
+            padding: 60px 0;
+            background: #f8f8f8;
+        }
+        .genplan__container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        .genplan__header {
+            background: #2d2d2d;
+            border-radius: 16px 16px 0 0;
+            padding: 40px 50px;
+            color: #fff;
+        }
+        .genplan__title {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .genplan__subtitle {
+            font-size: 16px;
+            color: rgba(255,255,255,0.7);
+        }
+        .genplan__map {
+            position: relative;
+            border-radius: 0 0 16px 16px;
+            overflow: hidden;
+        }
+        .genplan__map img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .genplan__map-hint {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.7);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        .genplan__marker {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: #c41e3a;
+            border: 3px solid #fff;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(196, 30, 58, 0.4);
+        }
+        .genplan__marker:hover,
+        .genplan__marker.is-active {
+            transform: scale(1.2);
+            box-shadow: 0 6px 25px rgba(196, 30, 58, 0.6);
+        }
+        .genplan__marker--1 { top: 30%; left: 25%; }
+        .genplan__marker--2 { top: 50%; left: 55%; }
+        .genplan__marker--3 { top: 70%; left: 35%; }
+        .genplan__cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+        .genplan__card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 28px;
+            cursor: pointer;
+            transition: box-shadow 0.3s, border-color 0.3s;
+            border: 2px solid transparent;
+        }
+        .genplan__card:hover,
+        .genplan__card.is-active {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-color: #c41e3a;
+        }
+        .genplan__card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        .genplan__card-num {
+            width: 32px;
+            height: 32px;
+            background: #c41e3a;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .genplan__card-tag {
+            padding: 6px 12px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            background: #27ae60;
+            color: #fff;
+            border-radius: 4px;
+        }
+        .genplan__card-tag--progress { background: #c41e3a; }
+        .genplan__card-tag--soon { background: #666; }
+        .genplan__card-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .genplan__card-desc {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .genplan__card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #c41e3a;
+            transition: gap 0.3s;
+        }
+        .genplan__card-link:hover {
+            gap: 14px;
+        }
+
+        /* ===== 5. CONTACT FORM ===== */
+        .contact-form {
+            padding: 60px 0;
+            background: #f5f5f5;
+        }
+        .contact-form__container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        .contact-form__title {
+            font-size: 48px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .contact-form__form {
+            background: #fff;
+            padding: 50px;
+            border-radius: 16px;
+        }
+        .contact-form__row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+        .contact-form__field {
+            margin-bottom: 24px;
+        }
+        .contact-form__field:last-of-type {
+            margin-bottom: 0;
+        }
+        .contact-form__label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        .contact-form__input,
+        .contact-form__textarea {
+            width: 100%;
+            padding: 16px 20px;
+            font-size: 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            transition: border-color 0.3s;
+        }
+        .contact-form__input:focus,
+        .contact-form__textarea:focus {
+            outline: none;
+            border-color: #c41e3a;
+        }
+        .contact-form__textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        .contact-form__consent {
+            margin: 30px 0;
+        }
+        .contact-form__checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+            cursor: pointer;
+        }
+        .contact-form__checkbox input {
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+            accent-color: #c41e3a;
+        }
+        .contact-form__checkbox span {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+        }
+        .contact-form__checkbox a {
+            color: #c41e3a;
+        }
+        .contact-form__submit {
+            width: 100%;
+            padding: 18px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            background: #c41e3a;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .contact-form__submit:hover {
+            background: #a01830;
+            transform: translateY(-2px);
+        }
+
+        /* ===== 6. EFFICIENCY - Slider with images ===== */
+        .efficiency {
+            padding: 60px 0;
+            background: #fff;
+            overflow: hidden;
+        }
+        .efficiency__container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        .efficiency__title {
+            font-size: 56px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            margin-bottom: 60px;
+        }
+        .efficiency__slider {
+            position: relative;
+        }
+        .efficiency__track {
+            display: flex;
+            transition: transform 0.6s ease;
+        }
+        .efficiency__slide {
+            flex: 0 0 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        .efficiency__img {
+            border-radius: 16px;
+            overflow: hidden;
+            height: 450px;
+        }
+        .efficiency__img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .efficiency__content h3 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+        .efficiency__content p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #666;
+        }
+        .efficiency__nav {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 50px;
+        }
+        .efficiency__dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #e0e0e0;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .efficiency__dot.is-active {
+            background: #c41e3a;
+            transform: scale(1.2);
+        }
+
+        /* ===== 7. SOLUTIONS - Accordions ===== */
+        .solutions-acc {
+            padding: 60px 0;
+            background: #1a1a1a;
+            color: #fff;
+        }
+        .solutions-acc__container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        .solutions-acc__title {
+            font-size: 56px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            margin-bottom: 60px;
+        }
+        .accordion {
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+        }
+        .accordion:first-child {
+            border-top: 1px solid rgba(255,255,255,0.15);
+        }
+        .accordion__header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px 0;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+        .accordion__header:hover {
+            opacity: 0.7;
+        }
+        .accordion__label {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #c41e3a;
+        }
+        .accordion__title {
+            font-size: 28px;
+            font-weight: 600;
+        }
+        .accordion__icon {
+            width: 40px;
+            height: 40px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s, background 0.3s;
+        }
+        .accordion.is-open .accordion__icon {
+            transform: rotate(45deg);
+            background: #c41e3a;
+            border-color: #c41e3a;
+        }
+        .accordion__body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+        .accordion.is-open .accordion__body {
+            max-height: 500px;
+        }
+        .accordion__content {
+            padding: 0 0 30px;
+        }
+        .accordion__text {
+            font-size: 17px;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 20px;
+        }
+        .accordion__link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #c41e3a;
+            transition: gap 0.3s;
+        }
+        .accordion__link:hover {
+            gap: 16px;
+        }
+
+        /* ===== 8. NEWS ===== */
+        .news-section {
+            padding: 60px 0;
+            background: #f5f5f5;
+        }
+        .news-section__container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        .news-section__header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+        .news-section__title {
+            font-size: 56px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+        .news-section__all {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a1a1a;
+            transition: gap 0.3s;
+        }
+        .news-section__all:hover {
+            gap: 16px;
+        }
+        .news-section__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .news-item {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.4s, box-shadow 0.4s;
+        }
+        .news-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+        }
+        .news-item__img {
+            height: 200px;
+            overflow: hidden;
+        }
+        .news-item__img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s;
+        }
+        .news-item:hover .news-item__img img {
+            transform: scale(1.05);
+        }
+        .news-item__content {
+            padding: 24px;
+        }
+        .news-item__date {
+            font-size: 13px;
+            color: #999;
+            margin-bottom: 12px;
+        }
+        .news-item__title {
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 1.4;
+            color: #1a1a1a;
+        }
+
+        /* ===== 9. SUBSCRIBE ===== */
+        .subscribe-section {
+            padding: 80px 0;
+            background: #fff;
+        }
+        .subscribe-section__container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 40px;
+            text-align: center;
+        }
+        .subscribe-section__title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .subscribe-section__text {
+            font-size: 17px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .subscribe-section__form {
+            display: flex;
+            gap: 12px;
+            max-width: 500px;
+            margin: 0 auto 24px;
+        }
+        .subscribe-section__input {
+            flex: 1;
+            padding: 16px 20px;
+            font-size: 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            transition: border-color 0.3s;
+        }
+        .subscribe-section__input:focus {
+            outline: none;
+            border-color: #c41e3a;
+        }
+        .subscribe-section__btn {
+            padding: 16px 32px;
+            font-size: 16px;
+            font-weight: 600;
+            background: #c41e3a;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .subscribe-section__btn:hover {
+            background: #a01830;
+        }
+        .subscribe-section__consent {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+        .subscribe-section__checkbox {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: #666;
+            cursor: pointer;
+        }
+        .subscribe-section__checkbox input {
+            accent-color: #c41e3a;
+        }
+        .subscribe-section__checkbox a {
+            color: #c41e3a;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .company__container {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            .format-card__img {
+                width: 300px;
+            }
+            .genplan__cards {
+                grid-template-columns: 1fr;
+            }
+            .genplan__header {
+                padding: 30px;
+            }
+            .genplan__title {
+                font-size: 32px;
+            }
+            .efficiency__slide {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .news-section__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .company__metrics {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .company__metric {
+                border-right: none;
+                border-bottom: 1px solid #e0e0e0;
+                padding: 30px 0;
+            }
+            .company__metric:last-child {
+                border-bottom: none;
+            }
+            .format-card {
+                flex-direction: column;
+            }
+            .format-card__img {
+                width: 100%;
+                height: 200px;
+                order: 1;
+            }
+            .format-card__content {
+                order: 2;
+                padding: 24px;
+            }
+            .contact-form__row {
+                grid-template-columns: 1fr;
+            }
+            .news-section__grid {
+                grid-template-columns: 1fr;
+            }
+            .subscribe-section__form {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body class="js js-loading">
     <!-- Preloader -->
@@ -49,16 +822,12 @@
     <!-- Header -->
     <header class="header" id="header">
         <div class="header__inner">
-            <!-- Left: Logo -->
             <div class="header__left">
                 <a href="index.html" class="header__logo">
                     <img src="assets/images/logo.png" alt="Красный Яр" style="height: 40px; width: auto;">
                 </a>
             </div>
-
-            <!-- Center: Navigation -->
             <nav class="header__nav">
-                <!-- О парке Dropdown -->
                 <div class="header__dropdown">
                     <button class="header__link header__link--dropdown">
                         <span>О парке</span>
@@ -76,10 +845,7 @@
                         </div>
                     </div>
                 </div>
-
                 <a href="buy.html" class="header__link">Инвесторам</a>
-
-                <!-- Помещения Dropdown -->
                 <div class="header__dropdown">
                     <button class="header__link header__link--dropdown">
                         <span>Помещения</span>
@@ -94,12 +860,9 @@
                         </div>
                     </div>
                 </div>
-
                 <a href="residents.html" class="header__link">Резиденты</a>
                 <a href="contacts.html" class="header__link">Контакты</a>
             </nav>
-
-            <!-- Right: Phone + CTA -->
             <div class="header__right">
                 <a href="tel:+73919899949" class="header__phone">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -108,7 +871,7 @@
                     <span>+7 (391) 989-99-49</span>
                 </a>
                 <a href="rent.html" class="header__cta">
-                    <span>Подобрать</span>
+                    <span>Выбрать помещение</span>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M5 12h14M12 5l7 7-7 7"/>
                     </svg>
@@ -139,529 +902,404 @@
                     <span>Позвонить нам</span>
                     <strong>+7 (391) 989-99-49</strong>
                 </a>
-                <div class="menu__contacts">
-                    <div class="menu__contact">
-                        <span>мобильный</span>
-                        <a href="tel:+79240424900">+7 924 042-49-00</a>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
 
-    <!-- Favorites Modal -->
-    <div class="modal" id="favorites-modal">
-        <div class="modal__overlay" data-close></div>
-        <div class="modal__box">
-            <button class="modal__close" data-close>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M18 6L6 18M6 6L18 18"/>
-                </svg>
-            </button>
-            <div class="modal__content">
-                <div class="modal__icon">
-                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M24 42L6 24C1.2 19.2 1.2 10.8 6 6C10.8 1.2 19.2 1.2 24 6C28.8 1.2 37.2 1.2 42 6C46.8 10.8 46.8 19.2 42 24L24 42Z"/>
+    <!-- 1. HERO -->
+    <section class="hero" id="hero">
+        <div class="hero__content">
+            <h1 class="hero__title">Промпарк<br>для бизнеса</h1>
+            <p class="hero__text">Современная производственно-складская площадка в Красноярске с полным комплексом инженерных коммуникаций и готовой инфраструктурой.</p>
+            <a href="#contact" class="hero__btn">Оставить заявку</a>
+        </div>
+        <div class="hero__media">
+            <img src="assets/images/gallery/about-hero.jpg" alt="Промпарк Красный Яр" class="hero__img">
+        </div>
+    </section>
+
+    <!-- 2. COMPANY - 3 metrics in row -->
+    <section class="company" id="company">
+        <div class="company__container">
+            <div class="company__text">
+                <p>Промпарк «Красный Яр» — первый парк Красноярского края в федеральном реестре промышленных парков Минпромторга РФ.</p>
+                <p>Мы работаем с компаниями любого масштаба: от малого бизнеса до крупных производственных холдингов. Предоставляем готовые решения и строим под ключ.</p>
+                <a href="about.html" class="company__link">
+                    <span>Подробнее</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
                     </svg>
-                </div>
-                <h3 class="modal__title">Избранное</h3>
-                <p class="modal__text">У вас пока нет сохранённых объектов. Добавляйте понравившиеся помещения в избранное, чтобы вернуться к ним позже.</p>
-                <a href="#projects" class="modal__btn" data-close>Смотреть проекты</a>
+                </a>
             </div>
-        </div>
-    </div>
-
-    <!-- Hero Video + Form Section -->
-    <section class="hero-dual">
-        <div class="hero-dual__video">
-            <video autoplay muted loop playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback">
-                <source src="assets/images/hero-video.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div class="hero-dual__form">
-            <div class="hero-dual__form-content">
-                <h1 class="hero-dual__title">Промпарк<br>«Красный Яр»</h1>
-                <p class="hero-dual__subtitle">Производственные, складские и офисные помещения в Красноярске</p>
-                <form class="hero-dual__contact" id="hero-form">
-                    <div class="hero-dual__field">
-                        <input type="text" name="name" placeholder="Ваше имя" required>
-                    </div>
-                    <div class="hero-dual__field">
-                        <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required>
-                    </div>
-                    <div class="hero-dual__field">
-                        <select name="interest">
-                            <option value="">Что вас интересует?</option>
-                            <option value="rent">Аренда помещения</option>
-                            <option value="buy">Покупка помещения</option>
-                            <option value="tour">Экскурсия по парку</option>
-                            <option value="other">Другое</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="hero-dual__btn">Отправить заявку</button>
-                    <p class="hero-dual__note">Перезвоним в течение 15 минут</p>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- About -->
-    <section class="about about--split" id="about">
-        
-        
-        
-        <div class="about__container">
-            <div class="about__content">
-                <div class="about__left" data-reveal="left">
-                    <h2 class="about__title">О парке</h2>
-                    <p class="about__text">Промпарк «Красный Яр» — это современная производственно-складская площадка в Красноярске с полным комплексом инженерных коммуникаций.</p>
-                    <p class="about__text">Основан в 2012 году на базе завода «Сибэлектросталь». Первый парк Красноярского края в федеральном реестре промышленных парков Минпромторга РФ. Более 14 лет успешной работы.</p>
-                    <p class="about__text">Парк занимает 29-е место в рейтинге промышленных парков России, входит в ТОП-50 по клиентоориентированности и ТОП-20 по вкладу в экономику.</p>
-                    <a href="about.html" class="about__more">
-                        <span>Подробнее о парке</span>
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M3 8H13M9 4L13 8L9 12"/>
-                        </svg>
-                    </a>
+            <div class="company__metrics">
+                <div class="company__metric">
+                    <div class="company__metric-value">57<span>тыс м²</span></div>
+                    <div class="company__metric-label">Площадь помещений</div>
                 </div>
-                <div class="about__right" data-reveal="right">
-                    <div class="about__stats stagger-children">
-                        <div class="about__stat">
-                            <div class="about__stat-value">
-                                <span class="about__stat-num">50&nbsp;000</span>
-                                <span class="about__stat-unit">м²</span>
-                            </div>
-                            <p class="about__stat-label">Производственно-складских помещений</p>
-                        </div>
-                        <div class="about__stat">
-                            <div class="about__stat-value">
-                                <span class="about__stat-num">7&nbsp;000</span>
-                                <span class="about__stat-unit">м²</span>
-                            </div>
-                            <p class="about__stat-label">Офисных помещений</p>
-                        </div>
-                        <div class="about__stat">
-                            <div class="about__stat-value">
-                                <span class="about__stat-num">21&nbsp;800</span>
-                                <span class="about__stat-unit">м²</span>
-                            </div>
-                            <p class="about__stat-label">Вторая очередь (от 480 м²)</p>
-                        </div>
-                        <div class="about__stat">
-                            <div class="about__stat-value">
-                                <span class="about__stat-num">1&nbsp;300+</span>
-                            </div>
-                            <p class="about__stat-label">Рабочих мест создано</p>
-                        </div>
-                    </div>
+                <div class="company__metric">
+                    <div class="company__metric-value">14<span>лет</span></div>
+                    <div class="company__metric-label">Успешной работы</div>
+                </div>
+                <div class="company__metric">
+                    <div class="company__metric-value">9</div>
+                    <div class="company__metric-label">Резидентов</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Formats -->
-    <section class="formats-new" id="formats">
-        
-        
-        
-        <div class="formats-new__container">
-            <div class="formats-new__header" data-reveal="up">
-                <h2 class="formats-new__title">Форматы помещений</h2>
-                <p class="formats-new__subtitle">Подберём оптимальное решение под ваши задачи</p>
-            </div>
-            <div class="formats-new__grid">
-                <a href="formats.html" class="format-new" data-reveal="up" data-delay="1">
-                    <span class="format-new__num">01</span>
-                    <div class="format-new__content">
-                        <h3 class="format-new__name">Производственные</h3>
-                        <p class="format-new__desc">Высота потолков до 12 м, мощность до 31,5 МВт, кран-балки до 10 тонн</p>
-                        <ul class="format-new__features">
-                            <li>от 1 500 до 5 000 м²</li>
-                            <li>Подъездные пути</li>
-                            <li>Вентиляция</li>
-                        </ul>
+    <!-- 3. FORMATS - Vertical cards -->
+    <section class="formats-grid" id="formats">
+        <div class="formats-grid__container">
+            <h2 class="formats-grid__title">Форматы</h2>
+            <div class="formats-grid__cards">
+                <a href="formats.html#production" class="format-card">
+                    <div class="format-card__img">
+                        <img src="assets/images/gallery/format-production.jpg" alt="Производственные">
                     </div>
-                    <div class="format-new__img">
-                        <img src="assets/images/gallery/format-production.jpg" alt="Производственные помещения">
+                    <div class="format-card__content">
+                        <h3 class="format-card__name">Производственные</h3>
+                        <p class="format-card__desc">Помещения с высотой потолков до 12 м, мощностью до 31,5 МВт и кран-балками</p>
+                        <span class="format-card__link">
+                            О формате
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </span>
                     </div>
-                    <span class="format-new__arrow">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M5 12H19M13 6L19 12L13 18"/>
-                        </svg>
-                    </span>
                 </a>
-                <a href="formats.html" class="format-new" data-reveal="up" data-delay="2">
-                    <span class="format-new__num">02</span>
-                    <div class="format-new__content">
-                        <h3 class="format-new__name">Light Industrial</h3>
-                        <p class="format-new__desc">Гибкие помещения для производства и хранения с офисной частью</p>
-                        <ul class="format-new__features">
-                            <li>от 500 до 1 500 м²</li>
-                            <li>Гибкая планировка</li>
-                            <li>Все коммуникации</li>
-                        </ul>
+                <a href="formats.html#light" class="format-card">
+                    <div class="format-card__img">
+                        <img src="assets/images/gallery/format-light.jpg" alt="Light Industrial">
                     </div>
-                    <div class="format-new__img">
-                        <img src="assets/images/gallery/format-light.jpg" alt="Light Industrial помещения">
+                    <div class="format-card__content">
+                        <h3 class="format-card__name">Light Industrial</h3>
+                        <p class="format-card__desc">Гибкие помещения для производства и хранения с офисной частью от 500 м²</p>
+                        <span class="format-card__link">
+                            О формате
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </span>
                     </div>
-                    <span class="format-new__arrow">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M5 12H19M13 6L19 12L13 18"/>
-                        </svg>
-                    </span>
                 </a>
-                <a href="formats.html" class="format-new" data-reveal="up" data-delay="3">
-                    <span class="format-new__num">03</span>
-                    <div class="format-new__content">
-                        <h3 class="format-new__name">Офисные</h3>
-                        <p class="format-new__desc">Современные офисы с переговорными и конференц-залами</p>
-                        <ul class="format-new__features">
-                            <li>от 20 до 500 м²</li>
-                            <li>Готовая отделка</li>
-                            <li>Интернет, парковка</li>
-                        </ul>
+                <a href="formats.html#office" class="format-card">
+                    <div class="format-card__img">
+                        <img src="assets/images/gallery/format-office.jpg" alt="Офисные">
                     </div>
-                    <div class="format-new__img">
-                        <img src="assets/images/gallery/format-office.jpg" alt="Офисные помещения">
+                    <div class="format-card__content">
+                        <h3 class="format-card__name">Офисные</h3>
+                        <p class="format-card__desc">Современные офисы с переговорными и конференц-залами от 20 м²</p>
+                        <span class="format-card__link">
+                            О формате
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </span>
                     </div>
-                    <span class="format-new__arrow">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M5 12H19M13 6L19 12L13 18"/>
-                        </svg>
-                    </span>
+                </a>
+                <a href="buy.html" class="format-card">
+                    <div class="format-card__img">
+                        <img src="assets/images/gallery/invest-bts.jpg" alt="Build-to-Suit">
+                    </div>
+                    <div class="format-card__content">
+                        <h3 class="format-card__name">Build-to-Suit</h3>
+                        <p class="format-card__desc">Строительство объекта под ваши требования на готовой инфраструктуре</p>
+                        <span class="format-card__link">
+                            О формате
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </span>
+                    </div>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Management Company -->
-    <section class="management-section" id="management">
-        <div class="management-section__container">
-            <div class="management-section__layout">
-                <div class="management-section__left" data-reveal="left">
-                    <img src="assets/images/gallery/management-company.jpg" alt="Управляющая компания" class="management-section__image">
-                </div>
-                <div class="management-section__right" data-reveal="right">
-                    <h2 class="management-section__title">Управляющая компания</h2>
-                    <p class="management-section__text">Полный цикл обслуживания и управления объектами промышленного парка</p>
-                    <div class="management-section__services">
-                        <div class="management-service">
-                            <span class="management-service__name">Техническая эксплуатация</span>
-                            <span class="management-service__desc">Обслуживание инженерных систем 24/7</span>
-                        </div>
-                        <div class="management-service">
-                            <span class="management-service__name">Безопасность</span>
-                            <span class="management-service__desc">Охрана территории, видеонаблюдение, контроль доступа</span>
-                        </div>
-                        <div class="management-service">
-                            <span class="management-service__name">Клининг</span>
-                            <span class="management-service__desc">Уборка помещений и прилегающей территории</span>
-                        </div>
-                        <div class="management-service">
-                            <span class="management-service__name">Логистика</span>
-                            <span class="management-service__desc">Погрузочно-разгрузочные работы, складские услуги</span>
-                        </div>
-                        <div class="management-service">
-                            <span class="management-service__name">Ремонт и обслуживание</span>
-                            <span class="management-service__desc">Текущий и капитальный ремонт помещений</span>
-                        </div>
-                        <div class="management-service">
-                            <span class="management-service__name">Благоустройство</span>
-                            <span class="management-service__desc">Озеленение, освещение, парковки</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Booking Section -->
-    <section class="booking" id="booking">
-        <div class="booking__container">
-            <div class="booking__layout">
-                <div class="booking__left" data-reveal="left">
-                    <img src="assets/images/gallery/park-tour.jpg" alt="Промпарк Красный Яр" class="booking__image" style="object-position: right center;">
-                </div>
-                <div class="booking__right" data-reveal="right">
-                    <h2 class="booking__title">Записаться на просмотр</h2>
-                    <p class="booking__desc">Приезжайте на экскурсию по парку — покажем все возможности и подберём оптимальное решение</p>
-                    <form class="booking__form" id="booking-form">
-                        <div class="booking__fields">
-                            <div class="booking__field">
-                                <label class="booking__label">Имя *</label>
-                                <input type="text" class="booking__input" name="name" required>
-                            </div>
-                            <div class="booking__field">
-                                <label class="booking__label">Телефон *</label>
-                                <input type="tel" class="booking__input" name="phone" required>
-                            </div>
-                            <div class="booking__field">
-                                <label class="booking__label">Дата</label>
-                                <input type="date" class="booking__input" name="date" id="booking-date">
-                            </div>
-                            <div class="booking__field">
-                                <label class="booking__label">Время</label>
-                                <select class="booking__select" name="time">
-                                    <option value="10:00">10:00</option>
-                                    <option value="11:00">11:00</option>
-                                    <option value="12:00">12:00</option>
-                                    <option value="14:00">14:00</option>
-                                    <option value="15:00">15:00</option>
-                                    <option value="16:00">16:00</option>
-                                </select>
-                            </div>
-                        </div>
-                        <button type="submit" class="booking__submit">Записаться на просмотр</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Interactive Genplan -->
+    <!-- 4. GENPLAN -->
     <section class="genplan" id="genplan">
         <div class="genplan__container">
             <div class="genplan__header">
                 <h2 class="genplan__title">Генплан парка</h2>
                 <p class="genplan__subtitle">Выберите объект на карте для просмотра информации</p>
             </div>
-            <div class="genplan__content">
-                <div class="genplan__map">
-                    <img src="assets/images/genplan.jpg" alt="Генплан Промпарка Красный Яр" class="genplan__img">
-
-                    <!-- Interactive Points -->
-                    <div class="genplan__point genplan__point--1" data-building="1">
-                        <span class="genplan__point-num">1</span>
-                        <div class="genplan__point-pulse"></div>
-                    </div>
-                    <div class="genplan__point genplan__point--2" data-building="2">
-                        <span class="genplan__point-num">2</span>
-                        <div class="genplan__point-pulse"></div>
-                    </div>
-                    <div class="genplan__point genplan__point--3" data-building="3">
-                        <span class="genplan__point-num">3</span>
-                        <div class="genplan__point-pulse"></div>
-                    </div>
-                </div>
-
-                <div class="genplan__info" id="genplan-info">
-                    <div class="genplan__info-default">
-                        <div class="genplan__info-icon">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M24 4L4 14V34L24 44L44 34V14L24 4Z"/>
-                                <path d="M4 14L24 24M24 24V44M24 24L44 14"/>
-                            </svg>
-                        </div>
-                        <p>Нажмите на точку на карте<br>для просмотра информации</p>
-                    </div>
-
-                    <!-- Building 1 Info -->
-                    <div class="genplan__building" id="building-1">
-                        <span class="genplan__building-tag">Введено в эксплуатацию</span>
-                        <h3 class="genplan__building-title">1-я очередь</h3>
-                        <p class="genplan__building-desc">Производственно-складские и офисные помещения</p>
-                        <div class="genplan__building-specs">
-                            <div class="genplan__building-spec">
-                                <span>Общая площадь</span>
-                                <strong>57 000 м²</strong>
-                            </div>
-                            <div class="genplan__building-spec">
-                                <span>Производство/склад</span>
-                                <strong>50 000 м²</strong>
-                            </div>
-                            <div class="genplan__building-spec">
-                                <span>Офисы</span>
-                                <strong>7 000 м²</strong>
-                            </div>
-                            <div class="genplan__building-spec">
-                                <span>Высота потолков</span>
-                                <strong>до 13 м</strong>
-                            </div>
-                        </div>
-                        <div class="genplan__building-actions">
-                            <a href="rent.html" class="genplan__building-btn genplan__building-btn--primary">Арендовать</a>
-                            <a href="projects.html" class="genplan__building-btn">Подробнее</a>
-                        </div>
-                    </div>
-
-                    <!-- Building 2 Info -->
-                    <div class="genplan__building" id="building-2">
-                        <span class="genplan__building-tag genplan__building-tag--progress">В реализации</span>
-                        <h3 class="genplan__building-title">2-я очередь</h3>
-                        <p class="genplan__building-desc">Гибкие помещения Light Industrial</p>
-                        <div class="genplan__building-specs">
-                            <div class="genplan__building-spec">
-                                <span>Общая площадь</span>
-                                <strong>21 800 м²</strong>
-                            </div>
-                            <div class="genplan__building-spec">
-                                <span>Минимальный блок</span>
-                                <strong>от 480 м²</strong>
-                            </div>
-                            <div class="genplan__building-spec">
-                                <span>Высота потолков</span>
-                                <strong>6-8 м</strong>
-                            </div>
-                            <div class="genplan__building-spec">
-                                <span>Электроснабжение</span>
-                                <strong>повышенное</strong>
-                            </div>
-                        </div>
-                        <div class="genplan__building-actions">
-                            <a href="buy.html" class="genplan__building-btn genplan__building-btn--primary">Инвестировать</a>
-                            <a href="projects.html" class="genplan__building-btn">Подробнее</a>
-                        </div>
-                    </div>
-
-                    <!-- Building 3 Info -->
-                    <div class="genplan__building" id="building-3">
-                        <span class="genplan__building-tag genplan__building-tag--soon">Скоро</span>
-                        <h3 class="genplan__building-title">3-я очередь</h3>
-                        <p class="genplan__building-desc">Перспективная территория развития</p>
-                        <div class="genplan__building-specs">
-                            <div class="genplan__building-spec">
-                                <span>Статус</span>
-                                <strong>Планируется</strong>
-                            </div>
-                            <div class="genplan__building-spec">
-                                <span>Формат</span>
-                                <strong>Build-to-suit</strong>
-                            </div>
-                            <div class="genplan__building-spec">
-                                <span>Земельный участок</span>
-                                <strong>доступен</strong>
-                            </div>
-                            <div class="genplan__building-spec">
-                                <span>Инфраструктура</span>
-                                <strong>готова</strong>
-                            </div>
-                        </div>
-                        <div class="genplan__building-actions">
-                            <a href="#request" class="genplan__building-btn genplan__building-btn--primary">Оставить заявку</a>
-                            <a href="contacts.html" class="genplan__building-btn">Связаться</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="genplan__map">
+                <img src="assets/images/genplan.jpg" alt="Генплан промпарка Красный Яр">
+                <div class="genplan__marker genplan__marker--1" data-card="1">1</div>
+                <div class="genplan__marker genplan__marker--2" data-card="2">2</div>
+                <div class="genplan__marker genplan__marker--3" data-card="3">3</div>
+                <div class="genplan__map-hint">Нажмите на точку для просмотра информации</div>
             </div>
-
-            <!-- Legend -->
-            <div class="genplan__legend">
-                <div class="genplan__legend-item">
-                    <span class="genplan__legend-dot genplan__legend-dot--active"></span>
-                    <span>Введено в эксплуатацию</span>
+            <div class="genplan__cards">
+                <div class="genplan__card" data-card="1">
+                    <div class="genplan__card-header">
+                        <div class="genplan__card-num">1</div>
+                        <span class="genplan__card-tag">Введено в эксплуатацию</span>
+                    </div>
+                    <h3 class="genplan__card-title">1-я очередь</h3>
+                    <p class="genplan__card-desc">57 000 м² — производственные, складские и офисные помещения с высотой потолков до 12 м</p>
+                    <a href="rent.html" class="genplan__card-link">
+                        Арендовать
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
                 </div>
-                <div class="genplan__legend-item">
-                    <span class="genplan__legend-dot genplan__legend-dot--progress"></span>
-                    <span>В реализации</span>
+                <div class="genplan__card" data-card="2">
+                    <div class="genplan__card-header">
+                        <div class="genplan__card-num">2</div>
+                        <span class="genplan__card-tag genplan__card-tag--progress">В реализации</span>
+                    </div>
+                    <h3 class="genplan__card-title">2-я очередь</h3>
+                    <p class="genplan__card-desc">21 800 м² — Light Industrial помещения от 480 м² с офисной частью</p>
+                    <a href="buy.html" class="genplan__card-link">
+                        Инвестировать
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
                 </div>
-                <div class="genplan__legend-item">
-                    <span class="genplan__legend-dot genplan__legend-dot--soon"></span>
-                    <span>Планируется</span>
+                <div class="genplan__card" data-card="3">
+                    <div class="genplan__card-header">
+                        <div class="genplan__card-num">3</div>
+                        <span class="genplan__card-tag genplan__card-tag--soon">Планируется</span>
+                    </div>
+                    <h3 class="genplan__card-title">3-я очередь</h3>
+                    <p class="genplan__card-desc">Build-to-Suit проекты на территории парка с готовой инфраструктурой</p>
+                    <a href="#contact" class="genplan__card-link">
+                        Оставить заявку
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Calculator + Request Section -->
-    <section class="calc-request" id="request">
-        
-        
-        
-        <div class="calc-request__container">
-            <div class="calc-request__content">
-                <!-- Calculator Left -->
-                <div class="calc-request__left" data-reveal="left">
-                    <h2 class="calc-request__title">Калькулятор стоимости</h2>
-                    <p class="calc-request__desc">Рассчитайте примерную стоимость</p>
-                    <div class="calculator__form">
-                        <!-- Rent/Buy Toggle -->
-                        <div class="calculator__toggle">
-                            <button type="button" class="calculator__toggle-btn is-active" data-mode="rent">Аренда</button>
-                            <button type="button" class="calculator__toggle-btn" data-mode="buy">Покупка</button>
+    <!-- 5. CONTACT FORM -->
+    <section class="contact-form" id="contact">
+        <div class="contact-form__container">
+            <h2 class="contact-form__title">Оставить заявку</h2>
+            <form class="contact-form__form" id="contact-form">
+                <div class="contact-form__row">
+                    <div class="contact-form__field">
+                        <label class="contact-form__label">Имя</label>
+                        <input type="text" class="contact-form__input" name="name" required placeholder="Иван Петров">
+                    </div>
+                    <div class="contact-form__field">
+                        <label class="contact-form__label">Телефон</label>
+                        <input type="tel" class="contact-form__input" name="phone" required placeholder="+7 (___) ___-__-__">
+                    </div>
+                </div>
+                <div class="contact-form__field">
+                    <label class="contact-form__label">Email</label>
+                    <input type="email" class="contact-form__input" name="email" placeholder="example@company.ru">
+                </div>
+                <div class="contact-form__field">
+                    <label class="contact-form__label">Комментарий</label>
+                    <textarea class="contact-form__textarea" name="comment" placeholder="Опишите ваши требования к помещению"></textarea>
+                </div>
+                <div class="contact-form__consent">
+                    <label class="contact-form__checkbox">
+                        <input type="checkbox" name="consent" required>
+                        <span>Согласен с <a href="privacy.html">политикой обработки персональных данных</a></span>
+                    </label>
+                    <label class="contact-form__checkbox">
+                        <input type="checkbox" name="marketing">
+                        <span>Согласен на получение информационных материалов</span>
+                    </label>
+                </div>
+                <button type="submit" class="contact-form__submit">Отправить</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 6. EFFICIENCY - Slider with images -->
+    <section class="efficiency" id="efficiency">
+        <div class="efficiency__container">
+            <h2 class="efficiency__title">Параметры эффективности</h2>
+            <div class="efficiency__slider">
+                <div class="efficiency__track" id="eff-track">
+                    <div class="efficiency__slide">
+                        <div class="efficiency__img">
+                            <img src="assets/images/gallery/1.jpg" alt="Готовая инфраструктура">
                         </div>
-                        <div class="calculator__field">
-                            <label class="calculator__label">Тип помещения</label>
-                            <div class="calculator__select-wrap">
-                                <select class="calculator__select" id="calc-type">
-                                    <option value="production">Производственное</option>
-                                    <option value="warehouse">Складское</option>
-                                    <option value="office">Офисное</option>
-                                </select>
-                            </div>
+                        <div class="efficiency__content">
+                            <h3>Готовая инфраструктура</h3>
+                            <p>Все инженерные коммуникации подведены и готовы к подключению: электричество до 31,5 МВт, газ, вода, канализация, оптоволоконный интернет. Вам не нужно тратить время и ресурсы на строительство сетей.</p>
                         </div>
-                        <div class="calculator__field">
-                            <label class="calculator__label">Площадь, м²</label>
-                            <input type="range" class="calculator__range" id="calc-area" min="50" max="5000" value="500" step="50">
-                            <div class="calculator__range-value"><span id="calc-area-value">500</span> м²</div>
+                    </div>
+                    <div class="efficiency__slide">
+                        <div class="efficiency__img">
+                            <img src="assets/images/gallery/2.jpg" alt="Гибкое использование">
                         </div>
-                        <div class="calculator__field calculator__field--term" id="calc-term-field">
-                            <label class="calculator__label">Срок аренды</label>
-                            <div class="calculator__select-wrap">
-                                <select class="calculator__select" id="calc-term">
-                                    <option value="12">12 месяцев</option>
-                                    <option value="24">24 месяца</option>
-                                    <option value="36">36 месяцев</option>
-                                    <option value="60">60 месяцев</option>
-                                </select>
-                            </div>
+                        <div class="efficiency__content">
+                            <h3>Гибкое использование пространства</h3>
+                            <p>Помещения от 20 м² до 5 000 м² с возможностью объединения и разделения пространств. Адаптируйте площади под меняющиеся потребности вашего бизнеса без переезда.</p>
                         </div>
-                        <!-- Request form for calculation -->
-                        <div class="calculator__request">
-                            <p class="calculator__request-text">Для получения расчёта оставьте контакты</p>
-                            <form class="calculator__request-form" id="calc-request-form">
-                                <input type="hidden" name="calc-mode" id="calc-mode-input" value="rent">
-                                <input type="hidden" name="calc-type" id="calc-type-input" value="production">
-                                <input type="hidden" name="calc-area" id="calc-area-input" value="500">
-                                <input type="hidden" name="calc-term" id="calc-term-input" value="12">
-                                <div class="calculator__request-fields">
-                                    <input type="text" class="calculator__input" name="name" required placeholder="Ваше имя">
-                                    <input type="tel" class="calculator__input" name="phone" required placeholder="+7 (___) ___-__-__">
-                                </div>
-                                <button type="submit" class="calculator__btn">Получить расчёт</button>
-                            </form>
+                    </div>
+                    <div class="efficiency__slide">
+                        <div class="efficiency__img">
+                            <img src="assets/images/gallery/3.jpg" alt="Управляющая компания">
+                        </div>
+                        <div class="efficiency__content">
+                            <h3>Полный сервис 24/7</h3>
+                            <p>Собственная управляющая компания обеспечивает полный цикл обслуживания: техническая эксплуатация, охрана, клининг, логистика, ремонт. Сосредоточьтесь на бизнесе, а не на хозяйственных вопросах.</p>
+                        </div>
+                    </div>
+                    <div class="efficiency__slide">
+                        <div class="efficiency__img">
+                            <img src="assets/images/gallery/4.jpg" alt="Индивидуальный подход">
+                        </div>
+                        <div class="efficiency__content">
+                            <h3>Индивидуальный подход</h3>
+                            <p>Каждому резиденту — персональный менеджер. Помогаем с подбором помещения, оформлением документов, адаптацией пространства под ваши задачи. Build-to-Suit проекты под ключ.</p>
                         </div>
                     </div>
                 </div>
-                <!-- Request Form Right -->
-                <div class="calc-request__right" data-reveal="right">
-                    <h2 class="calc-request__title">Оставить заявку</h2>
-                    <p class="calc-request__desc">Менеджер свяжется в течение 15 минут</p>
-                    <form class="request__form" id="request-form">
-                        <div class="request__row">
-                            <div class="request__field">
-                                <label class="request__label">Имя *</label>
-                                <input type="text" class="request__input" name="name" required placeholder="Иван Петров">
-                            </div>
-                            <div class="request__field">
-                                <label class="request__label">Телефон *</label>
-                                <input type="tel" class="request__input" name="phone" required placeholder="+7 (___) ___-__-__">
-                            </div>
-                        </div>
-                        <div class="request__field">
-                            <label class="request__label">Email</label>
-                            <input type="email" class="request__input" name="email" placeholder="example@company.ru">
-                        </div>
-                        <div class="request__field">
-                            <label class="request__label">Интересует</label>
-                            <div class="request__select-wrap">
-                                <select class="request__select" name="interest">
-                                    <option value="rent">Аренда помещения</option>
-                                    <option value="buy">Покупка помещения</option>
-                                    <option value="build">Строительство под ключ</option>
-                                    <option value="consult">Консультация</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="request__consent">
-                            <label class="request__checkbox">
-                                <input type="checkbox" name="consent" required>
-                                <span class="request__checkmark"></span>
-                                <span>Согласен с <a href="/privacy">политикой обработки данных</a></span>
-                            </label>
-                        </div>
-                        <button type="submit" class="request__submit">Отправить заявку</button>
-                    </form>
+            </div>
+            <div class="efficiency__nav">
+                <button class="efficiency__dot is-active" data-slide="0"></button>
+                <button class="efficiency__dot" data-slide="1"></button>
+                <button class="efficiency__dot" data-slide="2"></button>
+                <button class="efficiency__dot" data-slide="3"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. SOLUTIONS - Accordions -->
+    <section class="solutions-acc" id="solutions">
+        <div class="solutions-acc__container">
+            <h2 class="solutions-acc__title">Решения</h2>
+
+            <div class="accordion" data-accordion>
+                <div class="accordion__header">
+                    <div>
+                        <span class="accordion__label">Малый бизнес</span>
+                        <h3 class="accordion__title">Стартапы и небольшие компании</h3>
+                    </div>
+                    <span class="accordion__icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12h14"/>
+                        </svg>
+                    </span>
                 </div>
+                <div class="accordion__body">
+                    <div class="accordion__content">
+                        <p class="accordion__text">Офисы и склады от 20 м² с гибкими условиями аренды. Минимальные начальные затраты, возможность расширения по мере роста бизнеса. Готовая инфраструктура и все коммуникации включены в стоимость.</p>
+                        <a href="rent.html" class="accordion__link">
+                            <span>Подобрать помещение</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion" data-accordion>
+                <div class="accordion__header">
+                    <div>
+                        <span class="accordion__label">Средний бизнес</span>
+                        <h3 class="accordion__title">Растущие и развивающиеся компании</h3>
+                    </div>
+                    <span class="accordion__icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12h14"/>
+                        </svg>
+                    </span>
+                </div>
+                <div class="accordion__body">
+                    <div class="accordion__content">
+                        <p class="accordion__text">Light Industrial помещения от 500 м²: производство + склад + офис в одном блоке. Гибкая планировка позволяет адаптировать пространство под ваши процессы. Возможность объединения нескольких блоков при расширении.</p>
+                        <a href="formats.html" class="accordion__link">
+                            <span>Смотреть форматы</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion" data-accordion>
+                <div class="accordion__header">
+                    <div>
+                        <span class="accordion__label">Крупный бизнес</span>
+                        <h3 class="accordion__title">Производственные холдинги и корпорации</h3>
+                    </div>
+                    <span class="accordion__icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12h14"/>
+                        </svg>
+                    </span>
+                </div>
+                <div class="accordion__body">
+                    <div class="accordion__content">
+                        <p class="accordion__text">Build-to-Suit проекты: строительство под ключ на территории парка с готовой инфраструктурой. Земля в собственность или долгосрочная аренда. Индивидуальное проектирование под ваши технологические процессы.</p>
+                        <a href="buy.html" class="accordion__link">
+                            <span>Узнать условия</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. NEWS -->
+    <section class="news-section" id="news">
+        <div class="news-section__container">
+            <div class="news-section__header">
+                <h2 class="news-section__title">Новости</h2>
+                <a href="news.html" class="news-section__all">
+                    <span>Все новости</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="news-section__grid">
+                <a href="news.html" class="news-item">
+                    <div class="news-item__img">
+                        <img src="assets/images/gallery/1.jpg" alt="Новость">
+                    </div>
+                    <div class="news-item__content">
+                        <span class="news-item__date">10 марта 2026</span>
+                        <h3 class="news-item__title">Промпарк «Красный Яр» вошёл в ТОП-30 промышленных парков России</h3>
+                    </div>
+                </a>
+                <a href="news.html" class="news-item">
+                    <div class="news-item__img">
+                        <img src="assets/images/gallery/2.jpg" alt="Новость">
+                    </div>
+                    <div class="news-item__content">
+                        <span class="news-item__date">5 марта 2026</span>
+                        <h3 class="news-item__title">Началось строительство второй очереди промышленного парка</h3>
+                    </div>
+                </a>
+                <a href="news.html" class="news-item">
+                    <div class="news-item__img">
+                        <img src="assets/images/gallery/3.jpg" alt="Новость">
+                    </div>
+                    <div class="news-item__content">
+                        <span class="news-item__date">28 февраля 2026</span>
+                        <h3 class="news-item__title">Новый резидент: производственная компания «СибТехно»</h3>
+                    </div>
+                </a>
+                <a href="news.html" class="news-item">
+                    <div class="news-item__img">
+                        <img src="assets/images/gallery/4.jpg" alt="Новость">
+                    </div>
+                    <div class="news-item__content">
+                        <span class="news-item__date">20 февраля 2026</span>
+                        <h3 class="news-item__title">День открытых дверей для потенциальных резидентов</h3>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -720,9 +1358,9 @@
             <div class="footer__bottom">
                 <span class="footer__copy">&copy; 2026 ООО «Красный Яр»</span>
                 <span class="footer__divider">|</span>
-                <a href="/privacy">Политика обработки данных</a>
+                <a href="privacy.html">Политика обработки данных</a>
                 <span class="footer__divider">|</span>
-                <a href="/cookies">Политика использования cookies</a>
+                <a href="cookies.html">Политика использования cookies</a>
             </div>
         </div>
     </footer>
@@ -744,11 +1382,11 @@
             </div>
             <div class="chat-widget__body">
                 <div class="chat-widget__message chat-widget__message--bot">
-                    <p>Здравствуйте! 👋</p>
-                    <p>Я помогу вам подобрать помещение в промышленном парке. Выберите интересующий вопрос:</p>
+                    <p>Здравствуйте!</p>
+                    <p>Я помогу вам подобрать помещение. Выберите вопрос:</p>
                 </div>
                 <div class="chat-widget__options">
-                    <button class="chat-widget__option" data-question="price">Узнать стоимость аренды</button>
+                    <button class="chat-widget__option" data-question="price">Узнать стоимость</button>
                     <button class="chat-widget__option" data-question="available">Свободные помещения</button>
                     <button class="chat-widget__option" data-question="tour">Записаться на просмотр</button>
                     <button class="chat-widget__option" data-question="other">Другой вопрос</button>
@@ -768,16 +1406,66 @@
     <!-- Cookie Banner -->
     <div class="cookie-banner" id="cookie-banner">
         <div class="cookie-banner__content">
-            <p class="cookie-banner__text">Мы используем файлы cookie для улучшения работы сайта. Продолжая использовать сайт, вы соглашаетесь с <a href="/cookies">политикой использования cookies</a>.</p>
+            <p class="cookie-banner__text">Мы используем файлы cookie для улучшения работы сайта. <a href="cookies.html">Подробнее</a></p>
             <div class="cookie-banner__actions">
                 <button class="cookie-banner__btn cookie-banner__btn--accept" id="accept-cookies">Принять</button>
-                <button class="cookie-banner__btn cookie-banner__btn--settings">Настройки</button>
             </div>
         </div>
     </div>
 
-    <script src="js/polyfills.js?v=2.3"></script>
-    <script src="js/main.js?v=2.3"></script>
+    <script src="js/polyfills.js?v=3.1"></script>
+    <script src="js/main.js?v=3.1"></script>
+    <script>
+        // Genplan Interactive
+        (function() {
+            const markers = document.querySelectorAll('.genplan__marker');
+            const cards = document.querySelectorAll('.genplan__card');
+            if (!markers.length) return;
+
+            function setActive(num) {
+                markers.forEach(m => m.classList.toggle('is-active', m.dataset.card === num));
+                cards.forEach(c => c.classList.toggle('is-active', c.dataset.card === num));
+            }
+
+            markers.forEach(marker => {
+                marker.addEventListener('mouseenter', () => setActive(marker.dataset.card));
+                marker.addEventListener('click', () => setActive(marker.dataset.card));
+            });
+
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', () => setActive(card.dataset.card));
+            });
+        })();
+
+        // Efficiency Slider
+        (function() {
+            const track = document.getElementById('eff-track');
+            const dots = document.querySelectorAll('.efficiency__dot');
+            if (!track) return;
+
+            let current = 0;
+            const total = track.children.length;
+
+            function goTo(index) {
+                current = (index + total) % total;
+                track.style.transform = `translateX(-${current * 100}%)`;
+                dots.forEach((d, i) => d.classList.toggle('is-active', i === current));
+            }
+
+            dots.forEach(dot => dot.addEventListener('click', () => goTo(+dot.dataset.slide)));
+
+            // Auto-advance
+            setInterval(() => goTo(current + 1), 5000);
+        })();
+
+        // Accordions
+        document.querySelectorAll('[data-accordion]').forEach(acc => {
+            acc.querySelector('.accordion__header').addEventListener('click', () => {
+                const wasOpen = acc.classList.contains('is-open');
+                document.querySelectorAll('[data-accordion]').forEach(a => a.classList.remove('is-open'));
+                if (!wasOpen) acc.classList.add('is-open');
+            });
+        });
+    </script>
 </body>
 </html>
-<!-- v2 -->
